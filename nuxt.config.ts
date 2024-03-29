@@ -6,11 +6,20 @@ export default defineNuxtConfig({
     //'@pinia/nuxt'
     '@nuxtjs/google-fonts'
   ],
+  colorMode: {
+    preference: 'light'
+  },
   devtools: { enabled: true },
   typescript: {
     strict: true
   },
   image: {
     format: ['webp']
+  },
+  googleFonts: {
+    families: {
+      'DM+Sans': true,
+      'Space+Grotesk': true
+    }
   }
 })

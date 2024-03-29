@@ -1,5 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
   <div>
-    <NuxtWelcome />
+    <NavBar />
   </div>
 </template>
