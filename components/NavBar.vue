@@ -60,6 +60,7 @@ const menuOpen = ref(false)
       :links="links"
       class="flex-1 border-b border-gray-200"
       v-show="menuOpen"
+      @click="menuOpen = false"
     />
     <div>
       <div
