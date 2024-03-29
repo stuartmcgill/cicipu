@@ -6,9 +6,6 @@ export default defineNuxtConfig({
     //'@pinia/nuxt'
     '@nuxtjs/google-fonts'
   ],
-  colorMode: {
-    preference: 'light'
-  },
   devtools: { enabled: true },
   typescript: {
     strict: true

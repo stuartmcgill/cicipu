@@ -39,6 +39,11 @@ const links = [
     label: 'Tools',
     icon: 'i-heroicons-wrench-solid',
     to: '/tools'
+  },
+  {
+    label: 'Settings',
+    icon: 'i-heroicons-cog-6-tooth-solid',
+    to: '/settings'
   }
 ]
 
@@ -55,13 +60,10 @@ const menuOpen = ref(false)
       :links="links"
       class="flex-1 border-b border-gray-200"
       v-show="menuOpen"
-      :ui="{
-        base: 'group relative flex items-center justify-center gap-1.5 focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-1 focus-visible:before:ring-primary-500 dark:focus-visible:before:ring-primary-400 before:absolute before:inset-px before:rounded-md disabled:cursor-not-allowed disabled:opacity-75'
-      }"
     />
     <div>
       <div
-        class="flex items-center gap-4 cursor-pointer text-gray-700 hover:text-gray-400"
+        class="flex items-center gap-4 cursor-pointer text-gray-700 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-200"
         @click="menuOpen = !menuOpen"
       >
         <span>Menu</span>

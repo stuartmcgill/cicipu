@@ -1,28 +1,27 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+
+const toggleColorMode = () => {
+  colorMode.value = colorMode.value === 'light' ? 'dark' : 'light'
+}
+
 const mode = computed({
   get() {
     return colorMode.value === 'dark'
   },
-  set(value) {
-    colorMode.value = value ? 'light' : 'dark'
+  set(newValue) {
+    toggleColorMode()
   }
 })
 </script>
 
 <template>
   <ClientOnly>
-    <UButton
-      :icon="
-        mode ? 'i-ph-moon-stars-duotone w-5 h5' : 'i-ph-sun-dim-duotone w-5 h5'
-      "
-      color="gray"
-      variant="ghost"
-      aria-label="Theme"
-      @click="mode = !mode"
-    ></UButton>
-    <template #fallback>
-      <div class="w-8 h-8" />
-    </template>
+    <UToggle
+      on-icon="i-heroicons-moon-solid"
+      off-icon="i-heroicons-sun"
+      :model-value="mode"
+      @update:model-value="(val) => (mode = val)"
+    />
   </ClientOnly>
 </template>
