@@ -1,8 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    <NavBar />
-    <NuxtPage />
-  </div>
+  <h1>Photo galleries</h1>
 </template>
