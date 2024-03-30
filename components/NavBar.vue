@@ -55,26 +55,26 @@ const menuOpen = ref(false)
     :links="links"
     class="border-b border-gray-200 hidden md:flex"
   />
-  <div class="m-3 flex gap-4 justify-end md:hidden">
-    <UVerticalNavigation
-      :links="links"
-      class="flex-1 border-b border-gray-200"
-      v-show="menuOpen"
-      @click="menuOpen = false"
-    />
+  <div class="m-3 flex gap-4 justify-between md:hidden">
     <div>
       <div
         class="flex items-center gap-4 cursor-pointer text-gray-700 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-200"
         @click="menuOpen = !menuOpen"
       >
-        <span>Menu</span>
         <UIcon
           :name="
             menuOpen ? 'i-heroicons-x-mark-solid' : 'i-heroicons-bars-3-solid'
           "
           class="p-2 h-6 w-6"
         />
+        <span v-show="!menuOpen">Menu</span>
       </div>
     </div>
+    <UVerticalNavigation
+      :links="links"
+      class="flex-1 border-b border-gray-200"
+      v-show="menuOpen"
+      @click="menuOpen = false"
+    />
   </div>
 </template>
