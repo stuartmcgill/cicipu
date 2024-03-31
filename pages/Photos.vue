@@ -127,8 +127,8 @@ const galleries = [
   },
   {
     name: 'Ciciya (youth) festival',
-    description: `<p class="mb-2">At the Ciciya festival young men and women dress up in exotic costumes and perform spectacular feats of dancing.</p>
-<p class="mb-2">For the Orisino division Ciciya is a part of Ukumbu, the last festival of the year held in December or January.</p>
+    description: `<p>At the Ciciya festival young men and women dress up in exotic costumes and perform spectacular feats of dancing.</p>
+<p>For the Orisino division Ciciya is a part of Ukumbu, the last festival of the year held in December or January.</p>
 <p>Boys take part in this festival the year that they complete their Kezzeme initiation.
 <p>The Odipo division celebrate Ciciya as a stand-alone festival in August or September (unless the Caari official has died, in which case it will be combined with the Kezzeme).<\p>`,
     images: [
@@ -182,9 +182,9 @@ const galleries = [
   },
   {
     name: "Festival of the Dead (Røø'ø)",
-    description: `<p class="mb-2">In Mattaari village on Korisino, the Røø'ø [ɾɔ́ːʔɔ́] festival of remembrance of the dead is celebrated annually in February.</p>
-<p class="mb-2">After each household sacrifices a chicken, a procession takes place through the houses of those who have recently died, ending up in the central clearing outside the Magaaji's (priest) shelter.</p>
-<p class="mb-2">Dancing and drumming continues until dawn. Widows carry the spears of their dead husbands.</p>`,
+    description: `<p>In Mattaari village on Korisino, the Røø'ø [ɾɔ́ːʔɔ́] festival of remembrance of the dead is celebrated annually in February.</p>
+<p>After each household sacrifices a chicken, a procession takes place through the houses of those who have recently died, ending up in the central clearing outside the Magaaji's (priest) shelter.</p>
+<p>Dancing and drumming continues until dawn. Widows carry the spears of their dead husbands.</p>`,
     images: [
       {
         src: '/img/gallery/dead_01.jpg',
