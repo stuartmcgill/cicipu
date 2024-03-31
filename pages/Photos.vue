@@ -10,54 +10,6 @@ interface Gallery {
   images: Image[]
 }
 
-const tabs = [
-  {
-    label: 'Beer-making'
-  },
-  {
-    label: 'Building'
-  },
-  {
-    label: 'Ciciya (youth) festival'
-  },
-  {
-    label: 'Crafts'
-  },
-  {
-    label: "Festival of the Dead (Røø'ø)"
-  },
-  {
-    label: 'Farming'
-  },
-  {
-    label: 'Fieldwork'
-  },
-  {
-    label: 'Kezzeme festival'
-  },
-  {
-    label: 'Korisino'
-  },
-  {
-    label: 'Marriage'
-  },
-  {
-    label: 'Orthography workshop (2010)'
-  },
-  {
-    label: 'Orthography workshop (2016)'
-  },
-  {
-    label: 'Religion'
-  },
-  {
-    label: 'Rock art'
-  },
-  {
-    label: 'Scenery'
-  }
-]
-
 const galleries = [
   {
     name: 'Beer-making',
@@ -623,6 +575,10 @@ const galleries = [
     ]
   }
 ]
+
+const tabs = galleries.map((gallery) => ({
+  label: gallery.name
+}))
 
 const selectedGallery = ref<Gallery>(galleries[0])
 const selectedTab = ref<number>(0)
