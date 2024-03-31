@@ -594,13 +594,19 @@ const hideCaptions = ref(false)
 
 <template>
   <h1>Photo galleries</h1>
-  <div class="mb-4 flex items-center gap-8">
+  <div class="mb-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
     <h2>{{ selectedGallery.name }}</h2>
-    <div class="flex items-center gap-2 ml-auto">
-      <div>Hide captions</div>
-      <UToggle v-model="hideCaptions" title="Hide captions" />
+    <div class="flex sm:ml-auto gap-4">
+      <div class="flex items-center gap-2">
+        <div>Hide captions</div>
+        <UToggle v-model="hideCaptions" title="Hide captions" />
+      </div>
+      <UButton
+        class="ml-auto"
+        label="Change gallery"
+        @click="isSlideoverOpen = true"
+      />
     </div>
-    <UButton label="Change gallery" @click="isSlideoverOpen = true" />
   </div>
   <div v-html="selectedGallery.description" class="mb-4 text-lg max-w-xl"></div>
 
