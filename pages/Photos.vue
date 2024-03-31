@@ -629,7 +629,7 @@ const hideCaptions = ref(false)
         />
         <div
           v-show="!hideCaptions"
-          class="p-2 absolute left-0 top-0 w-full flex justify-center text-center bg-gray-400 opacity-80 rounded-t-lg"
+          class="p-2 absolute left-0 top-0 w-full flex justify-center text-center bg-gray-400 dark:bg-gray-800 opacity-80 rounded-t-lg"
         >
           {{ item.caption }}
         </div>
