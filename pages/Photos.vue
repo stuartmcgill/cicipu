@@ -615,7 +615,7 @@ const hideCaptions = ref(false)
   <UCarousel
     v-slot="{ item, index }"
     :items="selectedGallery.images"
-    :ui="{ item: 'basis-1/2' }"
+    :ui="{ item: 'basis-full lg:basis-1/2' }"
     arrows
     indicators
   >
