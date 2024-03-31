@@ -42,7 +42,10 @@ const tabs = [
     label: 'Marriage'
   },
   {
-    label: 'Orthography'
+    label: 'Orthography workshop (2010)'
+  },
+  {
+    label: 'Orthography workshop (2016)'
   },
   {
     label: 'Religion'
@@ -335,96 +338,288 @@ const galleries = [
   },
   {
     name: 'Korisino hill',
+    description: `<p>Korisino is the seat of the Wømø, the King of the Acipu. He lives at Kadaada, the highest point of the hill, about 500m in altitide and 200m above the valley. During much of the 19th and early 20th centuries the Acipu lived on the hills due to the threats posed by slavery and war. However over the last sixty years or so people have gradually moved down into the valley, and now only the King and his wife remain, along with the King's constant companion and advisor, the Mallu ('teacher'). The King is not supposed to speak in Hausa or ever leave the hill.</p>
+<p>Five festivals are held on Korisino each year, the most spectactular of which is the <a href="kezzeme.html">Kezzeme</a> held in March or April. Other than festival periods, the mountain villages are eerily empty, although the elderly may choose to move their when they believe they are about to die - in which case their families continue to care for them by making regular trips up the hill.</p>`,
     images: [
-      { src: '/img/gallery/korisino_01.jpg', caption: '' },
-      { src: '/img/gallery/korisino_02.jpg', caption: '' },
-      { src: '/img/gallery/korisino_03.jpg', caption: '' },
-      { src: '/img/gallery/korisino_04.jpg', caption: '' },
-      { src: '/img/gallery/korisino_05.jpg', caption: '' },
-      { src: '/img/gallery/korisino_06.jpg', caption: '' },
-      { src: '/img/gallery/korisino_07.jpg', caption: '' },
-      { src: '/img/gallery/korisino_08.jpg', caption: '' },
-      { src: '/img/gallery/korisino_09.jpg', caption: '' },
-      { src: '/img/gallery/korisino_10.jpg', caption: '' }
+      {
+        src: '/img/gallery/korisino_01.jpg',
+        caption: 'The King (Ddaa, also called Wan-Korisino)'
+      },
+      {
+        src: '/img/gallery/korisino_02.jpg',
+        caption: 'The king (right) and the Mallu, his senior advisor (left)'
+      },
+      {
+        src: '/img/gallery/korisino_03.jpg',
+        caption:
+          'Left to right: Nahuuce, Gizo, and Amaale. Even elders must remove hat, shoes, and shirt in the presence of the king.'
+      },
+      {
+        src: '/img/gallery/korisino_04.jpg',
+        caption: "Kadaada, the king's palace"
+      },
+      {
+        src: '/img/gallery/korisino_05.jpg',
+        caption:
+          'Many rocks on Korisino have strange pockmarks. Legend has it they are bulletholes made by enemies.'
+      },
+      {
+        src: '/img/gallery/korisino_06.jpg',
+        caption:
+          "View from Korisino. The boy is Tambaya, from the Mallu's (advisor) family."
+      },
+      {
+        src: '/img/gallery/korisino_07.jpg',
+        caption:
+          'Baobab tree on Korisino. The lines in the valley are rows of cut guineacorn.'
+      },
+      {
+        src: '/img/gallery/korisino_08.jpg',
+        caption:
+          'Pots in a burial ground on Korisino mountain. Pot burial is still practised.'
+      },
+      { src: '/img/gallery/korisino_09.jpg', caption: "The king's wife" },
+      {
+        src: '/img/gallery/korisino_10.jpg',
+        caption:
+          "The entrance to the king's guest hut where he receives visitors"
+      }
     ]
   },
   {
     name: 'Marriage',
+    description: 'Acipu marry young, usually as teenagers',
     images: [
-      { src: '/img/gallery/marriage_01.jpg', caption: '' },
-      { src: '/img/gallery/marriage_02.jpg', caption: '' },
-      { src: '/img/gallery/marriage_03.jpg', caption: '' },
-      { src: '/img/gallery/marriage_04.jpg', caption: '' },
-      { src: '/img/gallery/marriage_05.jpg', caption: '' },
-      { src: '/img/gallery/marriage_06.jpg', caption: '' },
-      { src: '/img/gallery/marriage_07.jpg', caption: '' },
-      { src: '/img/gallery/marriage_08.jpg', caption: '' },
-      { src: '/img/gallery/marriage_09.jpg', caption: '' },
-      { src: '/img/gallery/marriage_10.jpg', caption: '' },
-      { src: '/img/gallery/marriage_11.jpg', caption: '' }
+      {
+        src: '/img/gallery/marriage_01.jpg',
+        caption:
+          'Youth Stones, which Korisino youths must lift above their heads before marriage. Three large stones for boys, three lighter stones for girls.'
+      },
+      {
+        src: '/img/gallery/marriage_02.jpg',
+        caption:
+          'Girls soon to be married. These plastic necklaces are worn the year they are to be married.'
+      },
+      { src: '/img/gallery/marriage_03.jpg', caption: 'Shy newlywed' },
+      {
+        src: '/img/gallery/marriage_04.jpg',
+        caption: 'Dowry on display in Roogo village'
+      },
+      { src: '/img/gallery/marriage_05.jpg', caption: "Dowry in bride's hut" },
+      {
+        src: '/img/gallery/marriage_06.jpg',
+        caption: 'Fancy-dress priest during a wedding celebration'
+      },
+      {
+        src: '/img/gallery/marriage_07.jpg',
+        caption:
+          'Compound beating in Roogo village. In preparation for marriage, women and girls beat down the newly-built compound floor, in time to songs.'
+      },
+      {
+        src: '/img/gallery/marriage_08.jpg',
+        caption: 'Compound beating in Roogo village'
+      },
+      {
+        src: '/img/gallery/marriage_09.jpg',
+        caption:
+          "Ci'itani okoo karimai (marriage is sweet). Kka vvo, zza kkwa'a (my wife, man of the house). An early example of Cicipu writing."
+      },
+      {
+        src: '/img/gallery/marriage_10.jpg',
+        caption: 'Drummers (Dada Magajin Jayi) at the wedding of Dare Usman'
+      },
+      {
+        src: '/img/gallery/marriage_11.jpg',
+        caption: 'Dancing at the wedding of Dare Usman'
+      }
     ]
   },
   {
-    name: 'Orthography',
+    name: 'Orthography workshop (2010)',
+    description:
+      'A provisional writing system for Cicipu was agreed at a well-attended workshop in Sakaba in April 2010.',
     images: [
-      { src: '/img/gallery/orthography_01.jpg', caption: '' },
-      { src: '/img/gallery/orthography_02.jpg', caption: '' },
-      { src: '/img/gallery/orthography_03.jpg', caption: '' },
-      { src: '/img/gallery/orthography_04.jpg', caption: '' },
-      { src: '/img/gallery/orthography_05.jpg', caption: '' },
-      { src: '/img/gallery/orthography_06.jpg', caption: '' },
-      { src: '/img/gallery/orthography_07.jpg', caption: '' },
-      { src: '/img/gallery/orthography_08.jpg', caption: '' },
-      { src: '/img/gallery/orthography_09.jpg', caption: '' },
-      { src: '/img/gallery/orthography_10.jpg', caption: '' },
-      { src: '/img/gallery/orthography_11.jpg', caption: '' },
-      { src: '/img/gallery/orthography_12.jpg', caption: '' },
-      { src: '/img/gallery/orthography_13.jpg', caption: '' },
-      { src: '/img/gallery/orthography_14.jpg', caption: '' },
-      { src: '/img/gallery/orthography_15.jpg', caption: '' },
-      { src: '/img/gallery/orthography_16.jpg', caption: '' },
-      { src: '/img/gallery/orthography_17.jpg', caption: '' },
-      { src: '/img/gallery/orthography_18.jpg', caption: '' }
+      {
+        src: '/img/gallery/orthography_01.jpg',
+        caption:
+          'April is the hottest month of the year in Acipuland. With the temperature approaching forty degrees, a large mango tree was essential to the success of the meeting!'
+      },
+      {
+        src: '/img/gallery/orthography_02.jpg',
+        caption:
+          'Representatives came from six of the seven divisions of the Acipu people, with some travelling long distances to attend'
+      },
+      {
+        src: '/img/gallery/orthography_03.jpg',
+        caption: 'The Sarkinƙasa, a senior chief and the host for the workshop'
+      },
+      {
+        src: '/img/gallery/orthography_04.jpg',
+        caption:
+          "Special characters are needed to represent sounds that are not found in the world's major languages, such as the implosive ɓ"
+      },
+      {
+        src: '/img/gallery/orthography_05.jpg',
+        caption: 'The chiefs of the Acipu looking on'
+      },
+      {
+        src: '/img/gallery/orthography_06.jpg',
+        caption: 'The meeting was led by Stuart McGill and Sunday John'
+      },
+      {
+        src: '/img/gallery/orthography_07.jpg',
+        caption:
+          'Tone will be marked sparingly - with only one crucial grammatical distinction (indicative vs. subjunctive) indicated.'
+      }
+    ]
+  },
+  {
+    name: 'Orthography workshop (2016)',
+    description:
+      'A group of Bible translators, literacy workers, and other interested parties attended this 4-day workshop in Tungan Kaɗe from 11th-14th April 2016. Sixteen advanced principles were agreed for writing Cicipu.',
+    images: [
+      { src: '/img/gallery/orthography_08.jpg', caption: 'Suleiman Busa' },
+      {
+        src: '/img/gallery/orthography_09.jpg',
+        caption: 'Pastor Musa Bako from Tungan Kaɗe'
+      },
+      {
+        src: '/img/gallery/orthography_10.jpg',
+        caption: 'Nana James, Suleiman Busa, Mohammed Maburya, and Ishaya Audu'
+      },
+      { src: '/img/gallery/orthography_11.jpg', caption: 'Group discussions' },
+      { src: '/img/gallery/orthography_12.jpg', caption: 'Group discussions' },
+      {
+        src: '/img/gallery/orthography_13.jpg',
+        caption: 'Stuart McGill and Israel Wade looking on'
+      },
+      { src: '/img/gallery/orthography_14.jpg', caption: 'Amos Bako' },
+      {
+        src: '/img/gallery/orthography_15.jpg',
+        caption: 'Nana James presenting one of the agreed writing principles'
+      },
+      {
+        src: '/img/gallery/orthography_16.jpg',
+        caption: 'Omonor Wade presenting one of the agreed writing principles'
+      },
+      {
+        src: '/img/gallery/orthography_17.jpg',
+        caption: 'Pastor Musa Bako from Tungan Kaɗe'
+      },
+      {
+        src: '/img/gallery/orthography_18.jpg',
+        caption: 'Reflecting on the challenges of writing Cicipu!'
+      }
     ]
   },
   {
     name: 'Religion',
+    description: `<p>In the Korisino area most people over the age of about 50 were animist (in 2016). Younger people have mostly converted to Islam, with a small minority of Christians. The pictures here show various aspects of the Cicipu traditional religion.</p>
+      <p>The Okiiso hut pictured is a small mud structure with a grass roof devoted to the Okiiso (ancestral spirits). The surrounding stone piles are used in prayer and libation - each member of the village has their own stone. Both are sacred and must not be touched by outsiders, likewise the priest's hut.</p>`,
     images: [
-      { src: '/img/gallery/religion_01.jpg', caption: '' },
-      { src: '/img/gallery/religion_02.jpg', caption: '' },
-      { src: '/img/gallery/religion_03.jpg', caption: '' },
-      { src: '/img/gallery/religion_04.jpg', caption: '' },
-      { src: '/img/gallery/religion_05.jpg', caption: '' },
-      { src: '/img/gallery/religion_06.jpg', caption: '' },
-      { src: '/img/gallery/religion_07.jpg', caption: '' },
-      { src: '/img/gallery/religion_08.jpg', caption: '' },
-      { src: '/img/gallery/religion_09.jpg', caption: '' }
+      {
+        src: '/img/gallery/religion_01.jpg',
+        caption:
+          "The Magaaji (priest)'s hut (left), outside is the Okiiso (ancestral spirit) shelter and the ripizi (stone altar)"
+      },
+      {
+        src: '/img/gallery/religion_02.jpg',
+        caption: 'Okiiso (ancestral spirit) hut'
+      },
+      {
+        src: '/img/gallery/religion_03.jpg',
+        caption:
+          'Okiiso shelter on Ukula mountain. Outsiders are forbidden to enter'
+      },
+      {
+        src: '/img/gallery/religion_04.jpg',
+        caption: 'Inside the Okiiso shelter on Ukula mountain'
+      },
+      {
+        src: '/img/gallery/religion_05.jpg',
+        caption: 'Inside the Okiiso shelter on Ukula mountain'
+      },
+      {
+        src: '/img/gallery/religion_06.jpg',
+        caption:
+          'Altar on Ukula mountain. Chickens are sacrificed and eaten here'
+      },
+      {
+        src: '/img/gallery/religion_07.jpg',
+        caption: 'Broken sacrificial pots on Ukula mountain'
+      },
+      {
+        src: '/img/gallery/religion_08.jpg',
+        caption:
+          "Rukø̃'ø̃ crocodile pond on Korisino. The crocodiles are sacred and must not be disturbed."
+      },
+      {
+        src: '/img/gallery/religion_09.jpg',
+        caption:
+          'Dogs (as well as  chickens and goats) are sacrificed to the Okiiso. This dog jawbone was placed near Kadisa village, at a gap in the fortified wall surrounding Korisino.'
+      }
     ]
   },
   {
     name: 'Rock art',
+    description:
+      'The following mysterious patterns are carved onto a rock on Korisino hill. If you can shed any light please get in touch!',
     images: [
-      { src: '/img/gallery/rockart_01.jpg', caption: '' },
-      { src: '/img/gallery/rockart_02.jpg', caption: '' },
-      { src: '/img/gallery/rockart_03.jpg', caption: '' },
-      { src: '/img/gallery/rockart_04.jpg', caption: '' },
-      { src: '/img/gallery/rockart_05.jpg', caption: '' }
+      { src: '/img/gallery/rockart_01.jpg', caption: 'Carvings near Mattaari' },
+      { src: '/img/gallery/rockart_02.jpg', caption: 'In detail' },
+      { src: '/img/gallery/rockart_03.jpg', caption: 'Is this a lizard?' },
+      {
+        src: '/img/gallery/rockart_04.jpg',
+        caption: 'With leaf pigment to show the carvings better'
+      },
+      {
+        src: '/img/gallery/rockart_05.jpg',
+        caption:
+          'With leaf pigment to show the carvings better (alternate view)'
+      }
     ]
   },
   {
     name: 'Scenery',
     images: [
-      { src: '/img/gallery/scenery_01.jpg', caption: '' },
-      { src: '/img/gallery/scenery_02.jpg', caption: '' },
-      { src: '/img/gallery/scenery_03.jpg', caption: '' },
-      { src: '/img/gallery/scenery_04.jpg', caption: '' },
-      { src: '/img/gallery/scenery_05.jpg', caption: '' },
-      { src: '/img/gallery/scenery_06.jpg', caption: '' },
-      { src: '/img/gallery/scenery_07.jpg', caption: '' },
-      { src: '/img/gallery/scenery_08.jpg', caption: '' },
-      { src: '/img/gallery/scenery_09.jpg', caption: '' },
-      { src: '/img/gallery/scenery_10.jpg', caption: '' },
-      { src: '/img/gallery/scenery_11.jpg', caption: '' }
+      {
+        src: '/img/gallery/scenery_01.jpg',
+        caption: 'Cicipu hills, with Korisino on the left'
+      },
+      {
+        src: '/img/gallery/scenery_02.jpg',
+        caption: 'View from Rukuntu hill in the rainy season'
+      },
+      {
+        src: '/img/gallery/scenery_03.jpg',
+        caption:
+          "Standing stone near Mattaari on Korisino, said to look like a cock's comb"
+      },
+      {
+        src: '/img/gallery/scenery_04.jpg',
+        caption: 'Quiet compound in Maguji village on Korisino'
+      },
+      {
+        src: '/img/gallery/scenery_05.jpg',
+        caption:
+          'Guest hut on Korisino. The design allows for a cooling cross-breeze'
+      },
+      {
+        src: '/img/gallery/scenery_06.jpg',
+        caption:
+          "Makuku River in the rainy season. The main 'road' to Acipuland from the outside."
+      },
+      {
+        src: '/img/gallery/scenery_07.jpg',
+        caption: 'Baobab tree on Korisino'
+      },
+      { src: '/img/gallery/scenery_08.jpg', caption: 'Deleb palm on Korisino' },
+      { src: '/img/gallery/scenery_09.jpg', caption: 'Flowers on Korisino' },
+      { src: '/img/gallery/scenery_10.jpg', caption: 'Flowers on Korisino' },
+      {
+        src: '/img/gallery/scenery_11.jpg',
+        caption: 'Boulder near Tizeɓi village on Korisino (with Musa Ɗanjuma)'
+      }
     ]
   }
 ]
@@ -446,7 +641,7 @@ const isSlideoverOpen = ref(true)
     <h2>{{ selectedGallery.name }}</h2>
     <UButton label="Change gallery" @click="isSlideoverOpen = true" />
   </div>
-  <div v-html="selectedGallery.description" class="mb-4 text-lg"></div>
+  <div v-html="selectedGallery.description" class="mb-4 text-lg max-w-xl"></div>
 
   <USlideover v-model="isSlideoverOpen">
     <UTabs
@@ -459,7 +654,7 @@ const isSlideoverOpen = ref(true)
   <UCarousel
     v-slot="{ item, index }"
     :items="selectedGallery.images"
-    :ui="{ item: 'basis-full' }"
+    :ui="{ item: 'basis-1/2' }"
     class="rounded-lg max-h-[100px]"
     arrows
     indicators
