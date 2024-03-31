@@ -291,7 +291,7 @@ const galleries = [
   {
     name: 'Korisino hill',
     description: `<p>Korisino is the seat of the Wømø, the King of the Acipu. He lives at Kadaada, the highest point of the hill, about 500m in altitide and 200m above the valley. During much of the 19th and early 20th centuries the Acipu lived on the hills due to the threats posed by slavery and war. However over the last sixty years or so people have gradually moved down into the valley, and now only the King and his wife remain, along with the King's constant companion and advisor, the Mallu ('teacher'). The King is not supposed to speak in Hausa or ever leave the hill.</p>
-<p>Five festivals are held on Korisino each year, the most spectactular of which is the <a href="kezzeme.html">Kezzeme</a> held in March or April. Other than festival periods, the mountain villages are eerily empty, although the elderly may choose to move their when they believe they are about to die - in which case their families continue to care for them by making regular trips up the hill.</p>`,
+<p>Five festivals are held on Korisino each year, the most spectactular of which is the Kezzeme held in March or April. Other than festival periods, the mountain villages are eerily empty, although the elderly may choose to move their when they believe they are about to die - in which case their families continue to care for them by making regular trips up the hill.</p>`,
     images: [
       {
         src: '/img/gallery/korisino_01.jpg',
@@ -589,12 +589,17 @@ const onTabChange = (index: number) => {
 }
 
 const isSlideoverOpen = ref(true)
+const hideCaptions = ref(false)
 </script>
 
 <template>
   <h1>Photo galleries</h1>
-  <div class="mb-4 flex items-center justify-between">
+  <div class="mb-4 flex items-center gap-8">
     <h2>{{ selectedGallery.name }}</h2>
+    <div class="flex items-center gap-2 ml-auto">
+      <div>Hide captions</div>
+      <UToggle v-model="hideCaptions" title="Hide captions" />
+    </div>
     <UButton label="Change gallery" @click="isSlideoverOpen = true" />
   </div>
   <div v-html="selectedGallery.description" class="mb-4 text-lg max-w-xl"></div>
@@ -611,15 +616,24 @@ const isSlideoverOpen = ref(true)
     v-slot="{ item, index }"
     :items="selectedGallery.images"
     :ui="{ item: 'basis-1/2' }"
-    class="rounded-lg max-h-[100px]"
     arrows
     indicators
   >
-    <div class="text-center mx-auto">
-      <em
-        ><span>{{ item.caption }}</span></em
-      >
-      <img :src="item.src" class="" draggable="false" />
+    <div class="mx-auto p-2">
+      <div class="relative">
+        <img
+          :src="item.src"
+          draggable="false"
+          :alt="item.caption"
+          class="rounded-lg"
+        />
+        <div
+          v-show="!hideCaptions"
+          class="p-2 absolute left-0 top-0 w-full flex justify-center text-center bg-gray-400 opacity-80 rounded-t-lg"
+        >
+          {{ item.caption }}
+        </div>
+      </div>
     </div>
   </UCarousel>
 </template>
