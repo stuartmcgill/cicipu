@@ -23,3 +23,9 @@
         @apply mb-2
     }
 }
+
+@layer components {
+    .literacy-card {
+        @apply flex flex-col rounded-lg border border-primary-500 hover:bg-primary-100 dark:hover:bg-primary-800
+    }
+}

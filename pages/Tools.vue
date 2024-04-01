@@ -19,17 +19,17 @@
       </p>
     </div>
     <div class="flex flex-col gap-4">
-      <ExternalLink
+      <ToolsLink
         label="Documentation"
         link="/keyboards/cicipu_keyboard_documentation_v1.2.pdf"
         icon="i-heroicons-document-text"
       />
-      <ExternalLink
+      <ToolsLink
         label="UK keyboard"
         link="/keyboards/cipu_uk.zip"
         icon="i-twemoji-flag-united-kingdom"
       />
-      <ExternalLink
+      <ToolsLink
         label="US keyboard"
         link="/keyboards/cipu_us.zip"
         icon="i-twemoji-flag-united-states"
