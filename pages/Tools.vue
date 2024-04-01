@@ -19,31 +19,21 @@
       </p>
     </div>
     <div class="flex flex-col gap-4">
-      <NuxtLink
-        to="/keyboards/cicipu_keyboard_documentation_v1.2.pdf"
-        external
-        target="_blank"
-        class="flex items-center gap-4"
-      >
-        <UIcon name="i-heroicons-document-text"></UIcon>
-        <div>Documentation</div>
-      </NuxtLink>
-      <NuxtLink
-        to="/keyboards/cipu_uk.zip"
-        class="flex items-center gap-4"
-        external
-      >
-        <UIcon name="i-twemoji-flag-united-kingdom"></UIcon>
-        <div>UK keyboard</div>
-      </NuxtLink>
-      <NuxtLink
-        to="/keyboards/cipu_us.zip"
-        external
-        class="flex items-center gap-4"
-      >
-        <UIcon name="i-twemoji-flag-united-states"></UIcon>
-        <div>US keyboard</div>
-      </NuxtLink>
+      <ExternalLink
+        label="Documentation"
+        link="/keyboards/cicipu_keyboard_documentation_v1.2.pdf"
+        icon="i-heroicons-document-text"
+      />
+      <ExternalLink
+        label="UK keyboard"
+        link="/keyboards/cipu_uk.zip"
+        icon="i-twemoji-flag-united-kingdom"
+      />
+      <ExternalLink
+        label="US keyboard"
+        link="/keyboards/cipu_us.zip"
+        icon="i-twemoji-flag-united-states"
+      />
     </div>
   </div>
 </template>
