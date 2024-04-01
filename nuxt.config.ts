@@ -18,5 +18,8 @@ export default defineNuxtConfig({
       'DM+Sans': true,
       'Space+Grotesk': true
     }
+  },
+  ui: {
+    icons: ['heroicons', 'twemoji']
   }
 })

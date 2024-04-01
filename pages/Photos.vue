@@ -588,7 +588,7 @@ const onTabChange = (index: number) => {
   isSlideoverOpen.value = false
 }
 
-const isSlideoverOpen = ref(true)
+const isSlideoverOpen = ref(false)
 const hideCaptions = ref(false)
 </script>
 
@@ -603,7 +603,7 @@ const hideCaptions = ref(false)
       </div>
       <UButton
         class="ml-auto"
-        label="Change gallery"
+        label="Another gallery"
         @click="isSlideoverOpen = true"
       />
     </div>
