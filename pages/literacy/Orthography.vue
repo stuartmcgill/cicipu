@@ -29,14 +29,17 @@
         </p>
       </div>
       <div class="flex flex-col gap-8">
-        <div class="flex flex-col rounded-lg border border-primary-500 group">
+        <div
+          class="flex flex-col rounded-lg border border-primary-500 group"
+          id="workshop1"
+        >
           <NuxtImg
             src="/img/ortho_proposal1.jpg"
             class="rounded-t-lg"
           ></NuxtImg>
           <UDivider></UDivider>
           <div class="p-4 flex flex-col gap-4">
-            <div>Initial orthography proposal</div>
+            <div>Initial orthography proposal (2010)</div>
             <div class="flex gap-4">
               <NuxtLink
                 to="/literacy/2010-03-13_orthography_proposal_v20.pdf"
@@ -52,24 +55,33 @@
               >
                 <UButton color="cyan">Hausa</UButton>
               </NuxtLink>
-              <NuxtLink to="/photos" class="ml-auto">
+              <NuxtLink
+                to="/photos#Orthography workshop (2010)"
+                class="ml-auto"
+              >
                 <UButton>Workshop photos</UButton>
               </NuxtLink>
             </div>
           </div>
         </div>
         <NuxtLink
-          to="/literacy/2010-03-13_orthography_proposal_v20.pdf"
+          to="/literacy/orthography_principles_2016-04-15.pdf"
           target="_blank"
           external
           class="literacy-card"
+          id="workshop2"
         >
           <NuxtImg
-            src="/img/ortho_proposal1.jpg"
+            src="/img/ortho_proposal2.jpg"
             class="rounded-t-lg"
           ></NuxtImg>
           <UDivider></UDivider>
-          <div class="p-4">Initial orthography proposal</div>
+          <div class="p-2 flex items-center">
+            <div class="p-4">Additional orthographic principles (2016)</div>
+            <NuxtLink to="/photos#Orthography workshop (2016)" class="ml-auto">
+              <UButton>Workshop photos</UButton>
+            </NuxtLink>
+          </div>
         </NuxtLink>
       </div>
     </div>

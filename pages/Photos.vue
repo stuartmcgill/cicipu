@@ -580,8 +580,14 @@ const tabs = galleries.map((gallery) => ({
   label: gallery.name
 }))
 
-const selectedGallery = ref<Gallery>(galleries[0])
-const selectedTab = ref<number>(0)
+// Set the initial gallery/tab if supplied in the route
+const requestedGallery = useRoute().hash.substring(1)
+const selectedGallery = ref<Gallery>(
+  galleries.find((gallery) => gallery.name === requestedGallery) || galleries[0]
+)
+const selectedTab = ref<number>(
+  tabs.findIndex((tab) => tab.label === requestedGallery) || 0
+)
 
 const onTabChange = (index: number) => {
   selectedGallery.value = galleries[index]
