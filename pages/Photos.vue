@@ -593,53 +593,58 @@ const hideCaptions = ref(false)
 </script>
 
 <template>
-  <h1>Photo galleries</h1>
-  <div class="mb-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-    <h2>{{ selectedGallery.name }}</h2>
-    <div class="flex sm:ml-auto gap-4">
-      <div class="flex items-center gap-2">
-        <div>Hide captions</div>
-        <UToggle v-model="hideCaptions" title="Hide captions" />
-      </div>
-      <UButton
-        class="ml-auto"
-        label="Another gallery"
-        @click="isSlideoverOpen = true"
-      />
-    </div>
-  </div>
-  <div v-html="selectedGallery.description" class="mb-4 text-lg max-w-xl"></div>
-
-  <USlideover v-model="isSlideoverOpen">
-    <UTabs
-      :items="tabs"
-      v-model="selectedTab"
-      orientation="vertical"
-      @change="onTabChange"
-    />
-  </USlideover>
-  <UCarousel
-    v-slot="{ item, index }"
-    :items="selectedGallery.images"
-    :ui="{ item: 'basis-full lg:basis-1/2' }"
-    arrows
-    indicators
-  >
-    <div class="mx-auto p-2">
-      <div class="relative">
-        <img
-          :src="item.src"
-          draggable="false"
-          :alt="item.caption"
-          class="rounded-lg"
+  <div>
+    <h1>Photo galleries</h1>
+    <div class="mb-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+      <h2>{{ selectedGallery.name }}</h2>
+      <div class="flex sm:ml-auto gap-4">
+        <div class="flex items-center gap-2">
+          <div>Hide captions</div>
+          <UToggle v-model="hideCaptions" title="Hide captions" />
+        </div>
+        <UButton
+          class="ml-auto"
+          label="Another gallery"
+          @click="isSlideoverOpen = true"
         />
-        <div
-          v-show="!hideCaptions"
-          class="p-2 absolute left-0 top-0 w-full flex justify-center text-center bg-gray-400 dark:bg-gray-800 opacity-80 rounded-t-lg"
-        >
-          {{ item.caption }}
+      </div>
+    </div>
+    <div
+      v-html="selectedGallery.description"
+      class="mb-4 text-lg max-w-xl"
+    ></div>
+
+    <USlideover v-model="isSlideoverOpen">
+      <UTabs
+        :items="tabs"
+        v-model="selectedTab"
+        orientation="vertical"
+        @change="onTabChange"
+      />
+    </USlideover>
+    <UCarousel
+      v-slot="{ item, index }"
+      :items="selectedGallery.images"
+      :ui="{ item: 'basis-full lg:basis-1/2' }"
+      arrows
+      indicators
+    >
+      <div class="mx-auto p-2">
+        <div class="relative">
+          <img
+            :src="item.src"
+            draggable="false"
+            :alt="item.caption"
+            class="rounded-lg"
+          />
+          <div
+            v-show="!hideCaptions"
+            class="p-2 absolute left-0 top-0 w-full flex justify-center text-center bg-gray-400 dark:bg-gray-800 opacity-80 rounded-t-lg"
+          >
+            {{ item.caption }}
+          </div>
         </div>
       </div>
-    </div>
-  </UCarousel>
+    </UCarousel>
+  </div>
 </template>
