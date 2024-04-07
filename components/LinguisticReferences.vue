@@ -3,8 +3,7 @@ const sections = [
   {
     label: 'Published works',
     size: 'xl',
-    class:
-      'font-bold font-heading text-primary-800 bg-primary-300 hover:bg-primary-200 dark:text-primary-400 dark:bg-primary-950 dark:hover:bg-primary-800',
+    class: 'font-bold font-heading text-primary-600',
     icon: 'i-heroicons-book-open',
     defaultOpen: true,
     slot: 'published'
@@ -12,24 +11,21 @@ const sections = [
   {
     label: 'Unpublished materials',
     size: 'xl',
-    class:
-      'font-bold font-heading text-primary-800 bg-primary-300 hover:bg-primary-200 dark:text-primary-400 dark:bg-primary-950 dark:hover:bg-primary-800',
+    class: 'font-bold font-heading text-primary-600',
     icon: 'i-heroicons-pencil-square',
     slot: 'unpublished'
   },
   {
     label: 'General linguistics publications mentioning Cicipu',
     size: 'xl',
-    class:
-      'font-bold font-heading text-primary-800 bg-primary-300 hover:bg-primary-200 dark:text-primary-400 dark:bg-primary-950 dark:hover:bg-primary-800',
+    class: 'font-bold font-heading text-primary-600',
     icon: 'i-heroicons-document-plus',
     slot: 'mentions-cicipu'
   },
   {
     label: 'General linguistics resources on Kainji languages',
     size: 'xl',
-    class:
-      'font-bold font-heading text-primary-800 bg-primary-300 hover:bg-primary-200 dark:text-primary-400 dark:bg-primary-950 dark:hover:bg-primary-800',
+    class: 'font-bold font-heading text-primary-600',
     icon: 'i-heroicons-arrow-top-right-on-square-solid',
     slot: 'kainji'
   }
@@ -151,8 +147,12 @@ const sections = [
         <ul id="unpublished" class="references">
           <li>
             McGill, Stuart and Markus Yabani. 2016.
-            <cite>Cicipu dictionary</cite>.
-            <a href="dictionary.html">www.cicipu.org/dictionary.html</a>.
+            <NuxtLink
+              to="https://app.box.com/s/t6puwd3ff4d6c3cjmteguc2hwutm69gz"
+              external
+              target="_blank"
+              >Cicipu dictionary</NuxtLink
+            >.
           </li>
           <li>
             McGill, Stuart. 2011.
