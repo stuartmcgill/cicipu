@@ -1,7 +1,25 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const links = [
+  {
+    label: 'Home',
+    icon: 'i-heroicons-home',
+    to: '/'
+  },
+  {
+    label: 'Literacy',
+    icon: 'i-heroicons-pencil-solid',
+    to: '/literacy'
+  },
+  {
+    label: 'Orthography',
+    icon: 'i-twemoji-ab-button-blood-type'
+  }
+]
+</script>
 
 <template>
   <div>
+    <UBreadcrumb :links="links" class="mb-8" />
     <h1>Orthography</h1>
     <div class="grid md:grid-cols-2 gap-4 md:gap-8">
       <div>

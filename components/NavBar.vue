@@ -21,9 +21,9 @@ const links = [
     to: '/dictionary'
   },
   {
-    label: 'Linguistics',
+    label: 'Academic',
     icon: 'i-heroicons-academic-cap-solid',
-    to: '/linguistics'
+    to: '/academic'
   },
   {
     label: 'Photos',
