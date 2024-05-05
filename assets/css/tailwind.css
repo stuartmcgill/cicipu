@@ -3,37 +3,41 @@
 @tailwind utilities;
 
 @layer base {
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-heading font-bold
-    }
+  h1, h2, h3, h4, h5, h6 {
+      @apply font-heading font-bold
+  }
 
-    h1 {
-        @apply text-5xl mb-8
-    }
+  h1 {
+      @apply text-5xl mb-8
+  }
 
-    h2 {
-        @apply text-3xl mt-8 mb-4
-    }
+  h2 {
+      @apply text-3xl mt-8 mb-4
+  }
 
-    h3 {
-        @apply text-lg
-    }
+  h3 {
+      @apply text-lg
+  }
 
-    p {
-        @apply mb-3
-    }
+  p {
+      @apply mb-3
+  }
+
+  /*a {*/
+  /*  @apply text-primary-600 visited:text-primary-700 dark:text-primary-600 dark:visited:text-primary-700 hover:text-primary-400 dark:hover:text-primary-600;*/
+  /*}*/
 }
 
 @layer components {
-    .literacy-card {
-        @apply flex flex-col rounded-lg border border-primary-500 hover:bg-primary-100 dark:hover:bg-primary-800
-    }
+  .literacy-card {
+      @apply flex flex-col rounded-lg border border-primary-500 hover:bg-primary-100 dark:hover:bg-primary-800
+  }
 
-    ul.references {
-        @apply mt-4;
-    }
+  ul.references {
+      @apply mt-4;
+  }
 
-    ul.references li {
-        @apply mt-2 ml-8 -indent-8;
-    }
+  ul.references li {
+      @apply mt-2 ml-8 -indent-8;
+  }
 }

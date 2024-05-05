@@ -38,60 +38,47 @@ const sections = [
       <p>
         The most comprehensive grammatical resource for Cicipu is Stuart
         McGill's PhD thesis
-        <NuxtLink
+        <TextLink
           to="https://app.box.com/s/t4q302sv8g75zhoua930o55wua4a4t7e"
-          external
+          :external="true"
           target="_blank"
-          >Gender and person agreement in Cicipu discourse</NuxtLink
+          >Gender and person agreement in Cicipu discourse</TextLink
         >. This contains a sketch phonology and grammar as well as details of
         the gender (i.e. noun class) and person agreement systems.
       </p>
       <p>
         The
-        <NuxtLink
+        <TextLink
           to="https://app.box.com/s/t6puwd3ff4d6c3cjmteguc2hwutm69gz"
           external
           target="_blank"
-          >Cicipu dictionary</NuxtLink
+          >Cicipu dictionary</TextLink
         >
         (edited by Stuart McGill and Markus Yabani) contains glosses and example
         sentences in both English and Hausa.
       </p>
       <p>
         Additional
-        <NuxtLink to="#published">published</NuxtLink> and
-        <NuxtLink to="#unpublished">unpublished</NuxtLink> works on Cicipu are
+        <TextLink to="#published">published</TextLink> and
+        <TextLink to="#unpublished">unpublished</TextLink> works on Cicipu are
         listed below, along with more general works that either
-        <NuxtLink to="#mentions-cicipu">mention Cicipu</NuxtLink> or else deal
-        with <NuxtLink to="#kainji">Kainji</NuxtLink> languages in general.
+        <TextLink to="#mentions-cicipu">mention Cicipu</TextLink> or else deal
+        with <TextLink to="#kainji">Kainji</TextLink> languages in general.
       </p>
     </div>
 
-    <UAccordion
-      :items="sections"
-      :multiple="true"
-      :ui="{
-        item: {
-          size: '',
-          color: '',
-          padding: 'pl-4 pb-6'
-        },
-        default: {
-          variant: 'soft'
-        }
-      }"
-    >
+    <UAccordion :items="sections" :multiple="true">
       <template #published>
         <ul id="published" class="references">
           <li>
             McGill, Stuart. 2014. Cicipu.
             <cite>Journal of the International Phonetic Association</cite>,
             44(3), 303-318.
-            <NuxtLink
+            <TextLink
               to="http://dx.doi.org/10.1017/S002510031400022X"
               external
               target="_blank"
-              >http://dx.doi.org/10.1017/S002510031400022X.</NuxtLink
+              >http://dx.doi.org/10.1017/S002510031400022X.</TextLink
             >
           </li>
           <li>
@@ -99,11 +86,11 @@ const sections = [
             a comparative perspective. In Roger M. Blench &amp; Stuart McGill
             (eds.)
             <cite
-              ><NuxtLink
+              ><TextLink
                 to="https://www.koeppe.de/titel_advances-in-minority-language-research-in-nigeria-vol-i"
                 external
                 target="_blank"
-                >Advances in minority language research in Nigeria</NuxtLink
+                >Advances in minority language research in Nigeria</TextLink
               ></cite
             >
             vol. 1 (African languages monographs 5), 273-323. Köln: Rüdiger
@@ -111,33 +98,33 @@ const sections = [
           </li>
           <li>
             McGill, Stuart and Roger M. Blench. 2012.
-            <NuxtLink
+            <TextLink
               to="http://www.elpublishing.org/docs/1/11/ldd11_05.pdf"
               external
               target="_blank"
               >Documentation, development and ideology in the northwestern
-              Kainji languages</NuxtLink
+              Kainji languages</TextLink
             >. In Peter K. Austin &amp; Stuart McGill (eds.)
             <cite>Language Documentation and Description</cite> 11, 90-135.
           </li>
           <li>
             McGill, Stuart. 2011.
-            <NuxtLink
+            <TextLink
               to="http://www.elpublishing.org/docs/1/09/ldd09_06.pdf"
               external
               target="_blank"
               >Aspects of deixis in Cicipu: evidence from real-time video
-              commentary</NuxtLink
+              commentary</TextLink
             >. In Julia Sallbank (ed.)
             <cite>Language Documentation and Description</cite> 9, 121-168.
           </li>
           <li>
             McGill, Stuart. 2007.
-            <NuxtLink
+            <TextLink
               to="https://journalofwestafricanlanguages.org/index.php/downloads/download/100-volume-34-2/466-the-cicipu-noun-class-system"
               external
               target="_blank"
-              >The Cicipu noun class system.</NuxtLink
+              >The Cicipu noun class system.</TextLink
             >
             <cite>Journal of West African Languages</cite> 34(2), 51-90.
           </li>
@@ -147,53 +134,53 @@ const sections = [
         <ul id="unpublished" class="references">
           <li>
             McGill, Stuart and Markus Yabani. 2016.
-            <NuxtLink
+            <TextLink
               to="https://app.box.com/s/t6puwd3ff4d6c3cjmteguc2hwutm69gz"
               external
               target="_blank"
-              >Cicipu dictionary</NuxtLink
+              >Cicipu dictionary</TextLink
             >.
           </li>
           <li>
             McGill, Stuart. 2011.
-            <NuxtLink
+            <TextLink
               to="https://app.box.com/s/jf2vnravqav902w7xd8rwmkm01b4vz8y"
               external
               target="_blank"
-              >Vowel harmony, transparency, and opacity in Cicipu</NuxtLink
+              >Vowel harmony, transparency, and opacity in Cicipu</TextLink
             >. Paper presented at the (West) African Phonology Day, SOAS, April
             2011.
           </li>
           <li>
             McGill, Stuart. 2009.
-            <NuxtLink
+            <TextLink
               to="https://app.box.com/s/cb5yljg1x8zc7b098iuem8s1j0fdsodo"
               external
               target="_blank"
-              >The genetic classification of Cicipu</NuxtLink
+              >The genetic classification of Cicipu</TextLink
             >. Unpublished paper.
           </li>
           <li>
             McGill, Stuart. 2009.
-            <NuxtLink
+            <TextLink
               to="https://app.box.com/s/t4q302sv8g75zhoua930o55wua4a4t7e"
               external
               target="_blank"
               ><cite
                 >Gender and person agreement in Cicipu discourse</cite
-              ></NuxtLink
+              ></TextLink
             >. PhD thesis, School of Oriental and African Studies.
           </li>
           <li>
             Dettweiler, Stephen H. &amp; Sonia G. Dettweiler. 2002.
-            <NuxtLink
+            <TextLink
               to="https://www.sil.org/resources/publications/entry/9215"
               external
               target="_blank"
               ><cite
                 >Sociolinguistic survey (level one) of the Kamuku language
                 cluster</cite
-              ></NuxtLink
+              ></TextLink
             >. Electronic manuscript.
           </li>
         </ul>
@@ -203,11 +190,11 @@ const sections = [
           <li>
             Crozier, David H. &amp; Roger M. Blench. 1992.
             <cite>An Index of Nigerian Languages</cite>. 2nd edition. Dallas:
-            SIL [<NuxtLink
+            SIL [<TextLink
               to="https://rogerblench.info/Language/Africa/Nigeria/Atlas%20of%20Nigerian%20Languages%202020.pdf"
               external
               target="_blank"
-              >2020 edition</NuxtLink
+              >2020 edition</TextLink
             >
             is online].
           </li>
@@ -221,7 +208,7 @@ const sections = [
             Blench, Roger. M. 1988.
             <cite>The Basa-Kamuku languages</cite>. Paper for the 18th
             Colloquium on African Languages, Leiden [superseded by
-            <NuxtLink to="#kainji-overview" external>Blench n.d. c.</NuxtLink>]
+            <TextLink to="#kainji-overview" external>Blench n.d. c.</TextLink>]
           </li>
           <li>
             Westermann, Diedrich &amp; M. Bryan. 1952.
@@ -240,24 +227,24 @@ const sections = [
           <p>
             Most of these links are to external websites, in particular the SIL
             website and
-            <NuxtLink to="http://www.rogerblench.info" external
-              >Roger Blench's</NuxtLink
+            <TextLink to="http://www.rogerblench.info" external
+              >Roger Blench's</TextLink
             >
             - the latter especially for a more comprehensive
-            <NuxtLink
+            <TextLink
               to="http://www.rogerblench.info/Language/Niger-Congo/BC/Kainji/General/Kainji%20language%20overview.pdf"
               external
-              >bibliography</NuxtLink
+              >bibliography</TextLink
             >
             on Kainji languages.
           </p>
           <p>
             See also Becky Paterson's huge
-            <NuxtLink
+            <TextLink
               to="https://www.zotero.org/groups/2548758/nw_kainji_bibliography/library"
               external
               target="_blank"
-              >Kainji bibliography</NuxtLink
+              >Kainji bibliography</TextLink
             >, a collection of general resources linked to the Kainji language
             area (linguistic and non-linguistic).
           </p>
@@ -271,25 +258,25 @@ const sections = [
           </li>
           <li>
             Blench, Roger. M. 1991.
-            <NuxtLink
+            <TextLink
               to="http://www.rogerblench.info/Language/Niger-Congo/BC/Kainji/Basa/Basa%20Dictionary%202019%20complete.pdf"
               external
               target="_blank"
               ><cite
                 >Dictionary of the language of the Bas(s)a people</cite
-              ></NuxtLink
+              ></TextLink
             >. Electronic manuscript.
           </li>
           <li>
             Blench, Roger. M. 2007.
-            <NuxtLink
+            <TextLink
               to="http://www.rogerblench.info/Language/Niger-Congo/BC/Kainji/Kambari/Tsuvadi/Tsuvadi%20wordlist%20composite.pdf"
               external
               target="_blank"
               ><cite
                 >A sketch of the phonology and an extended wordlist of
                 TsuVa&#599;i, a Kambari language of Western Nigeria</cite
-              ></NuxtLink
+              ></TextLink
             >. Electronic manuscript.
           </li>
           <li>
@@ -305,26 +292,26 @@ const sections = [
           <li>
             <div id="kainji-overview">
               Blench, Roger. M. n.d. c.
-              <NuxtLink
+              <TextLink
                 to="http://www.rogerblench.info/Language/Niger-Congo/BC/Kainji/General/Kainji%20language%20overview.pdf"
                 external
                 target="_blank"
                 ><cite
                   >The Kainji languages of northwestern Nigeria.</cite
-                ></NuxtLink
+                ></TextLink
               >
               Electronic manuscript.
             </div>
           </li>
           <li>
             Blench, Roger M. &amp; McGill, Stuart. 2012.
-            <NuxtLink
+            <TextLink
               to="https://www.koeppe.de/titel_advances-in-minority-language-research-in-nigeria-vol-i"
               external
               target="_blank"
               ><cite
                 >Advances in minority language research in Nigeria</cite
-              ></NuxtLink
+              ></TextLink
             >
             vol. 1 (African languages monographs 5). Köln: Rüdiger Köppe.
           </li>
@@ -346,11 +333,11 @@ const sections = [
           <li>
             Crozier, David H. &amp; Roger M. Blench. 1992.
             <cite>An Index of Nigerian Languages</cite>. 2nd edition. Dallas:
-            SIL [<NuxtLink
+            SIL [<TextLink
               to="https://rogerblench.info/Language/Africa/Nigeria/Atlas%20of%20Nigerian%20Languages%202020.pdf"
               external
               target="_blank"
-              >2020 edition</NuxtLink
+              >2020 edition</TextLink
             >
             is online].
           </li>
@@ -367,46 +354,46 @@ const sections = [
           <li>
             Dettweiler, Stephen H. &amp; Sonia G. Dettweiler. 2002.
             <cite
-              ><NuxtLink
+              ><TextLink
                 to="https://www.sil.org/resources/publications/entry/9113"
                 external
                 target="_blank"
                 >Sociolinguistic survey (level one) of the Pongu
-                people</NuxtLink
+                people</TextLink
               ></cite
             >. Electronic manuscript.
           </li>
           <li>
             Dettweiler, Stephen H. &amp; Sonia G. Dettweiler. 2002.
             <cite
-              ><NuxtLink
+              ><TextLink
                 to="https://www.sil.org/resources/archives/9131"
                 external
                 target="_blank"
                 >Sociolinguistic survey (level one) of the Reshe
-                people</NuxtLink
+                people</TextLink
               ></cite
             >. Electronic manuscript.
           </li>
           <li>
             Dettweiler, Stephen H. &amp; Sonia G. Dettweiler. 2003.
             <cite
-              ><NuxtLink
+              ><TextLink
                 to="https://www.sil.org/resources/publications/entry/9129"
                 external
                 target="_blank"
-                >Sociolinguistic survey of the Duka (Hun-Saare) people</NuxtLink
+                >Sociolinguistic survey of the Duka (Hun-Saare) people</TextLink
               ></cite
             >. Electronic manuscript.
           </li>
           <li>
             Dettweiler, Stephen H. &amp; Sonia G. Dettweiler. 2005.
             <cite
-              ><NuxtLink
+              ><TextLink
                 to="https://www.sil.org/resources/publications/entry/9161"
                 external
                 target="_blank"
-                >Sociolinguistic survey of the Lela people</NuxtLink
+                >Sociolinguistic survey of the Lela people</TextLink
               ></cite
             >. Electronic manuscript.
           </li>
@@ -459,25 +446,25 @@ const sections = [
           </li>
           <li>
             McGill, Stuart, 2008.
-            <NuxtLink
+            <TextLink
               to="https://app.box.com/s/qoqerz6esxua3i7mk377ps9n1yb8556s"
               external
               target="_blank"
-              >The Damakawa language</NuxtLink
+              >The Damakawa language</TextLink
             >. Electronic manuscript.
           </li>
           <li>
             Rikoto, B., P. Senchi, Stephen H. Dettweiler, and Sonia G.
             Dettweiler. 2002.
             <i
-              ><NuxtLink
+              ><TextLink
                 to="http://blog.rowbory.co.uk/linguistics/clela-dictionary/"
                 external
                 target="_blank"
                 >K&#704;Ba&#817;tksa&#817;:
                 C&#704;Lela&#8212;C&#704;Turanci&#8212;C&#704;Gana&nbsp;Dictionary
                 =&nbsp; C&#704;Lela&#8212;English&#8212;Hausa = Kamus: Na
-                Dakarci&#8212;Turanci&#8212;Hausa</NuxtLink
+                Dakarci&#8212;Turanci&#8212;Hausa</TextLink
               >.</i
             >
             &nbsp;Lelna Language Development/Translation Association.
@@ -489,11 +476,11 @@ const sections = [
           </li>
           <li>
             Smith, Rebecca Dow. 2007.
-            <NuxtLink
+            <TextLink
               to="https://commons.und.edu/theses/4476/"
               external
               target="_blank"
-              ><cite>The noun class system of Ut-ma'in</cite></NuxtLink
+              ><cite>The noun class system of Ut-ma'in</cite></TextLink
             >.&nbsp; MA dissertation, University of North Dakota.
           </li>
           <li>
@@ -521,9 +508,3 @@ const sections = [
     </UAccordion>
   </div>
 </template>
-
-<style scoped>
-a {
-  @apply text-primary-600 visited:text-primary-700 dark:text-primary-600 dark:visited:text-primary-700 hover:text-primary-400 dark:hover:text-primary-600;
-}
-</style>
