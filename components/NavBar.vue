@@ -31,9 +31,9 @@ const links = [
     to: '/photos'
   },
   {
-    label: 'Links',
-    icon: 'i-heroicons-arrow-top-right-on-square-solid',
-    to: '/links'
+    label: 'Maps',
+    icon: 'i-heroicons-map-pin',
+    to: '/maps'
   },
   {
     label: 'Tools',
