@@ -86,7 +86,7 @@ const links = [
           to="/literacy/orthography_principles_2016-04-15.pdf"
           target="_blank"
           external
-          class="literacy-card"
+          class="card"
           id="workshop2"
         >
           <NuxtImg

@@ -29,7 +29,7 @@
 }
 
 @layer components {
-  .literacy-card {
+  .card {
       @apply flex flex-col rounded-lg border border-primary-500 hover:bg-primary-100 dark:hover:bg-primary-800
   }
 

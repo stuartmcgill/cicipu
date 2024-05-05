@@ -36,6 +36,11 @@ const links = [
     to: '/maps'
   },
   {
+    label: 'Links',
+    icon: 'i-heroicons-link',
+    to: '/links'
+  },
+  {
     label: 'Tools',
     icon: 'i-heroicons-wrench-solid',
     to: '/tools'

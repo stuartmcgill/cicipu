@@ -10,7 +10,7 @@
       displacement.
     </p>
     <div class="grid sm:grid-cols-2 gap-8">
-      <NuxtLink class="literacy-card" to="/maps/dialects">
+      <NuxtLink class="card" to="/maps/dialects">
         <div class="p-4 flex flex-wrap items-center">
           <h2>Cicipu dialects</h2>
           <div>Native speakers identify seven dialect areas</div>
@@ -21,7 +21,7 @@
           class="h-full rounded-b-lg object-cover"
         />
       </NuxtLink>
-      <NuxtLink class="literacy-card" to="/maps/languages">
+      <NuxtLink class="card" to="/maps/languages">
         <div class="p-4 flex flex-wrap items-center">
           <h2>Surrounding languages</h2>
           <div>Cicipu is one of many Kainji languages in northwest Nigeria</div>
