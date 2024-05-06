@@ -2,10 +2,7 @@
 const currentYear = new Date().getFullYear()
 
 const img = useImage()
-const imgUrl = img('/img/dummy-background.jpg')
-const backgroundStyles = computed(() => {
-  return { backgroundImage: `url('${imgUrl}')`, backgroundSize: 'cover' }
-})
+const imgUrl = ref<string>(`url(${img('/img/dummy-background.jpg')})`)
 </script>
 
 <template>
@@ -14,17 +11,18 @@ const backgroundStyles = computed(() => {
   >
     <NavBar />
     <div class="mb-4 mx-2 sm:mx-4 grow">
-      <NuxtPage class="my-12 rounded-lg" />
+      <NuxtPage class="my-12" />
     </div>
     <footer class="mb-4 mx-2 sm:mx-4 flex justify-end">
       &copy; {{ currentYear }}
     </footer>
   </div>
 </template>
-<style>
+<style scoped>
 .site-container::after {
   content: '';
-  background: url('/img/dummy-background.jpg');
+  background: linear-gradient(to top, #ffffff 1%, transparent 10%),
+    v-bind(imgUrl);
   background-size: cover;
   opacity: 0.3;
   top: 0;

@@ -31,7 +31,7 @@ const tabs = [
         </div>
       </template>
       <template #item="{ item }">
-        <div class="p-4 solid-background rounded">
+        <div class="p-4 solid-panel rounded">
           <LinguisticReferences v-if="item.key === 'linguistics'" />
           <AnthropologyReferences v-else />
         </div>
