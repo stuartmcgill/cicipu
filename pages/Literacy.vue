@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
+const store = useAppStore()
+store.backgroundImage = 'orthography_10.jpg'
+</script>
 
 <template>
   <div>

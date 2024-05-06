@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
+const store = useAppStore()
+store.backgroundImage = 'scenery_02.jpg'
+
 const tabs = [
   {
     key: 'linguistics',

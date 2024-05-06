@@ -1,8 +1,20 @@
 <script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
 const currentYear = new Date().getFullYear()
 
+console.log('app.vue ran')
+const store = useAppStore()
+store.backgroundImage = 'scenery_01.jpg'
+
 const img = useImage()
-const imgUrl = ref<string>(`url(${img('/img/dummy-background.jpg')})`)
+const imgUrl = computed(() => {
+  if (store.backgroundImage) {
+    return `url(${img('/img/gallery/' + store.backgroundImage)})`
+  }
+
+  return ''
+})
 </script>
 
 <template>
@@ -23,6 +35,8 @@ const imgUrl = ref<string>(`url(${img('/img/dummy-background.jpg')})`)
   content: '';
   background: linear-gradient(to top, #ffffff 1%, transparent 10%),
     v-bind(imgUrl);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.3;
   top: 0;

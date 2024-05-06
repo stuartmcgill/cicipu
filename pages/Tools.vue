@@ -1,9 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
+const store = useAppStore()
+store.backgroundImage = 'crafts_02.jpg'
+</script>
 
 <template>
   <div>
     <h1>Tools</h1>
-    <div class="flex flex-col sm:flex-row gap-4 sm:gap-12 max-w-2xl">
+    <div
+      class="p-4 flex flex-col sm:flex-row gap-4 sm:gap-12 max-w-2xl solid-panel"
+    >
       <div>
         <p>
           The Cicipu alphabet has some special characters that are not found in
@@ -19,7 +26,7 @@
           >.
         </p>
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 solid-panel">
         <ToolsLink
           label="Documentation"
           link="/keyboards/cicipu_keyboard_documentation_v1.2.pdf"

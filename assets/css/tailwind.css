@@ -30,11 +30,11 @@
 
 @layer components {
   .solid-panel {
-    @apply p-2 bg-white dark:bg-gray-950 rounded
+    @apply p-2 bg-white dark:bg-gray-950 rounded border border-primary-500 dark:border-primary-400
   }
 
   .card {
-      @apply flex flex-col rounded-lg border border-primary-500 solid-panel hover:bg-primary-100 dark:hover:bg-primary-800
+      @apply flex flex-col rounded-lg solid-panel hover:bg-primary-100 dark:hover:bg-primary-800
   }
 
   ul.references {

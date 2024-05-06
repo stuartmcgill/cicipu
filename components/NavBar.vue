@@ -59,8 +59,9 @@ const menuOpen = ref(false)
   <UHorizontalNavigation
     :links="links"
     class="border-b border-gray-200 hidden md:flex"
+    :ui="{ inactive: 'text-gray-700 dark:text-gray-200' }"
   />
-  <div class="m-3 flex gap-4 justify-between md:hidden">
+  <div class="m-3 flex gap-4 justify-between solid-panel md:hidden">
     <div>
       <div
         class="flex items-center gap-4 cursor-pointer text-gray-700 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-200"
@@ -77,7 +78,7 @@ const menuOpen = ref(false)
     </div>
     <UVerticalNavigation
       :links="links"
-      class="flex-1 border-b border-gray-200"
+      class="flex-1"
       v-show="menuOpen"
       @click="menuOpen = false"
     />

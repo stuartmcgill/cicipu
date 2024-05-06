@@ -13,7 +13,9 @@
     "@iconify-json/twemoji": "^1.1.15",
     "@nuxt/image": "^1.4.0",
     "@nuxt/ui": "^2.15.0",
+    "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.11.1",
+    "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },

@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
+const store = useAppStore()
+store.backgroundImage = 'fieldwork_08.jpg'
+
 const handleTimeUpdate = (e: Event) =>
   (timestamp.value = audio.value.currentTime)
 
@@ -11,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="p-8 solid-panel">
     <h1>Listen to a Cicipu folktale</h1>
     <audio id="audio" ref="audio" controls @timeupdate="handleTimeUpdate">
       <source src="/audio/symphony.mp3" type="audio/mpeg" />

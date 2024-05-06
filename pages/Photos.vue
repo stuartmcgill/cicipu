@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
 interface Image {
   src: string
   caption: string
@@ -9,6 +11,9 @@ interface Gallery {
   description?: string
   images: Image[]
 }
+
+const store = useAppStore()
+store.backgroundImage = ''
 
 const galleries = [
   {
@@ -604,7 +609,7 @@ const hideCaptions = ref(false)
     <div class="mb-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
       <h2>{{ selectedGallery.name }}</h2>
       <div class="flex sm:ml-auto gap-4">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 solid-panel">
           <div>Hide captions</div>
           <UToggle v-model="hideCaptions" title="Hide captions" />
         </div>
