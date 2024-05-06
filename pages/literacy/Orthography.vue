@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
+const store = useAppStore()
+store.backgroundImage = 'bathing.jpg'
+
 const links = [
   {
     label: 'Home',
@@ -19,10 +24,10 @@ const links = [
 
 <template>
   <div>
-    <UBreadcrumb :links="links" class="mb-8" />
+    <UBreadcrumb :links="links" class="mb-8 solid-panel" />
     <h1>Orthography</h1>
     <div class="grid md:grid-cols-2 gap-4 md:gap-8">
-      <div>
+      <div class="solid-panel">
         <p>
           The first Cicipu orthography workshop was held in Sakaba on Saturday
           3rd April 2010, hosted by the Sarkinƙasa (the secular chief) of the
@@ -76,22 +81,23 @@ const links = [
             </div>
           </div>
         </div>
-        <NuxtLink
-          to="/literacy/orthography_principles_2016-04-15.pdf"
-          target="_blank"
-          external
-          class="p-0 card"
-          id="workshop2"
-        >
+
+        <div class="p-0 card hover:bg-none" id="workshop2">
           <NuxtImg src="/img/ortho_proposal2.jpg" class="rounded-t-lg" />
           <UDivider />
           <div class="p-2 flex items-center">
-            <div class="p-4">Additional orthographic principles (2016)</div>
+            <NuxtLink
+              to="/literacy/orthography_principles_2016-04-15.pdf"
+              target="_blank"
+              external
+              class="p-4"
+              >Additional orthographic principles (2016)</NuxtLink
+            >
             <NuxtLink to="/photos#Orthography workshop (2016)" class="ml-auto">
               <UButton>Workshop photos</UButton>
             </NuxtLink>
           </div>
-        </NuxtLink>
+        </div>
       </div>
     </div>
   </div>

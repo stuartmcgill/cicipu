@@ -2,7 +2,7 @@
 import { useAppStore } from '~/stores/app'
 
 const store = useAppStore()
-store.backgroundImage = 'fieldwork_08.jpg'
+store.backgroundImage = 'hamlet.jpg'
 
 const handleTimeUpdate = (e: Event) =>
   (timestamp.value = audio.value.currentTime)

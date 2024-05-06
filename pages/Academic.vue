@@ -2,7 +2,7 @@
 import { useAppStore } from '~/stores/app'
 
 const store = useAppStore()
-store.backgroundImage = 'scenery_02.jpg'
+store.backgroundImage = 'academic.jpg'
 
 const tabs = [
   {

@@ -58,7 +58,7 @@ const menuOpen = ref(false)
 <template>
   <UHorizontalNavigation
     :links="links"
-    class="border-b border-gray-200 hidden md:flex"
+    class="px-4 py-0 border-gray-200 dark:border-gray-700 border-t-0 rounded-t-none hidden md:flex solid-panel"
     :ui="{ inactive: 'text-gray-700 dark:text-gray-200' }"
   />
   <div class="m-3 flex gap-4 justify-between solid-panel md:hidden">

@@ -1,14 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+
+const store = useAppStore()
+store.backgroundImage = 'rukuntu.jpg'
+</script>
 
 <template>
   <div>
-    <h1>Maps</h1>
-    <p class="mb-8">
-      The Cicipu heartland straddles the boundary of Kebbi and Niger States in
-      Nigeria, and speakers can also be found in the southwest of Niger State
-      where farmland is plentiful. Violence in recent years has led to a lot of
-      displacement.
-    </p>
+    <div class="mb-8">
+      <h1>Maps</h1>
+      <p>
+        The Cicipu heartland straddles the boundary of Kebbi and Niger States in
+        Nigeria, and speakers can also be found in the southwest of Niger State
+        where farmland is plentiful. Violence in recent years has led to a lot
+        of displacement.
+      </p>
+    </div>
     <div class="grid sm:grid-cols-2 gap-8">
       <NuxtLink class="p-0 card" to="/maps/dialects">
         <div class="p-8 flex flex-wrap items-center">

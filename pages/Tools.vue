@@ -2,7 +2,7 @@
 import { useAppStore } from '~/stores/app'
 
 const store = useAppStore()
-store.backgroundImage = 'crafts_02.jpg'
+store.backgroundImage = 'tools.jpg'
 </script>
 
 <template>
