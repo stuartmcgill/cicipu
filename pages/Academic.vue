@@ -31,8 +31,10 @@ const tabs = [
         </div>
       </template>
       <template #item="{ item }">
-        <LinguisticReferences v-if="item.key === 'linguistics'" />
-        <AnthropologyReferences v-else />
+        <div class="p-4 solid-background rounded">
+          <LinguisticReferences v-if="item.key === 'linguistics'" />
+          <AnthropologyReferences v-else />
+        </div>
       </template>
     </UTabs>
   </div>

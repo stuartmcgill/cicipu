@@ -29,8 +29,12 @@
 }
 
 @layer components {
+  .solid-background {
+    @apply bg-white dark:bg-gray-950
+  }
+
   .card {
-      @apply flex flex-col rounded-lg border border-primary-500 hover:bg-primary-100 dark:hover:bg-primary-800
+      @apply flex flex-col rounded-lg border border-primary-500 solid-background hover:bg-primary-100 dark:hover:bg-primary-800
   }
 
   ul.references {
