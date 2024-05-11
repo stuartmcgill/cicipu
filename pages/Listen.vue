@@ -1,30 +1,35 @@
 <script setup lang="ts">
 import { useAppStore } from '~/stores/app'
+import data from '~/public/audio/chewing-gum-girl/text.json'
+import AnnotationBlock from '~/components/AnnotationBlock.vue'
+import { useListenStore } from '~/stores/listen'
 
-const store = useAppStore()
-store.backgroundImage = 'hamlet.jpg'
+const appStore = useAppStore()
+appStore.backgroundImage = 'hamlet.jpg'
+
+const listenStore = useListenStore()
 
 const handleTimeUpdate = (e: Event) =>
-  (timestamp.value = audio.value.currentTime)
+  (listenStore.timestamp = audio.value.currentTime + data.audioOffset)
 
-const timestamp = ref<number>(0)
 const audio = ref(null)
-
-onMounted(() => {
-  console.log(audio.value.currentTime)
-})
 </script>
 
 <template>
   <div class="p-8 solid-panel">
     <h1>Listen to a Cicipu folktale</h1>
+    <div class="mb-4 flex items-center gap-2">
+      <div>Advanced view</div>
+      <UToggle v-model="listenStore.advancedView" title="Advanced view" />
+    </div>
     <audio id="audio" ref="audio" controls @timeupdate="handleTimeUpdate">
-      <source src="/audio/symphony.mp3" type="audio/mpeg" />
+      <source src="/audio/chewing-gum-girl/audio.mp3" type="audio/mpeg" />
       Your browser does not support the audio tag.
     </audio>
-    <div class="mt-4 flex items-center gap-4">
-      <span>Timestamp</span>
-      <div>{{ timestamp }}</div>
-    </div>
+    <AnnotationBlock
+      v-for="(ref, index) in data.refs"
+      :key="index"
+      :toolbox-ref="ref"
+    />
   </div>
 </template>
