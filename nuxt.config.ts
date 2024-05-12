@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/image', '@pinia/nuxt', '@nuxtjs/google-fonts'],
   devtools: { enabled: true },
+  css: ['~/assets/fonts/CharisSIL-webfont.css'],
   typescript: {
     strict: true
   },

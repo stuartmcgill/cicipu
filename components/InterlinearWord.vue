@@ -28,8 +28,8 @@ const partsOfSpeech = computed(() =>
 
 <template>
   <div>
-    <div>{{ props.textGroup.tx }}</div>
-    <div>{{ morphemes }}</div>
+    <div class="cicipu-text">{{ props.textGroup.tx }}</div>
+    <div class="cicipu-text">{{ morphemes }}</div>
     <div>{{ props.textGroup.ge }}</div>
     <div v-show="store.interlinearSettings.showPs" class="uppercase text-sm">
       {{ partsOfSpeech }}
