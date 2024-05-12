@@ -71,7 +71,7 @@ const settings = reactive(listenStore.interlinearSettings)
         />
       </div>
     </div>
-    <div class="mt-4 md:mt-6 lg:mt-8 p-8 solid-panel min-h-80">
+    <div class="mt-4 md:mt-6 lg:mt-8 p-8 solid-panel min-h-[400px]">
       <AnnotationBlock
         v-for="(ref, index) in data.refs"
         :key="index"
