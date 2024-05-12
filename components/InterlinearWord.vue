@@ -8,13 +8,14 @@ const props = defineProps<{ textGroup: TextGroup }>()
 
 const store = useListenStore()
 
-const morphemes = computed(() =>
-  ensureArray(props.textGroup.mb).reduce(
+const concatAndStrip = (field: object | object[]) =>
+  ensureArray(field).reduce(
     (combined, morpheme) => `${combined}${morpheme}`.replaceAll(' ', ''),
     ''
   )
-)
 
+const morphemes = computed(() => concatAndStrip(props.textGroup.mb))
+const glosses = computed(() => concatAndStrip(props.textGroup.ge))
 const partsOfSpeech = computed(() => ensureArray(props.textGroup.ps))
 </script>
 
@@ -22,7 +23,7 @@ const partsOfSpeech = computed(() => ensureArray(props.textGroup.ps))
   <div>
     <div class="mt-4 cicipu-text">{{ props.textGroup.tx }}</div>
     <div class="cicipu-text">{{ morphemes }}</div>
-    <div>{{ props.textGroup.ge }}</div>
+    <div>{{ glosses }}</div>
     <div class="flex">
       <div v-for="(ps, index) in partsOfSpeech" :key="index">
         <UTooltip

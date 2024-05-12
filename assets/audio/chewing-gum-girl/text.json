@@ -1,5 +1,5 @@
 {
-  "audioOffset": 8,
+  "audioOffset": 7.5,
   "refs": [
     {
       "ref": "saat002.001.001",
@@ -10,11 +10,13 @@
         {
           "tx": "mísòoní",
           "mb": "mísòoní",
+          "ge": "story",
           "ps": "n"
         },
         {
           "tx": "mísòoní",
           "mb": "mísòoní",
+          "ge": "story",
           "ps": "n"
         }
       ],
@@ -31,11 +33,13 @@
         {
           "tx": "míi...",
           "mb": "*míi...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "mìi...",
           "mb": "*mìi...",
+          "ge": "***",
           "ps": "***"
         }
       ]
@@ -49,11 +53,13 @@
         {
           "tx": "àyánà",
           "mb": ["aya", "-L -H -nà"],
+          "ge": ["come", "-IMP  -IMP.PL"],
           "ps": ["v", "-vtone  -imp"]
         },
         {
           "tx": "túyòonò",
           "mb": ["ti-", "yoo", "-na", "-H -L -L"],
+          "ge": ["1PP-", "go", "-VENT", "-IRRp"],
           "ps": ["agp-", "v", "-vent", "-vtonep"]
         }
       ],
@@ -70,11 +76,13 @@
         {
           "tx": "hói...",
           "mb": "*hói...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "hòi...",
           "mb": "*hòi...",
+          "ge": "***",
           "ps": "***"
         }
       ]
@@ -88,26 +96,31 @@
         {
           "tx": "wɔ́mɔ́",
           "mb": "wɔ́mɔ́",
+          "ge": "chief",
           "ps": "n"
         },
         {
           "tx": "vì,",
           "mb": ["v-", "ì"],
+          "ge": ["AGR8-", "COP"],
           "ps": ["ag-", "cop"]
         },
         {
           "tx": "ùyã̂anà",
           "mb": ["u-", "yãa", "-na", "-L -HL -L"],
+          "ge": ["3PS-", "do", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "cíníyáa",
           "mb": ["tì-", "níyáa"],
+          "ge": ["NC6-", "farm"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tőogínó",
           "mb": ["ti̋-", "à-", "gínó"],
+          "ge": ["AGR6.GEN-", "NC2-", "peanut"],
           "ps": ["aggen-", "nc-", "n"]
         }
       ],
@@ -124,26 +137,31 @@
         {
           "tx": "ánà",
           "mb": "ánà",
+          "ge": "when",
           "ps": "conj"
         },
         {
           "tx": "wɔ́mɔ́",
           "mb": "wɔ́mɔ́",
+          "ge": "chief",
           "ps": "n"
         },
         {
           "tx": "yã̂anà",
           "mb": ["yãa", "-na", "-HL -L"],
+          "ge": ["do", "-PFV", "-RLS"],
           "ps": ["v", "-asp", "-vtone"]
         },
         {
           "tx": "cíníyáa",
           "mb": ["tì-", "níyáa"],
+          "ge": ["NC6-", "farm"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tőogínó,",
           "mb": ["ti̋-", "à-", "gínó"],
+          "ge": ["AGR6.GEN-", "NC2-", "peanut"],
           "ps": ["aggen-", "nc-", "n"]
         }
       ],
@@ -160,56 +178,67 @@
         {
           "tx": "sáa",
           "mb": "sáa",
+          "ge": "or",
           "ps": "conj"
         },
         {
           "tx": "wèné",
           "mb": ["ù-", "èné"],
+          "ge": ["AGR7-", "what"],
           "ps": ["ag-", "question"]
         },
         {
           "tx": "lóokàcí",
           "mb": "lóokàcí",
+          "ge": "time",
           "ps": "n"
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ùdúkwà",
           "mb": ["u-", "dukwa", "-L -H -L"],
+          "ge": ["3PS-", "go", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ùjóolò",
           "mb": ["u-", "joolo", "-L -H -L"],
+          "ge": ["3PS-", "check", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "sée",
           "mb": "sée",
+          "ge": "unless",
           "ps": "conj"
         },
         {
           "tx": "úzàa",
           "mb": ["u-", "zaa", "-H -L"],
+          "ge": ["3PS-", "see", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "àbɔ́wɔ̀",
           "mb": ["a-", "bɔwɔ", "-L -H -L"],
+          "ge": ["3PP-", "steal", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ògínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -226,46 +255,55 @@
         {
           "tx": "àmú",
           "mb": "àmù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ǹlápà",
           "mb": ["m-", "lapa", "-L -H -L"],
+          "ge": ["1PS-", "know", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "zzá",
           "mb": ["CDup-", "zá"],
+          "ge": ["NC8-", "person"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "nnà",
           "mb": ["CDup-", "nà"],
+          "ge": ["AGR8-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "yónò",
           "mb": ["yo", "-na", "-H -L"],
+          "ge": ["be", "-PFV", "-RLS"],
           "ps": ["v", "-asp", "-vtone"]
         },
         {
           "tx": "úbɔ̀wɔ̀",
           "mb": ["ù-", "bɔwɔ", "-L -L"],
+          "ge": ["NC7-", "steal", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ògínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -282,81 +320,97 @@
         {
           "tx": "kwákúllè",
           "mb": "kwákúllè",
+          "ge": "that_day",
           "ps": "adv"
         },
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tò",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "ká'à",
           "mb": "ká'à",
+          "ge": "now",
           "ps": "adv"
         },
         {
           "tx": "wúuyã̀a",
           "mb": ["u-", "u-", "yãa", "-H -L"],
+          "ge": ["3PS-", "FUT-", "do", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "tèné",
           "mb": ["tì-", "èné"],
+          "ge": ["AGR6-", "what"],
           "ps": ["ag-", "question"]
         },
         {
           "tx": "ìndúu",
           "mb": "ìndúu",
+          "ge": "here_is",
           "ps": "pres"
         },
         {
           "tx": "útìyò",
           "mb": ["u-", "tiyo", "-H -L -L"],
+          "ge": ["3PS-", "get", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "úlàpà",
           "mb": ["u-", "lapa", "-H -L -L"],
+          "ge": ["3PS-", "know", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "zzá",
           "mb": ["CDup-", "zá"],
+          "ge": ["NC8-", "person"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "nnà",
           "mb": ["CDup-", "nà"],
+          "ge": ["AGR8-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "yónò",
           "mb": ["yo", "-na", "-H -L"],
+          "ge": ["be", "-PFV", "-RLS"],
           "ps": ["v", "-asp", "-vtone"]
         },
         {
           "tx": "úbɔ̀wɔ̀",
           "mb": ["ù-", "bɔwɔ", "-L -L"],
+          "ge": ["NC7-", "steal", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ògínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -373,46 +427,55 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùyã̂a",
           "mb": ["u-", "yãa", "-L -HL"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cì'ádì,",
           "mb": ["tì-", "'ádì"],
+          "ge": ["NC6-", "trap"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "cì'ádì",
           "mb": ["tì-", "'ádì"],
+          "ge": ["NC6-", "trap"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tínà",
           "mb": ["tì-", "nà"],
+          "ge": ["AGR6-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "wúuyã̀a,",
           "mb": ["u-", "u-", "yãa", "-H -L"],
+          "ge": ["3PS-", "FUT-", "do", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "ùyã̂a",
           "mb": ["u-", "yãa", "-L -HL"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kű-títtímbɔ̃̀",
           "mb": ["kű-", "tí-", "ttímbɔ̃̀"],
+          "ge": ["AGR9-", "NC6-", "chewing_gum"],
           "ps": ["aggen-", "nc-", "n"]
         }
       ],
@@ -429,56 +492,67 @@
         {
           "tx": "ánà",
           "mb": "ánà",
+          "ge": "when",
           "ps": "conj"
         },
         {
           "tx": "wɔ́mɔ́",
           "mb": "wɔ́mɔ́",
+          "ge": "chief",
           "ps": "n"
         },
         {
           "tx": "yã̂anà",
           "mb": ["yãa", "-na", "-HL -L"],
+          "ge": ["do", "-PFV", "-RLS"],
           "ps": ["v", "-asp", "-vtone"]
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kűtíttímbɔ̃̀,",
           "mb": ["kű-", "tí-", "ttímbɔ̃̀"],
+          "ge": ["AGR9-", "NC6-", "chewing_gum"],
           "ps": ["aggen-", "nc-", "n"]
         },
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùyôo",
           "mb": ["u-", "yoo", "-L -HL"],
+          "ge": ["3PS-", "go", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ùdúwà,",
           "mb": ["u-", "duwa", "-L -H -L"],
+          "ge": ["3PS-", "put", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "'ásù",
           "mb": "'ásù",
+          "ge": "place",
           "ps": "n"
         },
         {
           "tx": "ògínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "héevì",
           "mb": ["ha-", "évì"],
+          "ge": ["AGR2-", "3PS.POSS"],
           "ps": ["ag-", "ppro"]
         }
       ],
@@ -495,46 +569,55 @@
         {
           "tx": "èsée",
           "mb": "èsée",
+          "ge": "actually",
           "ps": "part"
         },
         {
           "tx": "náatà",
           "mb": "náatà",
+          "ge": "small_spider",
           "ps": "n"
         },
         {
           "tx": "vìsíyûu...",
           "mb": "*vìsíyûu...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "síyã̂a",
           "mb": ["si-", "yãa"],
+          "ge": ["HAB-", "do"],
           "ps": ["asp-", "v"]
         },
         {
           "tx": "kúyònò",
           "mb": ["kù-", "yo", "-na", "-L -L"],
+          "ge": ["NC9-", "be", "-PFV", "-COMPL"],
           "ps": ["nc-", "v", "-asp", "-ntone"]
         },
         {
           "tx": "ùyã̂a",
           "mb": ["u-", "yãa", "-L -HL"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúbɔ̀wɔ̀",
           "mb": ["kù-", "bɔwɔ", "-L -L"],
+          "ge": ["NC9-", "steal", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         },
         {
           "tx": "wɔ́mɔ́",
           "mb": "wɔ́mɔ́",
+          "ge": "chief",
           "ps": "n"
         },
         {
           "tx": "ògínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -551,41 +634,49 @@
         {
           "tx": "kwákúllè",
           "mb": "kwákúllè",
+          "ge": "that_day",
           "ps": "adv"
         },
         {
           "tx": "náatà",
           "mb": "náatà",
+          "ge": "small_spider",
           "ps": "n"
         },
         {
           "tx": "dúkwà,",
           "mb": ["dukwa", "-H -L"],
+          "ge": ["go", "-RLS"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "ùzâa",
           "mb": ["u-", "zaa", "-L -HL"],
+          "ge": ["3PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "'ũ̂",
           "mb": "'ũ̂",
+          "ge": "there",
           "ps": "loc"
         },
         {
           "tx": "'ásù",
           "mb": "'ásù",
+          "ge": "place",
           "ps": "n"
         },
         {
           "tx": "ògínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -602,36 +693,43 @@
         {
           "tx": "ánà",
           "mb": "ánà",
+          "ge": "when",
           "ps": "conj"
         },
         {
           "tx": "ùdúkwànà,",
           "mb": ["u-", "dukwa", "-na", "-L -H -L -L"],
+          "ge": ["3PS-", "go", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "wíndà",
           "mb": ["u-", "inda", "-L -H -L"],
+          "ge": ["3PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kùlácí,",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ùhwáarà",
           "mb": ["u-", "hwaara", "-L -H -L"],
+          "ge": ["3PS-", "start", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ùlɔ́dɔ́",
           "mb": ["ù-", "lɔdɔ", "-H -H"],
+          "ge": ["NC7-", "pluck_out", "-NMLZ"],
           "ps": ["nc-", "v", "-ntone"]
         },
         {
           "tx": "ògínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -648,41 +746,49 @@
         {
           "tx": "wíndà",
           "mb": ["u-", "inda", "-L -H -L"],
+          "ge": ["3PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ù'úgù",
           "mb": ["u-", "'ugu", "-L -H -L"],
+          "ge": ["3PS-", "throw_away", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ógínó",
           "mb": ["à-", "gínó"],
+          "ge": ["NC2-", "peanut"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ùdúkwà",
           "mb": ["u-", "dukwa", "-L -H -L"],
+          "ge": ["3PS-", "go", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "'ásù",
           "mb": "'ásù",
+          "ge": "place",
           "ps": "n"
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -698,6 +804,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -713,46 +820,55 @@
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ùyã́a",
           "mb": ["u-", "yãa", "-L -H"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúzɔ̀ɔsɔ̀wɔ̀",
           "mb": ["kù-", "zɔɔsɔ", "-wa", "-L -L -L"],
+          "ge": ["NC9-", "laugh", "-APPL", "-COMPL"],
           "ps": ["nc-", "v", "-appl", "-ntone"]
         },
         {
           "tx": "kwì,",
           "mb": ["kù-", "ì"],
+          "ge": ["AGR9-", "PRO"],
           "ps": ["ag-", "ncpro"]
         },
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kùlácí,",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùlácí,",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùlácí,",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -769,26 +885,31 @@
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kúllè",
           "mb": ["kù-", "llè"],
+          "ge": ["AGR9-", "that"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "tìnkám",
           "mb": "tìnkám",
+          "ge": "stand_firm",
           "ps": "ideo"
         },
         {
           "tx": "kwêewè",
           "mb": ["ku-", "ewe", "-H -L"],
+          "ge": ["AGR9-", "refuse", "-RLS"],
           "ps": ["agv-", "v", "-vtone"]
         },
         {
           "tx": "ùtépè",
           "mb": ["ù-", "tepe"],
+          "ge": ["NC7-", "talk"],
           "ps": ["nc-", "v"]
         }
       ],
@@ -805,21 +926,25 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "vúuzɔ̀ɔsɔ̀wɔ̀-n",
           "mb": ["v-", "u-", "zɔɔsɔ", "-wa", "-n", "-H -L -L -L"],
+          "ge": ["2PS-", "FUT-", "laugh", "-APPL", "-1PS.OBJ", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-appl", "-vcl", "-vtonep"]
         },
         {
           "tx": "cé?",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         }
       ],
@@ -835,6 +960,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -850,26 +976,31 @@
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kúllè",
           "mb": ["kù-", "llè"],
+          "ge": ["AGR9-", "that"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "gó",
           "mb": "gó",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "kùwéwè",
           "mb": ["ku-", "ewe", "-L -H -L"],
+          "ge": ["AGR9-", "refuse", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "tépè",
           "mb": "tepe",
+          "ge": "talk",
           "ps": "v"
         }
       ],
@@ -886,46 +1017,55 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ń",
           "mb": "ń",
+          "ge": "if",
           "ps": "conj"
         },
         {
           "tx": "nì",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "zɔ́ɔsɔ̀wɔ̀n",
           "mb": ["zɔɔsɔ", "-wa", "-n", "-H -L -L"],
+          "ge": ["laugh", "-APPL", "-1PS.OBJ", "-RLS"],
           "ps": ["v", "-appl", "-vcl", "-vtone"]
         },
         {
           "tx": "cé,",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "ká'à",
           "mb": "ká'à",
+          "ge": "now",
           "ps": "adv"
         },
         {
           "tx": "múu'ɔ̀pɔ̀",
           "mb": ["m-", "u-", "'ɔpɔ", "-H -L -L"],
+          "ge": ["1PS-", "FUT-", "hold", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "vù",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         },
         {
           "tx": "àsĩ́'yã́",
           "mb": ["à-", "sĩ́'yã́"],
+          "ge": ["NC2-", "breast"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -942,31 +1082,37 @@
         {
           "tx": "èsée",
           "mb": "èsée",
+          "ge": "actually",
           "ps": "part"
         },
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "lápà",
           "mb": ["lapa", "-H -L"],
+          "ge": ["know", "-RLS"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "tìttímbɔ̃̀",
           "mb": ["tì-", "ttímbɔ̃̀"],
+          "ge": ["NC6-", "chewing_gum"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tí",
           "mb": ["tì-", "ì"],
+          "ge": ["AGR6-", "COP"],
           "ps": ["ag-", "cop"]
         }
       ],
@@ -983,21 +1129,25 @@
         {
           "tx": "ée,",
           "mb": "'ĩ́i",
+          "ge": "yes",
           "ps": "intj"
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùwéwè",
           "mb": ["ku-", "ewe", "-L -H -L"],
+          "ge": ["AGR9-", "refuse", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "kùzɔ́ɔsɔ̀",
           "mb": ["ku-", "zɔɔsɔ", "-L -H -L"],
+          "ge": ["AGR9-", "laugh", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         }
       ],
@@ -1014,31 +1164,37 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ù'ɔ́pɔ̀",
           "mb": ["u-", "'ɔpɔ", "-L -H -L"],
+          "ge": ["3PS-", "hold", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "màhũ̂u",
           "mb": ["mà-", "hũ̂u"],
+          "ge": ["NC4-", "truth"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kásĩ́'yã́,",
           "mb": ["kà-", "sĩ́'yã́"],
+          "ge": ["NC1-", "breast"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùcíyè",
           "mb": ["kù-", "cíyè"],
+          "ge": ["NC9-", "hand"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùkáɓànù",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1055,41 +1211,49 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ń",
           "mb": "ń",
+          "ge": "if",
           "ps": "conj"
         },
         {
           "tx": "kúuzɔ̀ɔsɔ̀",
           "mb": ["ku-", "u-", "zɔɔsɔ", "-H -L -L"],
+          "ge": ["AGR9-", "FUT-", "laugh", "-IRRp"],
           "ps": ["agv-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "wúu'ɔ̀pɔ̀",
           "mb": ["u-", "u-", "'ɔpɔ", "-H -L -L"],
+          "ge": ["3PS-", "FUT-", "hold", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kúnɗò",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         }
       ],
@@ -1106,46 +1270,55 @@
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "gó",
           "mb": "gó",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "kùzɔ́ɔsɔ̀",
           "mb": ["ku-", "zɔɔsɔ", "-L -H -L"],
+          "ge": ["AGR9-", "laugh", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "kúmá",
           "mb": "kùmà",
+          "ge": "more",
           "ps": "quant"
         },
         {
           "tx": "ù'ɔ́pɔ̀,",
           "mb": ["u-", "'ɔpɔ", "-L -H -L"],
+          "ge": ["3PS-", "hold", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúɗò",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kùkáɓànù",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1162,51 +1335,61 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "á'áǃ",
           "mb": "á'á",
+          "ge": "surprise",
           "ps": "intj"
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tèné",
           "mb": ["tì-", "èné"],
+          "ge": ["AGR6-", "what"],
           "ps": ["ag-", "question"]
         },
         {
           "tx": "tì?",
           "mb": ["tì-", "ì"],
+          "ge": ["AGR6-", "COP"],
           "ps": ["ag-", "cop"]
         },
         {
           "tx": "sèkènú",
           "mb": ["seke", "-nu", "-L -L -H"],
+          "ge": ["release", "-RES", "-IMP"],
           "ps": ["v", "-res", "-vtone"]
         },
         {
           "tx": "hwàǃ",
           "mb": "hwà",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "sèkènú",
           "mb": ["seke", "-nu", "-L -L -H"],
+          "ge": ["release", "-RES", "-IMP"],
           "ps": ["v", "-res", "-vtone"]
         },
         {
           "tx": "mù",
           "mb": "mù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ècíyè",
           "mb": ["à-", "cíyè"],
+          "ge": ["NC2-", "hand"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -1223,36 +1406,43 @@
         {
           "tx": "nì",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "sékènù-n",
           "mb": ["seke", "-nu", "-n", "-H -L -L"],
+          "ge": ["release", "-RES", "-1PS.OBJ", "-RLS"],
           "ps": ["v", "-res", "-vcl", "-vtone"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "ècíyè",
           "mb": ["à-", "cíyè"],
+          "ge": ["NC2-", "hand"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ká'à",
           "mb": "ká'à",
+          "ge": "now",
           "ps": "adv"
         },
         {
           "tx": "múugàvà",
           "mb": ["m-", "u-", "gava", "-H -L -L"],
+          "ge": ["1PS-", "FUT-", "kick", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "vù",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         }
       ],
@@ -1269,26 +1459,31 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùgávà,",
           "mb": ["u-", "gava", "-L -H -L"],
+          "ge": ["3PS-", "kick", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kùnáa",
           "mb": ["kù-", "náa"],
+          "ge": ["NC9-", "leg"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kúɗò",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kùkáɓànù",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1304,6 +1499,7 @@
       "txGroup": {
         "tx": "á'áǃ",
         "mb": "á'á",
+        "ge": "surprise",
         "ps": "intj"
       },
       "ftGroup": {
@@ -1319,51 +1515,61 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ń",
           "mb": "ń",
+          "ge": "if",
           "ps": "conj"
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùsékènè",
           "mb": ["ku-", "seke", "-na", "-L -H -L -L"],
+          "ge": ["AGR9-", "release", "-VENT", "-RLSp"],
           "ps": ["agv-", "v", "-vent", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "wúugàvà",
           "mb": ["u-", "u-", "gava", "-H -L -L"],
+          "ge": ["3PS-", "FUT-", "kick", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "kúmá,",
           "mb": "kùmà",
+          "ge": "more",
           "ps": "quant"
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kùnáa",
           "mb": ["kù-", "náa"],
+          "ge": ["NC9-", "leg"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kúnɗò",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         }
       ],
@@ -1380,21 +1586,25 @@
         {
           "tx": "ùgávà",
           "mb": ["u-", "gava", "-L -H -L"],
+          "ge": ["3PS-", "kick", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "põ̂,",
           "mb": "põ̂",
+          "ge": "all",
           "ps": "quant"
         },
         {
           "tx": "kúnɗò",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kùkáɓànù",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1411,16 +1621,19 @@
         {
           "tx": "põ̂",
           "mb": "põ̂",
+          "ge": "all",
           "ps": "quant"
         },
         {
           "tx": "kùnáa",
           "mb": ["kù-", "náa"],
+          "ge": ["NC9-", "leg"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùyápù?",
           "mb": ["kù-", "yápù"],
+          "ge": ["AGR9-", "two"],
           "ps": ["ag-", "num"]
         }
       ],
@@ -1436,6 +1649,7 @@
       "txGroup": {
         "tx": "ée",
         "mb": "'ĩ́i",
+        "ge": "yes",
         "ps": "intj"
       }
     },
@@ -1448,16 +1662,19 @@
         {
           "tx": "ècíyè",
           "mb": ["à-", "cíyè"],
+          "ge": ["NC2-", "hand"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùmà",
           "mb": "kùmà",
+          "ge": "more",
           "ps": "quant"
         },
         {
           "tx": "àkáɓànù?",
           "mb": ["a-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["3PP-", "catch", "-RES", "-RLSp"],
           "ps": ["agp-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1474,31 +1691,37 @@
         {
           "tx": "põ̂",
           "mb": "põ̂",
+          "ge": "all",
           "ps": "quant"
         },
         {
           "tx": "ècíyè",
           "mb": ["à-", "cíyè"],
+          "ge": ["NC2-", "hand"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ànáa",
           "mb": ["à-", "náa"],
+          "ge": ["NC2-", "leg"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "hàyápù",
           "mb": ["hà-", "yápù"],
+          "ge": ["AGR2-", "two"],
           "ps": ["ag-", "num"]
         },
         {
           "tx": "àkáɓànù",
           "mb": ["a-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["3PP-", "catch", "-RES", "-RLSp"],
           "ps": ["agp-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1515,41 +1738,49 @@
         {
           "tx": "èví",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "dá'à",
           "mb": "dá'à",
+          "ge": "moreover",
           "ps": "adv"
         },
         {
           "tx": "ùyôo",
           "mb": ["u-", "yo", "-L -HL"],
+          "ge": ["3PS-", "be", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "dá'à",
           "mb": "dá'à",
+          "ge": "moreover",
           "ps": "adv"
         },
         {
           "tx": "lêe",
           "mb": "lêe",
+          "ge": "there",
           "ps": "loc"
         },
         {
           "tx": "ròtó...",
           "mb": "*ròtó...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "a̋",
           "mb": "a̋",
+          "ge": "LOC",
           "ps": "prep"
         },
         {
           "tx": "kúlácí?",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -1566,11 +1797,13 @@
         {
           "tx": "éví",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "lêe",
           "mb": "lêe",
+          "ge": "there",
           "ps": "loc"
         }
       ],
@@ -1587,46 +1820,55 @@
         {
           "tx": "èví",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "wíndà",
           "mb": ["u-", "inda", "-L -H -L"],
+          "ge": ["3PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "èví,",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ùgúyà",
           "mb": ["u-", "guya", "-L -H -L"],
+          "ge": ["3PS-", "can", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "ùsékènù",
           "mb": ["ù-", "seke", "-nu", "-H -L -L"],
+          "ge": ["NC7-", "release", "-RES", "-NMLZ"],
           "ps": ["nc-", "v", "-res", "-ntone"]
         },
         {
           "tx": "kúmá",
           "mb": "kùmà",
+          "ge": "more",
           "ps": "quant"
         }
       ],
@@ -1643,56 +1885,67 @@
         {
           "tx": "hálí",
           "mb": "hálì",
+          "ge": "even",
           "ps": "adv"
         },
         {
           "tx": "ká'à",
           "mb": "ká'à",
+          "ge": "now",
           "ps": "adv"
         },
         {
           "tx": "gó",
           "mb": "gó",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "náatà",
           "mb": "náatà",
+          "ge": "small_spider",
           "ps": "n"
         },
         {
           "tx": "kúsù",
           "mb": ["kusũ", "-H -L"],
+          "ge": ["reduce", "-RLS"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ìtángì",
           "mb": ["ì-", "tángì"],
+          "ge": ["NC3-", "item"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "cìgã̂a,",
           "mb": ["tì-", "gã̂a"],
+          "ge": ["NC6-", "quarrel"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "põ̂",
           "mb": "põ̂",
+          "ge": "all",
           "ps": "quant"
         },
         {
           "tx": "'ínì",
           "mb": "'ínì",
+          "ge": "like_that",
           "ps": "adv"
         }
       ],
@@ -1709,51 +1962,61 @@
         {
           "tx": "ń",
           "mb": "ń",
+          "ge": "if",
           "ps": "conj"
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùsékènù",
           "mb": ["ku-", "seke", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "release", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "éví",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "wúudù'ɔ̃̀",
           "mb": ["u-", "u-", "du'ɔ̃", "-H -L -L"],
+          "ge": ["3PS-", "FUT-", "collide", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kúllèenì",
           "mb": ["kù-", "llè", "-ni"],
+          "ge": ["AGR9-", "that", "-NMLZ"],
           "ps": ["ag-", "dem", "-nom"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "cìcĩ̂i",
           "mb": ["tì-", "cĩ̂i"],
+          "ge": ["NC6-", "forehead"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -1770,21 +2033,25 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùdú'ɔ̃̀,",
           "mb": ["u-", "du'ɔ̃", "-L -H -L"],
+          "ge": ["3PS-", "collide", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cìcĩ̂i",
           "mb": ["tì-", "cĩ̂i"],
+          "ge": ["NC6-", "forehead"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tìkáɓànù",
           "mb": ["ti-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR6-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1800,6 +2067,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -1815,26 +2083,31 @@
         {
           "tx": "ùhyã̂awà,",
           "mb": ["u-", "hyãa", "-wa", "-L -HL -L"],
+          "ge": ["3PS-", "say", "-APPL", "-RLSp"],
           "ps": ["agp-", "v", "-appl", "-vtonep"]
         },
         {
           "tx": "ká'à",
           "mb": "ká'à",
+          "ge": "now",
           "ps": "adv"
         },
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "wúunùmà",
           "mb": ["u-", "u-", "numa", "-H -L -L"],
+          "ge": ["3PS-", "FUT-", "bite", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "kúlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -1851,16 +2124,19 @@
         {
           "tx": "á'áǃ",
           "mb": "á'á",
+          "ge": "surprise",
           "ps": "intj"
         },
         {
           "tx": "cìcĩ̂i",
           "mb": ["tì-", "cĩ̂i"],
+          "ge": ["NC6-", "forehead"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ùkáɓánúuní",
           "mb": ["ù-", "kaɓa", "-nu", "-ni", "-H -H -H -H"],
+          "ge": ["NC7-", "catch", "-RES", "-NMLZ", "-NMLZ"],
           "ps": ["nc-", "v", "-res", "-nom", "-ntone"]
         }
       ],
@@ -1877,21 +2153,25 @@
         {
           "tx": "cìcĩ̂i",
           "mb": ["tì-", "cĩ̂i"],
+          "ge": ["NC6-", "forehead"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ùkáɓánúuní",
           "mb": ["ù-", "kaɓa", "-nu", "-ni", "-H -H -H -H"],
+          "ge": ["NC7-", "catch", "-RES", "-NMLZ", "-NMLZ"],
           "ps": ["nc-", "v", "-res", "-nom", "-ntone"]
         },
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùnímà",
           "mb": ["u-", "nima", "-L -H -L"],
+          "ge": ["3PS-", "bite", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         }
       ],
@@ -1908,36 +2188,43 @@
         {
           "tx": "èví",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "hínà",
           "mb": "hínà",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ùtíyò",
           "mb": ["u-", "tiyo", "-L -H -L"],
+          "ge": ["3PS-", "get", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "dìbárà",
           "mb": "dìbárà",
+          "ge": "scheme",
           "ps": "n"
         },
         {
           "tx": "ùyã̂a",
           "mb": ["u-", "yãa", "-L -HL"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "únùmà",
           "mb": ["ù-", "numa", "-L -L"],
+          "ge": ["NC7-", "bite", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         }
       ],
@@ -1954,11 +2241,13 @@
         {
           "tx": "ángá",
           "mb": ["à-", "ngáa"],
+          "ge": ["NC2-", "tooth"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "hàkáɓànù",
           "mb": ["ha-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR2-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -1974,6 +2263,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       }
     },
@@ -1986,36 +2276,43 @@
         {
           "tx": "náatà",
           "mb": "náatà",
+          "ge": "small_spider",
           "ps": "n"
         },
         {
           "tx": "lêe",
           "mb": "lêe",
+          "ge": "there",
           "ps": "loc"
         },
         {
           "tx": "dáɗà",
           "mb": "dá'à",
+          "ge": "moreover",
           "ps": "adv"
         },
         {
           "tx": "róotóo...,",
           "mb": "*róotóo...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "géɗù",
           "mb": "géɗù",
+          "ge": "high",
           "ps": "n"
         },
         {
           "tx": "a̋",
           "mb": "a̋",
+          "ge": "LOC",
           "ps": "prep"
         },
         {
           "tx": "kúlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -2032,26 +2329,31 @@
         {
           "tx": "ùlápà",
           "mb": ["u-", "lapa", "-L -H -L"],
+          "ge": ["3PS-", "know", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "tínà",
           "mb": ["tì-", "nà"],
+          "ge": ["AGR6-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "úyã̀a",
           "mb": ["u-", "yãa", "-H -L"],
+          "ge": ["3PS-", "do", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "úsìiwà",
           "mb": ["u-", "siiwa", "-H -L -L"],
+          "ge": ["3PS-", "untie", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         }
       ],
@@ -2067,6 +2369,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -2082,51 +2385,61 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "wíndà",
           "mb": ["u-", "inda", "-L -H -L"],
+          "ge": ["3PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cúkúndú,",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "lápà,",
           "mb": ["lapa", "-H -L"],
+          "ge": ["know", "-RLS"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "sáa",
           "mb": "sáa",
+          "ge": "or",
           "ps": "conj"
         },
         {
           "tx": "yànú",
           "mb": "yàanú",
+          "ge": "who",
           "ps": "question"
         },
         {
           "tx": "vésì",
           "mb": "vésì",
+          "ge": "too",
           "ps": "adv?"
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kwã́a'ã́",
           "mb": "kwã́a'ã́",
+          "ge": "day",
           "ps": "n"
         },
         {
           "tx": "kùwã́awà",
           "mb": ["ku-", "wãawa", "-L -H -L"],
+          "ge": ["AGR9-", "recover", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         }
       ],
@@ -2143,26 +2456,31 @@
         {
           "tx": "úbɔ̀lɔ̀",
           "mb": ["u-", "bɔlɔ", "-H -L -L"],
+          "ge": ["3PS-", "look_for", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ìrí",
           "mb": ["ì-", "rí"],
+          "ge": ["NC3-", "thing"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "yínà",
           "mb": ["ì-", "nà"],
+          "ge": ["AGR3-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "úràa",
           "mb": ["u-", "raa", "-H -L"],
+          "ge": ["3PS-", "eat", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kóo?",
           "mb": "kóo",
+          "ge": "or",
           "ps": "conj"
         }
       ],
@@ -2179,16 +2497,19 @@
         {
           "tx": "ée",
           "mb": "'ĩ́i",
+          "ge": "yes",
           "ps": "intj"
         },
         {
           "tx": "sòsái",
           "mb": "sòsâi",
+          "ge": "indeed",
           "ps": "adv"
         },
         {
           "tx": "hínàǃ",
           "mb": "hínà",
+          "ge": "TOP",
           "ps": "part"
         }
       ],
@@ -2205,56 +2526,67 @@
         {
           "tx": "sée",
           "mb": "sée",
+          "ge": "unless",
           "ps": "conj"
         },
         {
           "tx": "wíndànà",
           "mb": ["u-", "inda", "-na", "-L -H -L -L"],
+          "ge": ["3PS-", "see", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "cúkúndú,",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "cùkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "táyà",
           "mb": ["ti-", "aya", "-H -L"],
+          "ge": ["AGR6-", "come", "-IRRp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "tìzâa",
           "mb": ["ti-", "zaa", "-L -HL"],
+          "ge": ["AGR6-", "see", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "vì,",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "yìní",
           "mb": "yìní",
+          "ge": "what",
           "ps": "question"
         },
         {
           "tx": "yìyã̂anà",
           "mb": ["i-", "yãa", "-na", "-L -HL -L"],
+          "ge": ["AGR3-", "do", "-PFV", "-RLSp"],
           "ps": ["agv-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "vù?",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         }
       ],
@@ -2271,36 +2603,43 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tò,",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "kùlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kúmpàanì",
           "mb": ["kù-", "mpà", "-ni"],
+          "ge": ["AGR9-", "this", "-NMLZ"],
           "ps": ["ag-", "dem", "-nom"]
         },
         {
           "tx": "kwì",
           "mb": ["kù-", "ì"],
+          "ge": ["AGR9-", "COP"],
           "ps": ["ag-", "cop"]
         },
         {
           "tx": "ǹzâanà",
           "mb": ["m-", "zaa", "-na", "-L -HL -L"],
+          "ge": ["1PS-", "see", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "pâa",
           "mb": "pâa",
+          "ge": "here",
           "ps": "loc"
         }
       ],
@@ -2317,31 +2656,37 @@
         {
           "tx": "ǹhyã̂a",
           "mb": ["m-", "hyãa", "-L -HL"],
+          "ge": ["1PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "úzɔ̀ɔsɔ̀wɔ̀",
           "mb": ["u-", "zɔɔsɔ", "-wa", "-H -L -L -L"],
+          "ge": ["3PS-", "laugh", "-APPL", "-IRRp"],
           "ps": ["agp-", "v", "-appl", "-vtonep"]
         },
         {
           "tx": "mù,",
           "mb": "mù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "wěwè",
           "mb": ["u-", "ewe", "-L -H -L"],
+          "ge": ["3PS-", "refuse", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "úzɔ̀ɔsɔ̀wɔ̀",
           "mb": ["u-", "zɔɔsɔ", "-wa", "-H -L -L -L"],
+          "ge": ["3PS-", "laugh", "-APPL", "-IRRp"],
           "ps": ["agp-", "v", "-appl", "-vtonep"]
         }
       ],
@@ -2358,16 +2703,19 @@
         {
           "tx": "máyà",
           "mb": ["m-", "aya", "-L -H -L"],
+          "ge": ["1PS-", "come", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ǹsɔ́'ũ̀",
           "mb": ["m-", "sɔ'ũ", "-L -H -L"],
+          "ge": ["1PS-", "touch", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì, àsĩ́'yã́",
           "mb": ["vì  à-", "sĩ́'yã́"],
+          "ge": ["3PS.PRNC2-", "breast"],
           "ps": ["pro   nc-", "n"]
         }
       ],
@@ -2383,6 +2731,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       }
     },
@@ -2395,26 +2744,31 @@
         {
           "tx": "kùcíyè",
           "mb": ["kù-", "cíyè"],
+          "ge": ["NC9-", "hand"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùkáɓànù,",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         },
         {
           "tx": "ǹsɔ́'ũ̀",
           "mb": ["m-", "sɔ'ũ", "-L -H -L"],
+          "ge": ["1PS-", "touch", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúnɗò",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kùkáɓànù",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -2431,41 +2785,49 @@
         {
           "tx": "máyà",
           "mb": ["m-", "aya", "-L -H -L"],
+          "ge": ["1PS-", "come", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ǹgávà",
           "mb": ["m-", "gava", "-L -H -L"],
+          "ge": ["1PS-", "kick", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "põ̂",
           "mb": "põ̂",
+          "ge": "all",
           "ps": "quant"
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ànáa",
           "mb": ["à-", "náa"],
+          "ge": ["NC2-", "leg"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "hàyápù",
           "mb": ["hà-", "yápù"],
+          "ge": ["AGR2-", "two"],
           "ps": ["ag-", "num"]
         },
         {
           "tx": "àkáɓànù",
           "mb": ["a-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["3PP-", "catch", "-RES", "-RLSp"],
           "ps": ["agp-", "v", "-res", "-vtonep"]
         }
       ],
@@ -2482,11 +2844,13 @@
         {
           "tx": "põ̂",
           "mb": "põ̂",
+          "ge": "all",
           "ps": "quant"
         },
         {
           "tx": "àkáɓànù?",
           "mb": ["a-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["3PP-", "catch", "-RES", "-RLSp"],
           "ps": ["agp-", "v", "-res", "-vtonep"]
         }
       ],
@@ -2503,61 +2867,73 @@
         {
           "tx": "ée,",
           "mb": "'ĩ́i",
+          "ge": "yes",
           "ps": "intj"
         },
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tò",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "ká'à",
           "mb": "ká'à",
+          "ge": "now",
           "ps": "adv"
         },
         {
           "tx": "dáɗà",
           "mb": "dá'à",
+          "ge": "moreover",
           "ps": "adv"
         },
         {
           "tx": "ǹyíi",
           "mb": ["m-", "yu", "-L -H"],
+          "ge": ["1PS-", "CONT", "-RLSp"],
           "ps": ["agp-", "aux", "-vtonep"]
         },
         {
           "tx": "tà'à",
           "mb": ["ta'a", "-L -L"],
+          "ge": ["want", "-INF"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "tínà",
           "mb": ["tì-", "nà"],
+          "ge": ["AGR6-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "múuyã̀a",
           "mb": ["m-", "u-", "yãa", "-H -L"],
+          "ge": ["1PS-", "FUT-", "do", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "ńkùɗùwà",
           "mb": ["m-", "kuɗuwa", "-H -L -L -L"],
+          "ge": ["1PS-", "peel_off", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ǹgúyà",
           "mb": ["m-", "guya", "-L -H -L"],
+          "ge": ["1PS-", "can", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         }
       ],
@@ -2573,6 +2949,7 @@
       "txGroup": {
         "tx": "á'áǃ",
         "mb": "á'á",
+        "ge": "surprise",
         "ps": "intj"
       },
       "ftGroup": {
@@ -2588,66 +2965,79 @@
         {
           "tx": "cùkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tìhyã́a",
           "mb": ["ti-", "hyãa", "-L -H"],
+          "ge": ["AGR6-", "say", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "tò,",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "ká'à",
           "mb": "ká'à",
+          "ge": "now",
           "ps": "adv"
         },
         {
           "tx": "tínà",
           "mb": ["tì-", "nà"],
+          "ge": ["AGR6-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "húuyã̀a,",
           "mb": ["a-", "u-", "yãa", "-H -L"],
+          "ge": ["3PP-", "FUT-", "do", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "àmú",
           "mb": "àmù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "múukùɗùwà",
           "mb": ["m-", "u-", "kuɗuwa", "-H -L -L -L"],
+          "ge": ["1PS-", "FUT-", "peel_off", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "vù",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         },
         {
           "tx": "yáddà",
           "mb": ["yadda", "-H -L"],
+          "ge": ["agree", "-RLS"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "sṹ",
           "mb": "sṹ",
+          "ge": "question",
           "ps": "question"
         },
         {
           "tx": "ńkùɗùwà",
           "mb": ["m-", "kuɗuwa", "-H -L -L -L"],
+          "ge": ["1PS-", "peel_off", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vù?",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         }
       ],
@@ -2664,11 +3054,13 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "íi",
           "mb": "'ĩ́i",
+          "ge": "yes",
           "ps": "intj"
         }
       ],
@@ -2685,31 +3077,37 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ù'ɔ́pɔ̀",
           "mb": ["u-", "'ɔpɔ", "-L -H -L"],
+          "ge": ["3PS-", "hold", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ùyã̂a",
           "mb": ["u-", "yãa", "-L -HL"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúbɔ̀dɔ̀",
           "mb": ["kù-", "bɔdɔ", "-L -L"],
+          "ge": ["NC9-", "apply_liquid", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "mòtõ̂o",
           "mb": ["mà-", "tõ̂o"],
+          "ge": ["NC4-", "saliva"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -2725,6 +3123,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -2740,46 +3139,55 @@
         {
           "tx": "ùyã̂a",
           "mb": ["u-", "yãa", "-L -HL"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúbɔ̀dɔ̀",
           "mb": ["kù-", "bɔdɔ", "-L -L"],
+          "ge": ["NC9-", "apply_liquid", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "mòtõ̂o,",
           "mb": ["mà-", "tõ̂o"],
+          "ge": ["NC4-", "saliva"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ùyã̂a",
           "mb": ["u-", "yãa", "-L -HL"],
+          "ge": ["3PS-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúbɔ̀dɔ̀",
           "mb": ["kù-", "bɔdɔ", "-L -L"],
+          "ge": ["NC9-", "apply_liquid", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "mòtõ̂o",
           "mb": ["mà-", "tõ̂o"],
+          "ge": ["NC4-", "saliva"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "sòsái",
           "mb": "sòsâi",
+          "ge": "indeed",
           "ps": "adv"
         }
       ],
@@ -2796,16 +3204,19 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "dáɗà",
           "mb": "dá'à",
+          "ge": "moreover",
           "ps": "adv"
         },
         {
           "tx": "ùkúɗùwà",
           "mb": ["u-", "kuɗuwa", "-L -H -L -L"],
+          "ge": ["3PS-", "peel_off", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         }
       ],
@@ -2822,26 +3233,31 @@
         {
           "tx": "ánà",
           "mb": "ánà",
+          "ge": "when",
           "ps": "conj"
         },
         {
           "tx": "ùkúɗùwànà,",
           "mb": ["u-", "kuɗuwa", "-na", "-L -H -L -L -L"],
+          "ge": ["3PS-", "peel_off", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "náatà",
           "mb": "náatà",
+          "ge": "small_spider",
           "ps": "n"
         },
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "kúɗùwà",
           "mb": ["kuɗuwa", "-H -L -L"],
+          "ge": ["peel_off", "-RLS"],
           "ps": ["v", "-vtone"]
         }
       ],
@@ -2857,6 +3273,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -2872,61 +3289,73 @@
         {
           "tx": "sée",
           "mb": "sée",
+          "ge": "unless",
           "ps": "conj"
         },
         {
           "tx": "ùhyã̂anà",
           "mb": ["u-", "hyãa", "-na", "-L -HL -L"],
+          "ge": ["3PS-", "say", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "kâiǃ",
           "mb": "kâi",
+          "ge": "excl",
           "ps": "intj"
         },
         {
           "tx": "gàskìyá...",
           "mb": "*gàskìyá...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "ń",
           "mb": "ń",
+          "ge": "if",
           "ps": "conj"
         },
         {
           "tx": "dà",
           "mb": "*dà",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "gó",
           "mb": "gó",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "vúugùyà",
           "mb": ["v-", "u-", "guya", "-H -L -L"],
+          "ge": ["2PS-", "FUT-", "can", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "sɔ̀'ũ̀",
           "mb": ["sɔ'ũ", "-L -L"],
+          "ge": ["touch", "-INF"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "kúlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kúmpà",
           "mb": ["kù-", "mpà"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kóo?",
           "mb": "kóo",
+          "ge": "or",
           "ps": "conj"
         }
       ],
@@ -2943,11 +3372,13 @@
         {
           "tx": "ùhyã̂anà",
           "mb": ["u-", "hyãa", "-na", "-L -HL -L"],
+          "ge": ["3PS-", "say", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "cúkúndú?",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -2964,16 +3395,19 @@
         {
           "tx": "ée,",
           "mb": "'ĩ́i",
+          "ge": "yes",
           "ps": "intj"
         },
         {
           "tx": "hyã̂a",
           "mb": ["hyãa", "-HL"],
+          "ge": ["say", "-RLS"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "cúkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -2990,11 +3424,13 @@
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "náatà?",
           "mb": "náatà",
+          "ge": "small_spider",
           "ps": "n"
         }
       ],
@@ -3011,41 +3447,49 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cúkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "dà",
           "mb": "*dà",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "gó",
           "mb": "gó",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "cùkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "túugùyà",
           "mb": ["ti-", "u-", "guya", "-H -L -L"],
+          "ge": ["AGR6-", "FUT-", "can", "-IRRp"],
           "ps": ["agv-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "tísɔ̀'ũ̀",
           "mb": ["ti-", "sɔ'ũ", "-H -L -L"],
+          "ge": ["AGR6-", "touch", "-IRRp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "kúlácí",
           "mb": ["kù-", "lácí"],
+          "ge": ["NC9-", "young_woman"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -3062,56 +3506,67 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "dà",
           "mb": "*dà",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "gó",
           "mb": "gó",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "vúugùyà",
           "mb": ["v-", "u-", "guya", "-H -L -L"],
+          "ge": ["2PS-", "FUT-", "can", "-IRRp"],
           "ps": ["agp-", "tns-", "v", "-vtonep"]
         },
         {
           "tx": "sɔ́'ũ̀,",
           "mb": "sɔ'ũ",
+          "ge": "touch",
           "ps": "v"
         },
         {
           "tx": "sà'ṹ",
           "mb": ["sɔ'ũ", "-L -H"],
+          "ge": ["touch", "-IMP"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "kwì",
           "mb": ["kù-", "ì"],
+          "ge": ["AGR9-", "PRO"],
           "ps": ["ag-", "ncpro"]
         },
         {
           "tx": "vésìǃ",
           "mb": "vésì",
+          "ge": "too",
           "ps": "adv?"
         },
         {
           "tx": "tínà",
           "mb": ["tì-", "nà"],
+          "ge": ["AGR6-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "àmù",
           "mb": "àmù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "sá'ũ̀nà",
           "mb": ["sɔ'ũ", "-na", "-H -L -L"],
+          "ge": ["touch", "-PFV", "-RLS"],
           "ps": ["v", "-asp", "-vtone"]
         }
       ],
@@ -3128,21 +3583,25 @@
         {
           "tx": "cùkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "màhũ̂u",
           "mb": ["mà-", "hũ̂u"],
+          "ge": ["NC4-", "truth"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tìvɔ́ntɔ̀",
           "mb": ["ti-", "vɔntɔ", "-L -H -L"],
+          "ge": ["AGR6-", "grab", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "ásĩ́'yã́",
           "mb": ["à-", "sĩ́'yã́"],
+          "ge": ["NC2-", "breast"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -3159,31 +3618,37 @@
         {
           "tx": "ánà",
           "mb": "ánà",
+          "ge": "when",
           "ps": "conj"
         },
         {
           "tx": "ùvɔ́ntɔ̀nɔ̀",
           "mb": ["u-", "vɔntɔ", "-na", "-L -H -L -L"],
+          "ge": ["3PS-", "grab", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "ásĩ́'yã́,",
           "mb": ["à-", "sĩ́'yã́"],
+          "ge": ["NC2-", "breast"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùcíyè",
           "mb": ["kù-", "cíyè"],
+          "ge": ["NC9-", "hand"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùvésì",
           "mb": ["kù-", "vésì"],
+          "ge": ["AGR9-", "too"],
           "ps": ["ag-", "adv?"]
         },
         {
           "tx": "kùkáɓànù",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -3200,31 +3665,37 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vɔ̀ntɔ́",
           "mb": ["vɔntɔ", "-L -H"],
+          "ge": ["grab", "-IMP"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kúnɗòonì,",
           "mb": ["kù-", "ɗɗò", "-ni"],
+          "ge": ["AGR9-", "this", "-NMLZ"],
           "ps": ["ag-", "dem", "-nom"]
         },
         {
           "tx": "kú'índè",
           "mb": ["kù-", "'índè"],
+          "ge": ["AGR9-", "that"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kúsìiwà",
           "mb": ["ku-", "siiwa", "-H -L -L"],
+          "ge": ["AGR9-", "untie", "-IRRp"],
           "ps": ["agv-", "v", "-vtonep"]
         }
       ],
@@ -3241,41 +3712,49 @@
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùvɔ́ntɔ̀",
           "mb": ["u-", "vɔntɔ", "-L -H -L"],
+          "ge": ["3PS-", "grab", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kúɗò,",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kúɗò",
           "mb": ["kù-", "ɗɗò"],
+          "ge": ["AGR9-", "this"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kúmá",
           "mb": "kùmà",
+          "ge": "more",
           "ps": "quant"
         },
         {
           "tx": "kùkáɓànù",
           "mb": ["ku-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR9-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -3292,36 +3771,43 @@
         {
           "tx": "àmáa",
           "mb": "àmá",
+          "ge": "but",
           "ps": "conj"
         },
         {
           "tx": "vésì",
           "mb": "vésì",
+          "ge": "too",
           "ps": "adv"
         },
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ùvésì",
           "mb": ["u-", "vesi", "-L -H -L"],
+          "ge": ["3PS-", "also", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ɗà",
           "mb": "ɗà",
+          "ge": "be",
           "ps": "aux"
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "kàhánkàlì",
           "mb": ["kà-", "hánkàlì"],
+          "ge": ["NC1-", "wisdom"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -3338,51 +3824,61 @@
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ùzâa",
           "mb": ["u-", "zaa", "-L -HL"],
+          "ge": ["3PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "émpè",
           "mb": "émpè",
+          "ge": "this",
           "ps": "pro"
         },
         {
           "tx": "ùkáɓánúuní",
           "mb": ["ù-", "kaɓa", "-nu", "-ni", "-H -H -H -H"],
+          "ge": ["NC7-", "catch", "-RES", "-NMLZ", "-NMLZ"],
           "ps": ["nc-", "v", "-res", "-nom", "-ntone"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kùcíyè",
           "mb": ["kù-", "cíyè"],
+          "ge": ["NC9-", "hand"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùyápù",
           "mb": ["kù-", "yápù"],
+          "ge": ["AGR9-", "two"],
           "ps": ["ag-", "num"]
         },
         {
           "tx": "ùgúyà",
           "mb": ["u-", "guya", "-L -H -L"],
+          "ge": ["3PS-", "can", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "úkùɗùwà",
           "mb": ["ù-", "kuɗuwa", "-L -L -L"],
+          "ge": ["NC7-", "peel_off", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         }
       ],
@@ -3399,16 +3895,19 @@
         {
           "tx": "váyà",
           "mb": ["v-", "aya", "-L -H -L"],
+          "ge": ["2PS-", "come", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vvɔ́ntìlɔ̀",
           "mb": ["CDup-", "vɔntɔ", "-H -L", "-il-"],
+          "ge": ["2PS-", "grab", "-RLS", "-PLAC-"],
           "ps": ["agpl-", "v", "-vtone", "-plac-"]
         },
         {
           "tx": "'ínìǃ",
           "mb": "'ínì",
+          "ge": "like_that",
           "ps": "adv"
         }
       ],
@@ -3424,6 +3923,7 @@
       "txGroup": {
         "tx": "ée",
         "mb": "'ĩ́i",
+        "ge": "yes",
         "ps": "intj"
       },
       "ftGroup": {
@@ -3438,6 +3938,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -3453,16 +3954,19 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ùsékè",
           "mb": ["u-", "seke", "-L -H -L"],
+          "ge": ["3PS-", "release", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé?",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         }
       ],
@@ -3479,31 +3983,37 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ɔ́'ɔ̀",
           "mb": "á'à",
+          "ge": "no",
           "ps": "intj"
         },
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tò",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "gàvá",
           "mb": ["gava", "-L -H"],
+          "ge": ["kick", "-IMP"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         }
       ],
@@ -3520,21 +4030,25 @@
         {
           "tx": "cùkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tìgávà",
           "mb": ["ti-", "gava", "-L -H -L"],
+          "ge": ["AGR6-", "kick", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "kùnáa",
           "mb": ["kù-", "náa"],
+          "ge": ["NC9-", "leg"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "kùkáɓà",
           "mb": ["ku-", "kaɓa", "-L -H -L"],
+          "ge": ["AGR9-", "catch", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         }
       ],
@@ -3551,41 +4065,49 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "gàvá",
           "mb": ["gava", "-L -H"],
+          "ge": ["kick", "-IMP"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kù'índè",
           "mb": ["kù-", "'índè"],
+          "ge": ["AGR9-", "that"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "ùgávà",
           "mb": ["u-", "gava", "-L -H -L"],
+          "ge": ["3PS-", "kick", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "kúmá",
           "mb": "kùmà",
+          "ge": "more",
           "ps": "quant"
         },
         {
           "tx": "kù'índè",
           "mb": ["kù-", "'índè"],
+          "ge": ["AGR9-", "that"],
           "ps": ["ag-", "dem"]
         },
         {
           "tx": "kùkáɓà",
           "mb": ["ku-", "kaɓa", "-L -H -L"],
+          "ge": ["AGR9-", "catch", "-RLSp"],
           "ps": ["agv-", "v", "-vtonep"]
         }
       ],
@@ -3602,16 +4124,19 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ùsékènè",
           "mb": ["u-", "seke", "-na", "-L -H -L -L"],
+          "ge": ["3PS-", "release", "-VENT", "-RLSp"],
           "ps": ["agp-", "v", "-vent", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         }
       ],
@@ -3628,11 +4153,13 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ḿ'm̀...",
           "mb": "*ḿ'm̀...",
+          "ge": "***",
           "ps": "***"
         }
       ],
@@ -3649,61 +4176,73 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "lápà",
           "mb": ["lapa", "-H -L"],
+          "ge": ["know", "-RLS"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "tínà",
           "mb": ["tì-", "nà"],
+          "ge": ["AGR6-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "àmù",
           "mb": "àmù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ǹyã̂anà,",
           "mb": ["m-", "yãa", "-na", "-L -HL -L"],
+          "ge": ["1PS-", "do", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "ń dà",
           "mb": "ń *dà",
+          "ge": "if  ***",
           "ps": "conj***"
         },
         {
           "tx": "yâanà",
           "mb": ["yaa", "-na", "-HL -L"],
+          "ge": ["arrive", "-VENT", "-RLS"],
           "ps": ["v", "-vent", "-vtone"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "pâa,",
           "mb": "pâa",
+          "ge": "here",
           "ps": "loc"
         },
         {
           "tx": "ǹsáa",
           "mb": ["m-", "sáa"],
+          "ge": ["1PS-", "might"],
           "ps": ["agp-", "aux"]
         },
         {
           "tx": "síiwà",
           "mb": "siiwa",
+          "ge": "untie",
           "ps": "v"
         },
         {
           "tx": "síiwà",
           "mb": "siiwa",
+          "ge": "untie",
           "ps": "v"
         }
       ],
@@ -3720,36 +4259,43 @@
         {
           "tx": "ánà",
           "mb": "ánà",
+          "ge": "when",
           "ps": "conj"
         },
         {
           "tx": "yáànànà",
           "mb": ["yaa", "-na", "-na", "-H -L -L -L"],
+          "ge": ["arrive", "-VENT", "-PFV", "-RLS"],
           "ps": ["v", "-vent", "-asp", "-vtone"]
         },
         {
           "tx": "áuyì...,",
           "mb": "*áuyì...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "víndànà,",
           "mb": ["vi-", "inda", "-na", "-L -H -L -L"],
+          "ge": ["AGR8-", "see", "-PFV", "-RLSp"],
           "ps": ["agv-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "ǹhyã̂a        vù",
           "mb": ["m-", "hyãa", "-L -HL vù"],
+          "ge": ["1PS-", "say", "-RLSp  2PS.SG"],
           "ps": ["agp-", "v", "-vtoneppro"]
         },
         {
           "tx": "íggòonù",
           "mb": ["i-", "CDup-", "goonu", "-H -L -L"],
+          "ge": ["2PS.IRR-", "2PS-", "help", "-IRRp"],
           "ps": ["agpi-", "agpl-", "v", "-vtonep"]
         },
         {
           "tx": "mù",
           "mb": "mù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         }
       ],
@@ -3767,36 +4313,43 @@
         {
           "tx": "nìmá",
           "mb": ["nima", "-L -H"],
+          "ge": ["bite", "-IMP"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "vìǃ",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "wáyà",
           "mb": ["w-", "aya", "-HL"],
+          "ge": ["3PS-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ùnímà,",
           "mb": ["u-", "nima", "-L -H -L"],
+          "ge": ["3PS-", "bite", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "hárì",
           "mb": "hár",
+          "ge": "until",
           "ps": "conj"
         },
         {
           "tx": "ángá",
           "mb": ["à-", "ngáa"],
+          "ge": ["NC2-", "tooth"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "hàkáɓànù",
           "mb": ["ha-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR2-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -3813,26 +4366,31 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "dù'ɔ̃́ǃ",
           "mb": ["du'ɔ̃", "-L -H"],
+          "ge": ["collide", "-IMP"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "ùdú'ɔ̃̀",
           "mb": ["u-", "du'ɔ̃", "-L -H -L"],
+          "ge": ["3PS-", "collide", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cìcĩ̂i",
           "mb": ["tì-", "cĩ̂i"],
+          "ge": ["NC6-", "forehead"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tìkáɓànù",
           "mb": ["ti-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR6-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         }
       ],
@@ -3848,6 +4406,7 @@
       "txGroup": {
         "tx": "tò",
         "mb": "tò",
+        "ge": "OK",
         "ps": "intj"
       },
       "ftGroup": {
@@ -3863,26 +4422,31 @@
         {
           "tx": "cùkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tílêe",
           "mb": ["tì-", "lêe"],
+          "ge": ["AGR6-", "there"],
           "ps": ["ag-", "loc"]
         },
         {
           "tx": "dá'à",
           "mb": "dá'à",
+          "ge": "moreover",
           "ps": "adv"
         },
         {
           "tx": "vésì",
           "mb": "vésì",
+          "ge": "too",
           "ps": "adv"
         },
         {
           "tx": "róotòo",
           "mb": "róotòo",
+          "ge": "dangling",
           "ps": "n"
         }
       ],
@@ -3899,41 +4463,49 @@
         {
           "tx": "ánà",
           "mb": "ánà",
+          "ge": "when",
           "ps": "conj"
         },
         {
           "tx": "wíndànà",
           "mb": ["u-", "inda", "-na", "-L -H -L -L"],
+          "ge": ["3PS-", "see", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "cùkúndú,",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tìkáɓànù,",
           "mb": ["ti-", "kaɓa", "-nu", "-L -H -L -L"],
+          "ge": ["AGR6-", "catch", "-RES", "-RLSp"],
           "ps": ["agv-", "v", "-res", "-vtonep"]
         },
         {
           "tx": "báa",
           "mb": "báa",
+          "ge": "there_is_no",
           "ps": "neg"
         },
         {
           "tx": "tínà",
           "mb": ["tì-", "nà"],
+          "ge": ["AGR6-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "úyã̀a",
           "mb": ["u-", "yãa", "-H -L"],
+          "ge": ["3PS-", "do", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "úkùɗùwà",
           "mb": ["u-", "kuɗuwa", "-H -L -L -L"],
+          "ge": ["3PS-", "peel_off", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         }
       ],
@@ -3950,41 +4522,49 @@
         {
           "tx": "ùsúmà",
           "mb": ["u-", "sima", "-L -H -L"],
+          "ge": ["3PS-", "run", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "mázámázá",
           "mb": "mázámázá",
+          "ge": "hurriedly",
           "ps": "ideo"
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ìláɗì,",
           "mb": ["ì-", "láɗì"],
+          "ge": ["NC3-", "speed"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ìláɗì",
           "mb": ["ì-", "láɗì"],
+          "ge": ["NC3-", "speed"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "ìláɗì",
           "mb": ["ì-", "láɗì"],
+          "ge": ["NC3-", "speed"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -4001,41 +4581,49 @@
         {
           "tx": "wwɔ́mɔ́,",
           "mb": ["CDup-", "wɔ́mɔ́"],
+          "ge": ["NC8-", "chief"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ánnà",
           "mb": "ánnà",
+          "ge": "today",
           "ps": "adv"
         },
         {
           "tx": "míndà",
           "mb": ["m-", "inda", "-L -H -L"],
+          "ge": ["1PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "zzá",
           "mb": ["CDup-", "zá"],
+          "ge": ["NC8-", "person"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "nnà",
           "mb": ["CDup-", "nà"],
+          "ge": ["AGR8-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "sìyã́awà",
           "mb": ["si-", "yãa", "-wa", "-L -H -L"],
+          "ge": ["HAB-", "do", "-APPL", "-RLSp"],
           "ps": ["asp-", "v", "-appl", "-vtonep"]
         },
         {
           "tx": "vù",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         },
         {
           "tx": "ùbɔ́wɔ̀",
           "mb": ["ù-", "bɔwɔ", "-H -L"],
+          "ge": ["NC7-", "steal", "-NMLZ"],
           "ps": ["nc-", "v", "-ntone"]
         }
       ],
@@ -4052,21 +4640,25 @@
         {
           "tx": "ánnà",
           "mb": "ánnà",
+          "ge": "today",
           "ps": "adv"
         },
         {
           "tx": "ǹ'ɔ́pɔ̀wɔ̀",
           "mb": ["m-", "'ɔpɔ", "-wa", "-L -H -L -L"],
+          "ge": ["1PS-", "hold", "-APPL", "-RLSp"],
           "ps": ["agp-", "v", "-appl", "-vtonep"]
         },
         {
           "tx": "vù",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         },
         {
           "tx": "bɔ́wɔ́",
           "mb": "bɔ́wɔ́",
+          "ge": "thief",
           "ps": "n"
         }
       ],
@@ -4083,11 +4675,13 @@
         {
           "tx": "èvì",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "náatà?",
           "mb": "náatà",
+          "ge": "small_spider",
           "ps": "n"
         }
       ],
@@ -4104,66 +4698,79 @@
         {
           "tx": "íi,",
           "mb": "'ĩ́i",
+          "ge": "yes",
           "ps": "intj"
         },
         {
           "tx": "ǹ'ɔ́pɔ̀",
           "mb": ["m-", "'ɔpɔ", "-L -H -L"],
+          "ge": ["1PS-", "hold", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "bɔ́wɔ́",
           "mb": "bɔ́wɔ́",
+          "ge": "thief",
           "ps": "n"
         },
         {
           "tx": "váavù",
           "mb": ["v-", "ávù"],
+          "ge": ["AGR8-", "2PS.POSS"],
           "ps": ["ag-", "ppro"]
         },
         {
           "tx": "vőogínó,",
           "mb": ["vi̋-", "à-", "gínó"],
+          "ge": ["AGR8-", "NC2-", "peanut"],
           "ps": ["aggen-", "nc-", "n"]
         },
         {
           "tx": "àyá",
           "mb": ["aya", "-L -H"],
+          "ge": ["come", "-IMP"],
           "ps": ["v", "-vtone"]
         },
         {
           "tx": "vîndàǃ",
           "mb": ["vi-", "inda", "-HL -L"],
+          "ge": ["AGR8-", "see", "-IRRp"],
           "ps": ["agv-", "v", "-vtonep"]
         },
         {
           "tx": "é",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "vì",
           "mb": ["v-", "ì"],
+          "ge": ["AGR8-", "COP"],
           "ps": ["ag-", "cop"]
         },
         {
           "tx": "'ũ̂,",
           "mb": "'ũ̂",
+          "ge": "there",
           "ps": "loc"
         },
         {
           "tx": "ǹ'ɔ́pɔ̀",
           "mb": ["m-", "'ɔpɔ", "-L -H -L"],
+          "ge": ["1PS-", "hold", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ánnà",
           "mb": "ánnà",
+          "ge": "today",
           "ps": "adv"
         }
       ],
@@ -4179,6 +4786,7 @@
       "txGroup": {
         "tx": "á'áǃ",
         "mb": "á'á",
+        "ge": "surprise",
         "ps": "intj"
       },
       "ftGroup": {
@@ -4194,21 +4802,25 @@
         {
           "tx": "háyà",
           "mb": ["h-", "aya", "-HL"],
+          "ge": ["3PP-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "àzâa",
           "mb": ["a-", "zaa", "-L -HL"],
+          "ge": ["3PP-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cúkúndú,",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ùkáɓánúuní",
           "mb": ["ù-", "kaɓa", "-nu", "-ni", "-H -H -H -H"],
+          "ge": ["NC7-", "catch", "-RES", "-NMLZ", "-NMLZ"],
           "ps": ["nc-", "v", "-res", "-nom", "-ntone"]
         }
       ],
@@ -4225,21 +4837,25 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cúkúndú,",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "àyã̂a",
           "mb": ["a-", "yãa", "-L -HL"],
+          "ge": ["3PP-", "do", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tèné?",
           "mb": ["tì-", "èné"],
+          "ge": ["AGR6-", "what"],
           "ps": ["ag-", "question"]
         }
       ],
@@ -4256,41 +4872,49 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "úh-ùh...",
           "mb": "*úh-ùh...",
+          "ge": "***",
           "ps": "***"
         },
         {
           "tx": "àmù",
           "mb": "àmù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "gó",
           "mb": "gó",
+          "ge": "TOP",
           "ps": "part"
         },
         {
           "tx": "ǹzâa",
           "mb": ["m-", "zaa", "-L -HL"],
+          "ge": ["1PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "émpè",
           "mb": "émpè",
+          "ge": "this",
           "ps": "pro"
         },
         {
           "tx": "pâa",
           "mb": "pâa",
+          "ge": "here",
           "ps": "loc"
         },
         {
           "tx": "ùkáɓánúuní",
           "mb": ["ù-", "kaɓa", "-nu", "-ni", "-H -H -H -H"],
+          "ge": ["NC7-", "catch", "-RES", "-NMLZ", "-NMLZ"],
           "ps": ["nc-", "v", "-res", "-nom", "-ntone"]
         }
       ],
@@ -4307,41 +4931,49 @@
         {
           "tx": "àmáa",
           "mb": "àmá",
+          "ge": "but",
           "ps": "conj"
         },
         {
           "tx": "ǹ'ɔ̂ɔ",
           "mb": ["m-", "'ɔɔ", "-L -HL"],
+          "ge": ["1PS-", "tired", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ńkùɗù",
           "mb": ["m-", "kuɗu", "-H -L -L"],
+          "ge": ["1PS-", "peel", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "ù'ɔ̂ɔ        ù'ɔ̂ɔ",
           "mb": ["u-", "'ɔɔ", "-L -HL u-", "'ɔɔ", "-L -HL"],
+          "ge": ["3PS-", "tired", "-RLSp  3PS-", "tired", "-RLSp"],
           "ps": ["agp-", "v", "-vtonepagp-", "v", "-vtonep"]
         },
         {
           "tx": "ùgúyà",
           "mb": ["u-", "guya", "-L -H -L"],
+          "ge": ["3PS-", "can", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cé",
           "mb": "cé",
+          "ge": "NEG",
           "ps": "neg"
         },
         {
           "tx": "úkùɗùwà",
           "mb": ["ù-", "kuɗuwa", "-L -L -L"],
+          "ge": ["NC7-", "peel_off", "-COMPL"],
           "ps": ["nc-", "v", "-ntone"]
         }
       ],
@@ -4358,46 +4990,55 @@
         {
           "tx": "máyà",
           "mb": ["m-", "aya", "-L -H -L"],
+          "ge": ["1PS-", "come", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "ńkùɗù",
           "mb": ["m-", "kuɗu", "-H -L -L"],
+          "ge": ["1PS-", "peel", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vì,",
           "mb": "vì",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "sɔ́bɔ̀",
           "mb": "sɔ́bɔ̀",
+          "ge": "because",
           "ps": "conj"
         },
         {
           "tx": "'ínì",
           "mb": "'ínì",
+          "ge": "like_that",
           "ps": "adv"
         },
         {
           "tx": "vì,",
           "mb": ["v-", "ì"],
+          "ge": ["AGR8-", "COP"],
           "ps": ["ag-", "cop"]
         },
         {
           "tx": "wáyànà",
           "mb": ["u-", "aya", "-na", "-L -H -L -L"],
+          "ge": ["3PS-", "come", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "ùhyã̂awà",
           "mb": ["u-", "hyãa", "-wa", "-L -HL -L"],
+          "ge": ["3PS-", "say", "-APPL", "-RLSp"],
           "ps": ["agp-", "v", "-appl", "-vtonep"]
         },
         {
           "tx": "ámbì",
           "mb": "ámbì",
+          "ge": "I_am",
           "ps": "?"
         }
       ],
@@ -4414,26 +5055,31 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tò",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "sùpõ̂o",
           "mb": "sùpõ̂o",
+          "ge": "falsehood",
           "ps": "n"
         },
         {
           "tx": "tì",
           "mb": ["tì-", "ì"],
+          "ge": ["AGR6-", "COP"],
           "ps": ["ag-", "cop"]
         }
       ],
@@ -4450,16 +5096,19 @@
         {
           "tx": "ìvɔ́",
           "mb": "ìvɔ́",
+          "ge": "2PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "lêe",
           "mb": "lêe",
+          "ge": "there",
           "ps": "loc"
         },
         {
           "tx": "ùkáɓánúuní",
           "mb": ["ù-", "kaɓa", "-nu", "-ni", "-H -H -H -H"],
+          "ge": ["NC7-", "catch", "-RES", "-NMLZ", "-NMLZ"],
           "ps": ["nc-", "v", "-res", "-nom", "-ntone"]
         }
       ],
@@ -4476,46 +5125,55 @@
         {
           "tx": "yàaní",
           "mb": "yàanú",
+          "ge": "who",
           "ps": "question"
         },
         {
           "tx": "vì",
           "mb": ["v-", "ì"],
+          "ge": ["AGR8-", "COP"],
           "ps": ["ag-", "cop"]
         },
         {
           "tx": "àzâanà",
           "mb": ["a-", "zaa", "-na", "-L -HL -L"],
+          "ge": ["3PP-", "see", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "'ásù",
           "mb": "'ásù",
+          "ge": "place",
           "ps": "n"
         },
         {
           "tx": "cìníyáa",
           "mb": ["tì-", "níyáa"],
+          "ge": ["NC6-", "farm"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ti̋wwɔ́mɔ́,",
           "mb": ["ti̋-", "CDup-", "wɔ́mɔ́"],
+          "ge": ["AGR6.GEN-", "NC8-", "chief"],
           "ps": ["aggen-", "nc-", "n"]
         },
         {
           "tx": "àhyã̂a",
           "mb": ["a-", "hyãa", "-L -HL"],
+          "ge": ["3PP-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cùkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "tì",
           "mb": ["tì-", "ì"],
+          "ge": ["AGR6-", "COP"],
           "ps": ["ag-", "cop"]
         }
       ],
@@ -4532,56 +5190,67 @@
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tò",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "tò",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "é",
           "mb": "éví",
+          "ge": "3PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "vì,",
           "mb": ["v-", "ì"],
+          "ge": ["AGR8-", "COP"],
           "ps": ["ag-", "cop"]
         },
         {
           "tx": "àmú",
           "mb": "àmù",
+          "ge": "1PS.PRO",
           "ps": "pro"
         },
         {
           "tx": "zzá",
           "mb": ["CDup-", "zá"],
+          "ge": ["NC8-", "person"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "nnà",
           "mb": ["CDup-", "nà"],
+          "ge": ["AGR8-", "ART"],
           "ps": ["ag-", "art"]
         },
         {
           "tx": "àlíbànà",
           "mb": ["a-", "laba", "-na", "-L -H -L -L"],
+          "ge": ["3PP-", "lack", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "ùzáaní",
           "mb": ["ù-", "zaa", "-ni", "-H -H"],
+          "ge": ["NC7-", "see", "-NMLZ", "-NMLZ"],
           "ps": ["nc-", "v", "-nom", "-ntone"]
         },
         {
           "tx": "pâa",
           "mb": "pâa",
+          "ge": "here",
           "ps": "loc"
         }
       ],
@@ -4598,26 +5267,31 @@
         {
           "tx": "ámbì",
           "mb": "ámbì",
+          "ge": "I_am",
           "ps": "?"
         },
         {
           "tx": "máyànà",
           "mb": ["m-", "aya", "-na", "-L -H -L -L"],
+          "ge": ["1PS-", "come", "-PFV", "-RLSp"],
           "ps": ["agp-", "v", "-asp", "-vtonep"]
         },
         {
           "tx": "ńdàmà",
           "mb": ["m-", "dama", "-H -L -L"],
+          "ge": ["1PS-", "tell", "-IRRp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "vù",
           "mb": "vù",
+          "ge": "2PS.SG",
           "ps": "pro"
         },
         {
           "tx": "kóo?",
           "mb": "kóo",
+          "ge": "or",
           "ps": "conj"
         }
       ],
@@ -4634,36 +5308,43 @@
         {
           "tx": "àhyã̂a",
           "mb": ["a-", "hyãa", "-L -HL"],
+          "ge": ["3PP-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "íi,",
           "mb": "'ĩ́i",
+          "ge": "yes",
           "ps": "intj"
         },
         {
           "tx": "ùhyã̂a",
           "mb": ["u-", "hyãa", "-L -HL"],
+          "ge": ["3PS-", "say", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "tò",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "ìndúu",
           "mb": "ìndúu",
+          "ge": "here_is",
           "ps": "pres"
         },
         {
           "tx": "bɔ́wɔ́",
           "mb": "bɔ́wɔ́",
+          "ge": "thief",
           "ps": "n"
         },
         {
           "tx": "pâa",
           "mb": "pâa",
+          "ge": "here",
           "ps": "loc"
         }
       ],
@@ -4680,16 +5361,19 @@
         {
           "tx": "háyà",
           "mb": ["h-", "aya", "-HL"],
+          "ge": ["3PP-", "come", "-RLS"],
           "ps": ["agp-", "v", "-vtone"]
         },
         {
           "tx": "ɔ̀'ɔ́pɔ̀",
           "mb": ["a-", "'ɔpɔ", "-L -H -L"],
+          "ge": ["3PP-", "hold", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cúkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         }
       ],
@@ -4706,16 +5390,19 @@
         {
           "tx": "ɔ̀gɔ́rìlɔ̀",
           "mb": ["a-", "gɔrɔ", "-L -H -L", "-ìl-"],
+          "ge": ["3PP-", "beat", "-RLSp", "-PLAC-"],
           "ps": ["agp-", "v", "-vtonep", "-plac-"]
         },
         {
           "tx": "tì,",
           "mb": ["tì-", "ì"],
+          "ge": ["AGR6-", "PRO"],
           "ps": ["ag-", "ncpro"]
         },
         {
           "tx": "àváyù",
           "mb": ["a-", "vayu", "-L -H -L"],
+          "ge": ["3PP-", "lose", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         }
       ],
@@ -4732,31 +5419,37 @@
         {
           "tx": "víndà",
           "mb": ["v-", "inda", "-L -H -L"],
+          "ge": ["2PS-", "see", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "àhúnà",
           "mb": ["a-", "huna", "-L -H -L"],
+          "ge": ["3PP-", "kill", "-RLSp"],
           "ps": ["agp-", "v", "-vtonep"]
         },
         {
           "tx": "cíkúndú",
           "mb": ["tì-", "kúndú"],
+          "ge": ["NC6-", "hyena"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ǹ",
           "mb": "ǹ",
+          "ge": "and",
           "ps": "conj"
         },
         {
           "tx": "kàlíipì",
           "mb": ["kà-", "líipì"],
+          "ge": ["NC1-", "blame"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "ka̋nnàatànáatà",
           "mb": ["ka̋-", "vì-", "náatà"],
+          "ge": ["AGR1-", "NC8-", "small_spider"],
           "ps": ["aggen-", "nc-", "n"]
         }
       ],
@@ -4773,16 +5466,19 @@
         {
           "tx": "tò,",
           "mb": "tò",
+          "ge": "OK",
           "ps": "intj"
         },
         {
           "tx": "kòmísòoní",
           "mb": ["kò-", "mísòoní"],
+          "ge": ["NC1-", "story"],
           "ps": ["nc-", "n"]
         },
         {
           "tx": "jùngònú",
           "mb": ["jungonu", "-L -L -H"],
+          "ge": ["shut", "-IMP"],
           "ps": ["v", "-vtone"]
         }
       ],
