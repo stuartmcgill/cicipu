@@ -22,7 +22,9 @@ const text = computed(() =>
 
 <template>
   <div v-show="store.timestamp > start && store.timestamp < end" class="p-4">
-    <div class="mb-4 text-xl text-primary-800 font-bold cicipu-text">
+    <div
+      class="mb-4 text-xl text-primary-800 dark:text-primary-400 font-bold cicipu-text"
+    >
       {{ text }}
     </div>
     <InterlinearClause

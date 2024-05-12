@@ -2,7 +2,7 @@
 import type { TextGroup } from '~/composables/ToolboxRefs'
 import { ensureArray } from '~/composables/ensureArray'
 import { useListenStore } from '~/stores/listen'
-import attributes from '~/composables/abbreviations'
+import abbreviations from '~/composables/abbreviations'
 
 const props = defineProps<{ textGroup: TextGroup }>()
 
@@ -10,7 +10,7 @@ const store = useListenStore()
 
 const concatAndStrip = (field: object | object[]) =>
   ensureArray(field).reduce(
-    (combined, morpheme) => `${combined}${morpheme}`.replaceAll(' ', ''),
+    (combined, text) => `${combined}${text}`.replaceAll(' ', ''),
     ''
   )
 
@@ -29,7 +29,7 @@ const partsOfSpeech = computed(() => ensureArray(props.textGroup.ps))
         <UTooltip
           v-show="store.interlinearSettings.showPs"
           class="text-sm"
-          :text="attributes.get(ps.replaceAll('-', ''))"
+          :text="abbreviations.get(ps.replaceAll('-', ''))"
         >
           <span class="uppercase">{{ ps }}</span>
         </UTooltip>
