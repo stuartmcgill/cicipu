@@ -611,7 +611,7 @@ const hideCaptions = ref(false)
       <div class="flex sm:ml-auto gap-4">
         <div class="flex items-center gap-2 solid-panel">
           <div>Hide captions</div>
-          <UToggle v-model="hideCaptions" title="Hide captions" />
+          <UToggle v-model="hideCaptions" />
         </div>
         <UButton
           class="ml-auto"

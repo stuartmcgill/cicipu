@@ -33,6 +33,10 @@
       @apply flex flex-col rounded-lg solid-panel hover:bg-primary-100 dark:hover:bg-primary-800
   }
 
+  .disabled-text {
+    @apply text-gray-400 dark:text-gray-500
+  }
+
   ul.references {
       @apply mt-4;
   }
