@@ -29,7 +29,7 @@ const settings = reactive(listenStore.interlinearSettings)
     <div class="p-8 solid-panel">
       <h1>Listen to a Cicipu folktale</h1>
       <div class="grid lg:grid-cols-2 gap-8 items-start">
-        <div class="flex flex-col h-full justify-between">
+        <div class="flex flex-col gap-4 h-full justify-between">
           <div class="text-lg">
             Told by Amos Bako in Inguwar Rogo, February 2007
           </div>
@@ -42,7 +42,7 @@ const settings = reactive(listenStore.interlinearSettings)
               class="flex items-center gap-2"
               :class="!settings.show ? 'disabled-text' : ''"
             >
-              <div>Include parts of speech</div>
+              <div>Show parts of speech</div>
               <UToggle :disabled="!settings.show" v-model="settings.showPs" />
             </div>
           </div>
