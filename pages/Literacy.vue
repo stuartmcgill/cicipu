@@ -23,7 +23,7 @@ store.backgroundImage = 'literacy.jpg'
         external
         class="card"
       >
-        <NuxtImg src="/img/primer.jpg" class="rounded-t-lg"></NuxtImg>
+        <NuxtImg src="/img/primer.jpg" class="rounded-t-lg" />
         <UDivider></UDivider>
         <div class="p-4 flex flex-wrap gap-2">
           How to read and write in Cicipu for those who can already read

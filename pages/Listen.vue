@@ -33,25 +33,36 @@ const settings = reactive(listenStore.interlinearSettings)
   <div>
     <div class="p-8 solid-panel">
       <h1>Listen to a Cicipu folktale</h1>
-      <div class="flex gap-4">
-        <div class="flex items-center gap-2">
-          <div>Advanced view</div>
-          <UToggle v-model="listenStore.interlinearSettings.show" />
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="flex flex-col h-full justify-between">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <div>Advanced view</div>
+              <UToggle v-model="listenStore.interlinearSettings.show" />
+            </div>
+            <div
+              class="flex items-center gap-2"
+              :class="!settings.show ? 'disabled-text' : ''"
+            >
+              <div>Include parts of speech</div>
+              <UToggle :disabled="!settings.show" v-model="settings.showPs" />
+            </div>
+          </div>
+          <div>
+            Told by Amos Bako of Tungan Kaɗe in Inguwar Rogo, February 2007
+          </div>
+          <audio id="audio" ref="audio" controls @timeupdate="handleTimeUpdate">
+            <source src="/audio/chewing-gum-girl/audio.mp3" type="audio/mpeg" />
+            Your browser does not support the audio tag.
+          </audio>
         </div>
-        <div
-          class="flex items-center gap-2"
-          :class="!settings.show ? 'disabled-text' : ''"
-        >
-          <div>Include parts of speech</div>
-          <UToggle :disabled="!settings.show" v-model="settings.showPs" />
-        </div>
+        <NuxtImg
+          src="/img/background/amos-left.jpg"
+          class="max-h-60 rounded shadow-lg"
+        />
       </div>
     </div>
     <div class="mt-4 md:mt-6 lg:mt-8 p-8 solid-panel min-h-80">
-      <audio id="audio" ref="audio" controls @timeupdate="handleTimeUpdate">
-        <source src="/audio/chewing-gum-girl/audio.mp3" type="audio/mpeg" />
-        Your browser does not support the audio tag.
-      </audio>
       <AnnotationBlock
         v-for="(ref, index) in data.refs"
         :key="index"
