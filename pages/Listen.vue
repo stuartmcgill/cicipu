@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useAppStore } from '~/stores/app'
-import data from '~/public/audio/chewing-gum-girl/text.json'
+import data from '../assets/audio/chewing-gum-girl/text.json'
 import AnnotationBlock from '~/components/AnnotationBlock.vue'
 import { useListenStore } from '~/stores/listen'
 import { ensureArray } from '~/composables/ensureArray'
@@ -58,7 +58,10 @@ const settings = reactive(listenStore.interlinearSettings)
             controls
             @timeupdate="handleTimeUpdate"
           >
-            <source src="/audio/chewing-gum-girl/audio.mp3" type="audio/mpeg" />
+            <source
+              src="/assets/audio/chewing-gum-girl/audio.mp3"
+              type="audio/mpeg"
+            />
             Your browser does not support the audio tag.
           </audio>
         </div>
