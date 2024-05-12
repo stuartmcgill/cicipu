@@ -35,7 +35,10 @@ const settings = reactive(listenStore.interlinearSettings)
       <h1>Listen to a Cicipu folktale</h1>
       <div class="grid lg:grid-cols-2 gap-8 items-start">
         <div class="flex flex-col h-full justify-between">
-          <div class="flex flex-col gap-2">
+          <div class="text-lg">
+            Told by Amos Bako in Inguwar Rogo, February 2007
+          </div>
+          <div class="flex flex-col gap-2 indent-8">
             <div class="flex items-center gap-2">
               <div>Advanced view</div>
               <UToggle v-model="listenStore.interlinearSettings.show" />
@@ -48,10 +51,13 @@ const settings = reactive(listenStore.interlinearSettings)
               <UToggle :disabled="!settings.show" v-model="settings.showPs" />
             </div>
           </div>
-          <div>
-            Told by Amos Bako of Tungan Kaɗe in Inguwar Rogo, February 2007
-          </div>
-          <audio id="audio" ref="audio" controls @timeupdate="handleTimeUpdate">
+          <audio
+            class="w-full"
+            id="audio"
+            ref="audio"
+            controls
+            @timeupdate="handleTimeUpdate"
+          >
             <source src="/audio/chewing-gum-girl/audio.mp3" type="audio/mpeg" />
             Your browser does not support the audio tag.
           </audio>
