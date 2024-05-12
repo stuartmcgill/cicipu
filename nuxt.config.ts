@@ -15,6 +15,6 @@ export default defineNuxtConfig({
     }
   },
   ui: {
-    icons: ['heroicons', 'twemoji']
+    icons: ['heroicons', 'twemoji', 'mdi']
   }
 })

@@ -22,8 +22,14 @@ const imgUrl = computed(() => {
     <div class="mb-4 mx-2 sm:mx-4 grow">
       <NuxtPage class="my-12" />
     </div>
-    <footer class="mb-4 mx-2 sm:mx-4 flex justify-end">
-      &copy; {{ currentYear }}
+    <footer class="mb-4 mx-2 sm:mx-4 flex gap-8 justify-end items-end">
+      <NuxtLink
+        to="https://github.com/stuartmcgill/cicipu"
+        external
+        target="_blank"
+        class="i-mdi-github h-8 w-8"
+      />
+      <div>&copy; {{ currentYear }}</div>
     </footer>
   </div>
 </template>

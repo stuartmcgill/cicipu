@@ -16,7 +16,7 @@ const props = defineProps<{
       class="h-60 rounded-t-lg object-cover"
     />
     <div v-if="props.icon" class="flex items-center justify-center h-60">
-      <div class="h-full w-full" :class="props.icon"></div>
+      <div class="h-full w-full" :class="props.icon" />
     </div>
     <UDivider />
     <div class="p-4 flex flex-col gap-2">
