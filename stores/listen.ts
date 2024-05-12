@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 interface InterlinearSettings {
   show: boolean
   showPs: boolean
-  showHausa: boolean
 }
 
 export const useListenStore = defineStore('listen', {
@@ -11,8 +10,7 @@ export const useListenStore = defineStore('listen', {
     timestamp: 0 as number,
     interlinearSettings: {
       show: false,
-      showPs: true,
-      showHausa: false
+      showPs: true
     } as InterlinearSettings
   })
 })

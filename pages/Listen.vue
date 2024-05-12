@@ -33,21 +33,17 @@ const settings = reactive(listenStore.interlinearSettings)
   <div>
     <div class="p-8 solid-panel">
       <h1>Listen to a Cicipu folktale</h1>
-      <div class="mb-4 flex items-center gap-2">
-        <div>Advanced view</div>
-        <UToggle v-model="listenStore.interlinearSettings.show" />
-      </div>
-      <div
-        class="mb-4 flex gap-4"
-        :class="!settings.show ? 'disabled-text' : ''"
-      >
+      <div class="flex gap-4">
         <div class="flex items-center gap-2">
-          <div>Parts of speech</div>
-          <UToggle :disabled="!settings.show" v-model="settings.showPs" />
+          <div>Advanced view</div>
+          <UToggle v-model="listenStore.interlinearSettings.show" />
         </div>
-        <div class="flex items-center gap-2">
-          <div>Include Hausa</div>
-          <UToggle :disabled="!settings.show" v-model="settings.showHausa" />
+        <div
+          class="flex items-center gap-2"
+          :class="!settings.show ? 'disabled-text' : ''"
+        >
+          <div>Include parts of speech</div>
+          <UToggle :disabled="!settings.show" v-model="settings.showPs" />
         </div>
       </div>
     </div>
