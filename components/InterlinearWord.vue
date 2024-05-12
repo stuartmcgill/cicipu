@@ -2,6 +2,7 @@
 import type { TextGroup } from '~/composables/ToolboxRefs'
 import { ensureArray } from '~/composables/ensureArray'
 import { useListenStore } from '~/stores/listen'
+import attributes from '~/composables/abbreviations'
 
 const props = defineProps<{ textGroup: TextGroup }>()
 
@@ -14,25 +15,24 @@ const morphemes = computed(() =>
   )
 )
 
-const partsOfSpeech = computed(() =>
-  ensureArray(props.textGroup.ps).reduce(
-    (combined, ps) =>
-      `${combined}${ps}`
-        .replaceAll('[', '')
-        .replaceAll(']', '')
-        .replaceAll(' ', ''),
-    ''
-  )
-)
+const partsOfSpeech = computed(() => ensureArray(props.textGroup.ps))
 </script>
 
 <template>
   <div>
-    <div class="cicipu-text">{{ props.textGroup.tx }}</div>
+    <div class="mt-4 cicipu-text">{{ props.textGroup.tx }}</div>
     <div class="cicipu-text">{{ morphemes }}</div>
     <div>{{ props.textGroup.ge }}</div>
-    <div v-show="store.interlinearSettings.showPs" class="uppercase text-sm">
-      {{ partsOfSpeech }}
+    <div class="flex">
+      <div v-for="(ps, index) in partsOfSpeech" :key="index">
+        <UTooltip
+          v-show="store.interlinearSettings.showPs"
+          class="text-sm"
+          :text="attributes.get(ps.replaceAll('-', ''))"
+        >
+          <span class="uppercase">{{ ps }}</span>
+        </UTooltip>
+      </div>
     </div>
   </div>
 </template>
