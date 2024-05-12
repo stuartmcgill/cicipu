@@ -15,7 +15,7 @@ const concatAndStrip = (field: object | object[]) =>
   )
 
 const morphemes = computed(() => concatAndStrip(props.textGroup.mb))
-const glosses = computed(() => concatAndStrip(props.textGroup.ge))
+const glosses = computed(() => ensureArray(props.textGroup.ge))
 const partsOfSpeech = computed(() => ensureArray(props.textGroup.ps))
 </script>
 
@@ -23,7 +23,16 @@ const partsOfSpeech = computed(() => ensureArray(props.textGroup.ps))
   <div>
     <div class="mt-4 cicipu-text">{{ props.textGroup.tx }}</div>
     <div class="cicipu-text">{{ morphemes }}</div>
-    <div>{{ glosses }}</div>
+    <div class="flex">
+      <div v-for="(gloss, index) in glosses" :key="index">
+        <UTooltip
+          class="text-sm"
+          :text="abbreviations.get(gloss.toLowerCase().replaceAll('-', ''))"
+        >
+          <span>{{ gloss }}</span>
+        </UTooltip>
+      </div>
+    </div>
     <div class="flex">
       <div v-for="(ps, index) in partsOfSpeech" :key="index">
         <UTooltip

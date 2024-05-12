@@ -14,11 +14,6 @@ const listenStore = useListenStore()
 // be arrays
 data.refs.forEach((ref, i) => {
   data.refs[i].txGroup = ensureArray(data.refs[i].txGroup)
-
-  // Also remove the square brackets and trim the \mb field
-  data.refs[i].txGroup.forEach((group, j) => {
-    data.refs[i].txGroup[j].mb = ensureArray(data.refs[i].txGroup[j].mb)
-  })
 })
 
 const handleTimeUpdate = (e: Event) =>
