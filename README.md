@@ -2,6 +2,30 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Production install
+
+- Add the following to `cicipu.stuartmcgill.conf`:
+```
+ProxyPass / http://localhost:3000/
+ProxyPassReverse / http://localhost:3000/
+```
+
+Installation using [pm2](https://pm2.keymetrics.io/):
+
+```bash
+# Install pm2 globally
+npm install pm2 -g
+
+# Install and build website
+npm install
+npm run build
+
+# This should start the app and also handle restarts
+pm2 start
+```
+
+See also https://nuxt.com/docs/getting-started/deployment#pm2.
+
 ## Setup
 
 Make sure to install the dependencies:
