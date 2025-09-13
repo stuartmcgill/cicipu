@@ -26,74 +26,49 @@ pm2 start
 
 See also https://nuxt.com/docs/getting-started/deployment#pm2.
 
-## Setup
+## Development
 
-Make sure to install the dependencies:
+Install the dependencies:
 
 ```bash
 # npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm ci && npm run build
 ```
-
-## Development Server
 
 Start the development server on `http://localhost:3000`:
 
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
 
-Build the application for production:
+To deploy a release to production, do the following on a development machine:
 
 ```bash
-# npm
-npm run build
+# Build
+npm ci && run build
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# Copy the files to the server
+rsync -avz --delete -e "ssh -p <PORT>" .output/ <USERNAME>@stuartmcgill.org:~/domains/cicipu.stuartmcgill.org/cicipu-main/.output
 ```
+
+Now on the production server:
+
+```bash
+# NPM build
+npm ci
+
+# Reload the app
+pm2 reload cicipu-main
+````
 
 Locally preview production build:
 
 ```bash
 # npm
 npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
