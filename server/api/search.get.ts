@@ -1,9 +1,10 @@
 import { getDb } from '~/server/db'
-import { and, eq, like, sql } from 'drizzle-orm'
+import { and, eq, like, or } from 'drizzle-orm'
 import {
   lexemeEntries,
   lexemeEntryTypes,
-  lexemes
+  lexemes,
+  senses
 } from '~/server/db/schema/schema'
 import { LexemeEntryTypeConst } from '~/composables/constants'
 
@@ -31,13 +32,22 @@ export default defineEventHandler(async (event) => {
         lexemeEntryTypes,
         eq(lexemeEntries.typeId, lexemeEntryTypes.id)
       )
+      .leftJoin(senses, eq(lexemeEntries.id, senses.lexemeEntryId))
       .where(
         and(
           eq(lexemeEntries.typeId, LexemeEntryTypeConst.Headword),
-          like(lexemeEntries.citationOrtho, `%${term}%`)
+          or(
+            like(lexemeEntries.citationOrtho, `%${term}%`),
+            like(senses.nationalGloss, `%${term}%`),
+            like(senses.englishGloss, `%${term}%`)
+          )
         )
       )
-      .orderBy(lexemes.lexeme, lexemes.homonymNumber)
+      .orderBy(
+        lexemeEntries.citationOrtho,
+        lexemes.lexeme,
+        lexemes.homonymNumber
+      )
 
     return results
   } catch (err) {

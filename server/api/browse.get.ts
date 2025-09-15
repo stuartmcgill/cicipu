@@ -3,7 +3,7 @@ import {
   lexemeEntries,
   lexemeEntryTypes,
   lexemes
-} from '~/server/db/schema/schema.ts'
+} from '~/server/db/schema/schema'
 import { and, eq, like } from 'drizzle-orm'
 import { LexemeEntryTypeConst } from '~/composables/constants'
 
@@ -37,7 +37,11 @@ export default defineEventHandler(async (event) => {
           like(lexemeEntries.citationOrtho, `${letter}%`)
         )
       )
-      .orderBy(lexemes.lexeme, lexemes.homonymNumber)
+      .orderBy(
+        lexemeEntries.citationOrtho,
+        lexemes.lexeme,
+        lexemes.homonymNumber
+      )
 
     return results
   } catch (err) {
