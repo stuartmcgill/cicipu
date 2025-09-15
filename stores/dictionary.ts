@@ -1,4 +1,5 @@
-import { defineStore } from 'pinia'
+import { acceptHMRUpdate, defineStore } from 'pinia'
+import type { Lexeme, LexemeEntry, LexemeEntryType } from '~/composables/models'
 
 interface SearchResult {
   lexemes: Lexeme

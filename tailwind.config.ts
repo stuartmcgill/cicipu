@@ -6,9 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['DM Sans', 'serif', 'sans-serif'],
+        sans: ['DM Sans', 'sans-serif'],
         heading: ['Space Grotesk', 'serif', ...defaultTheme.fontFamily.sans],
-        serif: ['serif']
+        serif: ['serif'],
+        vernacular: ['Charis SIL', 'serif']
       }
     }
   }

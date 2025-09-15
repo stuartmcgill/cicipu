@@ -107,6 +107,7 @@ watch(searchTerm, (val) => search(val))
         <button
           v-for="(letter, index) in letters"
           :key="index"
+          class="font-vernacular"
           @click="browseLetter(letter)"
         >
           {{ letter }}

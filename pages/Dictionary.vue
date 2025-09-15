@@ -40,7 +40,7 @@ store.searchResults = []
       Error loading data: {{ store.error.message || store.error }}
     </div>
     <ul v-else>
-      <li v-for="result in store.searchResults">
+      <li v-for="result in store.searchResults" class="font-vernacular">
         {{ result.lexeme_entries.citationOrtho }}
       </li>
     </ul>
