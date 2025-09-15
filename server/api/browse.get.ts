@@ -1,5 +1,6 @@
 import { getDb } from '~/server/db'
-import { sql } from 'drizzle-orm'
+import { lexemes } from '~/server/db/schema/schema.ts'
+import { ilike, like } from 'drizzle-orm'
 
 export default defineEventHandler(async (event) => {
   try {
@@ -17,13 +18,21 @@ export default defineEventHandler(async (event) => {
       return { error: 'Missing or invalid "letter" parameter' }
     }
 
-    const results = await db.execute(
-      sql`SELECT * FROM lexemes WHERE Lexeme LIKE ${letter + '%'} ORDER BY Lexeme, HomonymNumber`
-    )
+    const results = await db
+      .select()
+      .from(lexemes)
+      .where(like(lexemes.lexeme, `${letter}%`))
+      .orderBy(lexemes.lexeme, lexemes.homonymNumber)
+
+    // const results = await db.execute(
+    //   sql`SELECT * FROM lexemes WHERE Lexeme LIKE ${letter + '%'} ORDER BY Lexeme, HomonymNumber`
+    // )
 
     return results
   } catch (err) {
     event.node.res.statusCode = 500
+
+    console.error(err)
 
     return { error: (err as Error).message || 'Internal server error' }
   }

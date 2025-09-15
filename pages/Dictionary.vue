@@ -41,7 +41,7 @@ store.searchResults = []
     </div>
     <ul v-else>
       <li v-for="result in store.searchResults">
-        {{ result.Lexeme }}
+        {{ result.lexemeOrtho }}
       </li>
     </ul>
   </div>
