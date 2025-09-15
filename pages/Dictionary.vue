@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useAppStore } from '~/stores/app'
-import { useMediaQuery } from '@vueuse/core'
 import BrowsePanel from '~/components/dictionary/BrowsePanel.vue'
 
 definePageMeta({
@@ -18,6 +17,12 @@ const pending = lexemesAsync.pending
 const error = lexemesAsync.error
 
 const isOpen = ref(appStore.isDesktop.value)
+
+watch(appStore.isDesktop, (isDesktop) => {
+  if (isDesktop) {
+    isOpen.value = true
+  }
+})
 </script>
 
 <template>
