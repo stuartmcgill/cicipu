@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { useDebounceFn } from '@vueuse/core'
 import { useAppStore } from '~/stores/app'
 
 const isOpen = defineModel<boolean>({ default: false })
 
 const store = useDictionaryStore()
 const appStore = useAppStore()
+
+const searchTerm = ref('')
 
 const browseLetter = (letter: string) => {
   store.browse(letter)
@@ -13,6 +16,21 @@ const browseLetter = (letter: string) => {
     isOpen.value = false
   }
 }
+
+const search = useDebounceFn((term: string) => {
+  if (!searchTerm.value) {
+    store.searchTerm = ''
+    store.searchResults = []
+
+    return
+  }
+
+  store.search(searchTerm.value)
+
+  if (!appStore.isDesktop.value) {
+    isOpen.value = false
+  }
+}, 500)
 
 const letters = ref([
   'a',
@@ -43,6 +61,8 @@ const letters = ref([
   'z',
   "'"
 ])
+
+watch(searchTerm, (val) => search(val))
 </script>
 
 <template>
@@ -51,7 +71,7 @@ const letters = ref([
     side="left"
     :overlay="!appStore.isDesktop.value"
     :prevent-close="appStore.isDesktop.value"
-    :ui="{ width: 'w-screen max-w-64' }"
+    :ui="{ width: 'w-screen max-w-64', base: 'overflow-y-auto' }"
   >
     <UCard
       class="flex flex-col flex-1"
@@ -63,7 +83,13 @@ const letters = ref([
     >
       <template #header>
         <div class="flex gap-1 justify-between items-center">
-          <UInput type="text" size="md" icon="i-heroicons-magnifying-glass" />
+          <UInput
+            v-model="searchTerm"
+            type="text"
+            size="md"
+            icon="i-heroicons-magnifying-glass"
+            @input="search"
+          />
           <UButton
             color="gray"
             variant="ghost"

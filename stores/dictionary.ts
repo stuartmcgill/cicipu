@@ -8,9 +8,6 @@ export const useDictionaryStore = defineStore('dictionary', {
     error: null as string | null
   }),
   actions: {
-    async listLexemes() {
-      return useAsyncData('lexemes', () => $fetch('/api/lexemes'))
-    },
     async browse(letter: string) {
       this.pending = true
       this.error = null
@@ -21,6 +18,23 @@ export const useDictionaryStore = defineStore('dictionary', {
         )
         this.searchResults = data[0] as Array<{ Id: number; Lexeme: any }>
         this.searchTerm = letter
+      } catch (err) {
+        this.error = (err as Error).message
+        this.searchResults = []
+      } finally {
+        this.pending = false
+      }
+    },
+    async search(term: string) {
+      this.pending = true
+      this.error = null
+
+      try {
+        const data = await $fetch(
+          `/api/search?term=${encodeURIComponent(term)}`
+        )
+        this.searchResults = data[0] as Array<{ Id: number; Lexeme: any }>
+        this.searchTerm = term
       } catch (err) {
         this.error = (err as Error).message
         this.searchResults = []
