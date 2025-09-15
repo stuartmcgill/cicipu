@@ -11,6 +11,36 @@ const browseLetter = (letter: string) => {
 
   isOpen.value = false
 }
+
+const letters = ref([
+  'a',
+  'b',
+  'ɓ',
+  'c',
+  'd',
+  'ɗ',
+  'e',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'ø',
+  'p',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'y',
+  'z',
+  "'"
+])
 </script>
 
 <template>
@@ -46,8 +76,13 @@ const browseLetter = (letter: string) => {
       </template>
 
       <div class="flex flex-col gap-1">
-        <button @click="browseLetter('a')">a</button>
-        <button @click="browseLetter('b')">b</button>
+        <button
+          v-for="(letter, index) in letters"
+          :key="index"
+          @click="browseLetter(letter)"
+        >
+          {{ letter }}
+        </button>
       </div>
     </UCard>
   </USlideover>
