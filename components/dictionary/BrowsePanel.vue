@@ -2,7 +2,15 @@
 import { useAppStore } from '~/stores/app'
 
 const isOpen = defineModel<boolean>({ default: false })
+
+const store = useDictionaryStore()
 const appStore = useAppStore()
+
+const browseLetter = (letter: string) => {
+  store.browse(letter)
+
+  isOpen.value = false
+}
 </script>
 
 <template>
@@ -37,7 +45,10 @@ const appStore = useAppStore()
         </div>
       </template>
 
-      <div>Body</div>
+      <div class="flex flex-col gap-1">
+        <button @click="browseLetter('a')">a</button>
+        <button @click="browseLetter('b')">b</button>
+      </div>
     </UCard>
   </USlideover>
 </template>

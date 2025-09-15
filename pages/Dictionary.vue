@@ -27,11 +27,15 @@ watch(appStore.isDesktop, (isDesktop) => {
 
 <template>
   <div>
-    <BrowsePanel v-model="isOpen" />
+    <ClientOnly>
+      <BrowsePanel v-model="isOpen" />
+    </ClientOnly>
     <h1>Cicipu dictionary</h1>
     <UButton label="Browse" class="xl:hidden" @click="isOpen = true" />
 
-    <h2>Lexemes table</h2>
+    <h2 v-if="store.searchTerm">
+      Search results for <span class="font-normal">{{ store.searchTerm }}</span>
+    </h2>
 
     <!-- Loading state -->
     <div v-if="pending">Loading...</div>
@@ -43,8 +47,8 @@ watch(appStore.isDesktop, (isDesktop) => {
 
     <!-- Data display -->
     <ul v-else>
-      <li v-for="lexeme in lexemes[0]">
-        {{ lexeme.Lexeme }}
+      <li v-for="result in store.searchResults">
+        {{ result.Lexeme }}
       </li>
     </ul>
   </div>
