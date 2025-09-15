@@ -15,6 +15,11 @@ export const useDictionaryStore = defineStore('dictionary', {
     error: null as string | null
   }),
   actions: {
+    resetSearchResults() {
+      this.searchTerm = ''
+      this.searchResults = []
+    },
+
     async browse(letter: string) {
       this.pending = true
       this.error = null
