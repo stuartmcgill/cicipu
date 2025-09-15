@@ -10,11 +10,6 @@ const appStore = useAppStore()
 appStore.backgroundImage = 'literacy-chiefs.jpg'
 
 const store = useDictionaryStore()
-const lexemesAsync = await store.listLexemes()
-
-const lexemes = lexemesAsync.data
-const pending = lexemesAsync.pending
-const error = lexemesAsync.error
 
 const isOpen = ref(appStore.isDesktop.value)
 
@@ -23,6 +18,9 @@ watch(appStore.isDesktop, (isDesktop) => {
     isOpen.value = true
   }
 })
+
+store.searchTerm = ''
+store.searchResults = []
 </script>
 
 <template>
@@ -37,15 +35,10 @@ watch(appStore.isDesktop, (isDesktop) => {
       Search results for <span class="font-normal">{{ store.searchTerm }}</span>
     </h2>
 
-    <!-- Loading state -->
-    <div v-if="pending">Loading...</div>
-
-    <!-- Error state -->
-    <div v-else-if="error">
-      Error loading data: {{ error.message || error }}
+    <div v-if="store.pending">Loading...</div>
+    <div v-else-if="store.error">
+      Error loading data: {{ store.error.message || store.error }}
     </div>
-
-    <!-- Data display -->
     <ul v-else>
       <li v-for="result in store.searchResults">
         {{ result.Lexeme }}

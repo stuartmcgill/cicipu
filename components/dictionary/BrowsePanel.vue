@@ -9,7 +9,9 @@ const appStore = useAppStore()
 const browseLetter = (letter: string) => {
   store.browse(letter)
 
-  isOpen.value = false
+  if (!appStore.isDesktop.value) {
+    isOpen.value = false
+  }
 }
 
 const letters = ref([
