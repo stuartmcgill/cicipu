@@ -1,9 +1,15 @@
 import { defineStore } from 'pinia'
 
+interface SearchResult {
+  lexemes: Lexeme
+  lexeme_entries: LexemeEntry
+  lexeme_entry_types: LexemeEntryType
+}
+
 export const useDictionaryStore = defineStore('dictionary', {
   state: () => ({
     searchTerm: '',
-    searchResults: [] as Lexeme[],
+    searchResults: [] as SearchResult[],
     pending: false,
     error: null as string | null
   }),
@@ -16,7 +22,7 @@ export const useDictionaryStore = defineStore('dictionary', {
         const data = await $fetch(
           `/api/browse?letter=${encodeURIComponent(letter)}`
         )
-        this.searchResults = data as Lexeme[]
+        this.searchResults = data as SearchResult[]
         this.searchTerm = letter
       } catch (err) {
         this.error = (err as Error).message
@@ -34,7 +40,7 @@ export const useDictionaryStore = defineStore('dictionary', {
         const data = await $fetch(
           `/api/search?term=${encodeURIComponent(term)}`
         )
-        this.searchResults = data as Array<{ Id: number; Lexeme: any }>
+        this.searchResults = data as SearchResult[]
         this.searchTerm = term
       } catch (err) {
         this.error = (err as Error).message

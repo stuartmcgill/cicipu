@@ -1,6 +1,11 @@
 import { getDb } from '~/server/db'
-import { lexemes } from '~/server/db/schema/schema.ts'
-import { ilike, like } from 'drizzle-orm'
+import {
+  lexemeEntries,
+  lexemeEntryTypes,
+  lexemes
+} from '~/server/db/schema/schema.ts'
+import { and, eq, like } from 'drizzle-orm'
+import { LexemeEntryTypeConst } from '~/composables/constants'
 
 export default defineEventHandler(async (event) => {
   try {
@@ -21,12 +26,18 @@ export default defineEventHandler(async (event) => {
     const results = await db
       .select()
       .from(lexemes)
-      .where(like(lexemes.lexeme, `${letter}%`))
+      .innerJoin(lexemeEntries, eq(lexemes.id, lexemeEntries.lexemeId))
+      .innerJoin(
+        lexemeEntryTypes,
+        eq(lexemeEntries.typeId, lexemeEntryTypes.id)
+      )
+      .where(
+        and(
+          eq(lexemeEntries.typeId, LexemeEntryTypeConst.Headword),
+          like(lexemeEntries.citationOrtho, `${letter}%`)
+        )
+      )
       .orderBy(lexemes.lexeme, lexemes.homonymNumber)
-
-    // const results = await db.execute(
-    //   sql`SELECT * FROM lexemes WHERE Lexeme LIKE ${letter + '%'} ORDER BY Lexeme, HomonymNumber`
-    // )
 
     return results
   } catch (err) {
