@@ -1,5 +1,11 @@
 import { getDb } from '~/server/db'
-import { sql } from 'drizzle-orm'
+import { and, eq, like, sql } from 'drizzle-orm'
+import {
+  lexemeEntries,
+  lexemeEntryTypes,
+  lexemes
+} from '~/server/db/schema/schema'
+import { LexemeEntryTypeConst } from '~/composables/constants'
 
 export default defineEventHandler(async (event) => {
   try {
@@ -17,9 +23,21 @@ export default defineEventHandler(async (event) => {
       return { error: 'Missing or invalid "term" parameter' }
     }
 
-    const results = await db.execute(
-      sql`SELECT * FROM lexemes WHERE Lexeme LIKE ${'%' + term + '%'} ORDER BY Lexeme, HomonymNumber`
-    )
+    const results = await db
+      .select()
+      .from(lexemes)
+      .innerJoin(lexemeEntries, eq(lexemes.id, lexemeEntries.lexemeId))
+      .innerJoin(
+        lexemeEntryTypes,
+        eq(lexemeEntries.typeId, lexemeEntryTypes.id)
+      )
+      .where(
+        and(
+          eq(lexemeEntries.typeId, LexemeEntryTypeConst.Headword),
+          like(lexemeEntries.citationOrtho, `%${term}%`)
+        )
+      )
+      .orderBy(lexemes.lexeme, lexemes.homonymNumber)
 
     return results
   } catch (err) {
