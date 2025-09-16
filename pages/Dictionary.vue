@@ -56,35 +56,41 @@ watch(searchTerm, (val) => search(val))
     </ClientOnly>
     <h1>Dictionary</h1>
     <div class="flex items-center gap-2">
-      <UButton label="Browse" @click="isOpen = true" />
-      <UInput
-        ref="searchTermRef"
-        v-model="searchTerm"
-        type="text"
-        size="md"
-        icon="i-heroicons-magnifying-glass"
-        :ui="{ icon: { trailing: { pointer: '' } } }"
-        @input="search"
-      >
-        <template #trailing>
+      <div class="flex flex-col md:flex-row gap-2">
+        <div class="flex gap-2">
+          <UButton label="Browse" @click="isOpen = true" />
+          <UInput
+            ref="searchTermRef"
+            v-model="searchTerm"
+            type="text"
+            size="md"
+            icon="i-heroicons-magnifying-glass"
+            :ui="{ icon: { trailing: { pointer: '' } } }"
+            @input="search"
+          >
+            <template #trailing>
+              <UButton
+                v-show="searchTerm !== ''"
+                color="gray"
+                variant="link"
+                icon="i-heroicons-x-mark-20-solid"
+                :padded="false"
+                @click="searchTerm = ''"
+              />
+            </template>
+          </UInput>
+        </div>
+        <div class="flex gap-2 justify-end">
           <UButton
-            v-show="searchTerm !== ''"
+            v-for="(char, index) in specialChars"
+            :key="index"
+            :label="char"
+            size="md"
             color="gray"
-            variant="link"
-            icon="i-heroicons-x-mark-20-solid"
-            :padded="false"
-            @click="searchTerm = ''"
+            @click="appendSpecialChar(char)"
           />
-        </template>
-      </UInput>
-      <UButton
-        v-for="(char, index) in specialChars"
-        :key="index"
-        :label="char"
-        size="md"
-        color="gray"
-        @click="appendSpecialChar(char)"
-      />
+        </div>
+      </div>
     </div>
 
     <h2 v-if="store.searchTerm">
