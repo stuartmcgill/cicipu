@@ -14,15 +14,21 @@ appStore.backgroundImage = ''
 const store = useDictionaryStore()
 store.resetSearchResults()
 
-const isOpen = ref(appStore.isDesktop.value)
+const specialChars = ref(['ɓ', 'ɗ', 'ø', 'ƙ'])
 
-watch(appStore.isDesktop, (isDesktop) => {
-  if (isDesktop) {
-    isOpen.value = true
-  }
-})
-
+//const isOpen = ref(appStore.isDesktop.value)
+const isOpen = ref(false)
 const searchTerm = ref('')
+const searchTermRef = ref(null)
+
+const appendSpecialChar = (char: string) => {
+  searchTerm.value += char
+
+  const searchEl = searchTermRef.value?.$el?.querySelector('input')
+  if (searchEl) {
+    searchEl.focus()
+  }
+}
 
 const search = useDebounceFn((term: string) => {
   if (!searchTerm.value) {
@@ -35,6 +41,12 @@ const search = useDebounceFn((term: string) => {
 }, 500)
 
 watch(searchTerm, (val) => search(val))
+//
+// watch(appStore.isDesktop, (isDesktop) => {
+//   if (isDesktop) {
+//     isOpen.value = true
+//   }
+// })
 </script>
 
 <template>
@@ -46,11 +58,20 @@ watch(searchTerm, (val) => search(val))
     <div class="flex items-center gap-2">
       <UButton label="Browse" @click="isOpen = true" />
       <UInput
+        ref="searchTermRef"
         v-model="searchTerm"
         type="text"
         size="md"
         icon="i-heroicons-magnifying-glass"
         @input="search"
+      />
+      <UButton
+        v-for="(char, index) in specialChars"
+        :key="index"
+        :label="char"
+        size="md"
+        color="gray"
+        @click="appendSpecialChar(char)"
       />
     </div>
 

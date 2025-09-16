@@ -9,9 +9,9 @@ const appStore = useAppStore()
 const browseLetter = (letter: string) => {
   store.browse(letter)
 
-  if (!appStore.isDesktop.value) {
-    isOpen.value = false
-  }
+  //if (!appStore.isDesktop.value) {
+  isOpen.value = false
+  //}
 }
 
 const letters = ref([
@@ -46,11 +46,11 @@ const letters = ref([
 </script>
 
 <template>
+  <!--    :prevent-close="appStore.isDesktop.value"-->
+  <!--  :overlay="!appStore.isDesktop.value"-->
   <USlideover
     v-model="isOpen"
     side="left"
-    :overlay="!appStore.isDesktop.value"
-    :prevent-close="appStore.isDesktop.value"
     :ui="{ width: 'w-screen max-w-64', base: 'overflow-y-auto' }"
   >
     <div class="pt-2 flex flex-col">
