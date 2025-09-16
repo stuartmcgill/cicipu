@@ -2,6 +2,15 @@
 import { useAppStore } from '~/stores/app'
 import BrowsePanel from '~/components/dictionary/BrowsePanel.vue'
 import { useDebounceFn } from '@vueuse/core'
+import type { TableColumn } from '#ui/types'
+
+interface SearchRow {
+  id: number
+  cicipu: string
+  partOfSpeech: string
+  english: string
+  national: string
+}
 
 // definePageMeta({
 //   layout: 'dictionary'
@@ -16,34 +25,45 @@ store.resetSearchResults()
 
 const specialChars = ref(['ɓ', 'ɗ', 'ø', 'ƙ'])
 
-const columns = [
-  {
-    key: 'cicipu',
-    label: 'Cicipu',
-    sortable: true,
-    rowClass: 'font-vernacular'
-  },
-  {
-    key: 'partOfSpeech',
-    sortable: true
-  },
-  {
-    key: 'english',
-    label: 'English',
-    sortable: true,
-    rowClass: 'italic'
-  },
-  {
-    key: 'national',
-    label: 'Hausa',
-    sortable: true,
-    rowClass: 'italic'
+const columns = computed(() => {
+  let columns: TableColumn[] = [
+    {
+      key: 'cicipu',
+      label: 'Cicipu',
+      sortable: true,
+      rowClass: 'font-vernacular'
+    }
+  ]
+
+  if (!appStore.isMobile.value) {
+    columns.push({
+      key: 'partOfSpeech',
+      sortable: true
+    })
   }
-]
+
+  columns.push(
+    {
+      key: 'english',
+      label: 'English',
+      sortable: true,
+      rowClass: 'italic'
+    },
+    {
+      key: 'national',
+      label: 'Hausa',
+      sortable: true,
+      rowClass: 'italic'
+    }
+  )
+
+  return columns
+})
 
 const rows = computed(() => {
   return store.searchResults.map((result) => {
     return {
+      id: result.lexemes.id,
       cicipu: result.lexeme_entries.citationOrtho,
       partOfSpeech: result.lexeme_entries.partOfSpeechId,
       english: 'dog',
@@ -51,6 +71,10 @@ const rows = computed(() => {
     }
   })
 })
+
+const showLexeme = (row: SearchRow) => {
+  navigateTo(`/dictionary/${row.id}`)
+}
 
 //const isOpen = ref(appStore.isDesktop.value)
 const isOpen = ref(false)
@@ -138,7 +162,12 @@ watch(searchTerm, (val) => search(val))
       Error loading data: {{ store.error.message || store.error }}
     </div>
     <ul v-else>
-      <UTable :rows="rows" :columns="columns" />
+      <UTable
+        :rows="rows"
+        :columns="columns"
+        class="cursor-pointer"
+        @select="showLexeme"
+      />
     </ul>
   </div>
 </template>

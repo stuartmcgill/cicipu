@@ -6,6 +6,7 @@ export const useAppStore = defineStore('app', {
     backgroundImage: '' as string
   }),
   getters: {
-    isDesktop: (state) => useMediaQuery('(min-width: 1280px)')
+    isDesktop: () => useMediaQuery('(min-width: 1280px)'),
+    isMobile: () => useMediaQuery('(max-width: 640px)')
   }
 })
