@@ -16,6 +16,42 @@ store.resetSearchResults()
 
 const specialChars = ref(['ɓ', 'ɗ', 'ø', 'ƙ'])
 
+const columns = [
+  {
+    key: 'cicipu',
+    label: 'Cicipu',
+    sortable: true,
+    rowClass: 'font-vernacular'
+  },
+  {
+    key: 'partOfSpeech',
+    sortable: true
+  },
+  {
+    key: 'english',
+    label: 'English',
+    sortable: true,
+    rowClass: 'italic'
+  },
+  {
+    key: 'national',
+    label: 'Hausa',
+    sortable: true,
+    rowClass: 'italic'
+  }
+]
+
+const rows = computed(() => {
+  return store.searchResults.map((result) => {
+    return {
+      cicipu: result.lexeme_entries.citationOrtho,
+      partOfSpeech: result.lexeme_entries.partOfSpeechId,
+      english: 'dog',
+      national: 'kare'
+    }
+  })
+})
+
 //const isOpen = ref(appStore.isDesktop.value)
 const isOpen = ref(false)
 const searchTerm = ref('')
@@ -97,14 +133,12 @@ watch(searchTerm, (val) => search(val))
       Search results for <span class="font-normal">{{ store.searchTerm }}</span>
     </h2>
 
-    <div v-if="store.pending">Loading...</div>
+    <div v-if="store.pending" class="mt-4">Loading...</div>
     <div v-else-if="store.error">
       Error loading data: {{ store.error.message || store.error }}
     </div>
     <ul v-else>
-      <li v-for="result in store.searchResults" class="font-vernacular">
-        {{ result.lexeme_entries.citationOrtho }}
-      </li>
+      <UTable :rows="rows" :columns="columns" />
     </ul>
   </div>
 </template>
