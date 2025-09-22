@@ -13,7 +13,7 @@ appStore.backgroundImage = ''
 </script>
 
 <template>
-  <div class="mx-auto max-w-2xl">
+  <div class="mx-auto max-w-2xl text-lg">
     <h1>Cicipu dictionary</h1>
     <div class="italic">Stuart McGill, 2017</div>
     <p>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const menuLinks = [
   {
-    label: 'Cicipu home',
-    icon: 'i-heroicons-home-solid',
-    to: '/'
+    label: 'Search/browse',
+    icon: 'i-heroicons-magnifying-glass-solid',
+    to: '/dictionary/Dictionary'
   },
   {
     label: 'Introduction',
@@ -11,14 +11,14 @@ const menuLinks = [
     to: '/dictionary/Introduction'
   },
   {
-    label: 'Browse',
-    icon: 'i-heroicons-book-open-solid',
-    to: '/dictionary/Dictionary'
+    label: 'Navigation',
+    icon: 'i-heroicons-map-solid',
+    to: '/dictionary/Navigation'
   },
   {
-    label: 'Search',
-    icon: 'i-heroicons-magnifying-glass-solid',
-    to: '/dictionary/Dictionary'
+    label: 'Cicipu home',
+    icon: 'i-heroicons-home-solid',
+    to: '/'
   }
 ]
 </script>
