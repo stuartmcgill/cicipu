@@ -16,6 +16,26 @@ const menuLinks = [
     to: '/dictionary/Navigation'
   },
   {
+    label: 'Entry details',
+    icon: 'i-heroicons-document-magnifying-glass-solid',
+    to: '/dictionary/EntryDetails'
+  },
+  {
+    label: 'Orthogaphy',
+    icon: 'i-heroicons-pencil-solid',
+    to: '/dictionary/Orthography'
+  },
+  {
+    label: 'Audio',
+    icon: 'i-heroicons-speaker-wave-solid',
+    to: '/dictionary/AudioFiles'
+  },
+  {
+    label: 'Translation',
+    icon: 'i-heroicons-language-solid',
+    to: '/dictionary/HausaTranslations'
+  },
+  {
     label: 'Cicipu home',
     icon: 'i-heroicons-home-solid',
     to: '/'

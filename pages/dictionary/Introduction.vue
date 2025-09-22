@@ -103,10 +103,7 @@ appStore.backgroundImage = ''
       that can be heard in the recordings. In 2015 a LexiquePro version of this
       dictionary was put online, and then in 2017 this was replaced by a
       mobile-friendly version. The photographs included in this dictionary were
-      taken variously by Markus Yabani, Stuart McGill, and
-      <TextLink :external="true" to="http://rogerblench.info/"
-        >Roger Blench</TextLink
-      >.
+      taken variously by Markus Yabani, Stuart McGill, and Roger Blench.
     </p>
     <p>
       I'm grateful to the
@@ -118,5 +115,56 @@ appStore.backgroundImage = ''
       for a field trip grant which greatly helped in the preparation of this
       dictionary.
     </p>
+
+    <h2>References</h2>
+    <p>
+      Bargery, George P. 1934.
+      <I>
+        <TextLink :external="true" to="http://maguzawa.dyndns.ws/"
+          >A Hausa-English dictionary and English-Hausa vocabulary</TextLink
+        > </I
+      >. London: Oxford University Press.
+    </p>
+    <p>
+      McGill, Stuart. 2009.
+      <I>
+        <TextLink
+          :external="true"
+          to="http://cicipu.org/papers/gender_and_person_agreement_in_cicipu_discourse.pdf"
+          >Gender and person agreement in Cicipu discourse</TextLink
+        >
+      </I>
+      . PhD thesis, School of Oriental and African Studies.
+    </p>
+    <p>
+      Newman, Paul. 2000.
+      <I> The Hausa language: an encyclopedic reference grammar </I>. New Haven:
+      Yale University Press.
+    </p>
+
+    <h2>Acknowledgments</h2>
+    <p>
+      Many people have helped make this dictionary possible, especially the Wømø
+      of Karishen, the Sarkinƙasa in Sakaba, the Mai Unguwa of Inguwar Rogo, and
+      Mohammed Mallam. Other important contributors have been Mohammed Musa,
+      Musa Mai Unguwa, Ibrahim Mai Unguwa, Ayuba Sani, Ishiaku Ibrahim, Amos
+      Bako, Israel and Omonor Wade, David Heath, and David Crozier.
+      <span class="vern-detail">Tugweede ggẽi!</span>
+    </p>
+    <p>
+      I am especially grateful to the
+      <TextLink
+        :external="true"
+        to="http://www.rogerblench.info/KWEF/KWEF/KWEFOP.htm"
+        >Kay Williamson Educational Foundation</TextLink
+      >
+      for a grant towards the production of this dictionary, and especially to
+      <TextLink :external="true" to="http://rogerblench.info/"
+        >Roger Blench</TextLink
+      >
+      for his encouragement throughout the project.
+    </p>
+
+    <span class="italic">Stuart McGill, November 2017</span>
   </div>
 </template>

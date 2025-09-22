@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { useAppStore } from '~/stores/app'
-import DialectTable from '~/components/dictionary/DialectTable.vue'
-import LanguageAreaMap from '~/components/dictionary/LanguageAreaMap.vue'
-import DialectMap from '~/components/dictionary/DialectMap.vue'
 
 definePageMeta({
   layout: 'dictionary'
@@ -76,13 +73,3 @@ appStore.backgroundImage = ''
     </p>
   </div>
 </template>
-
-<style scoped>
-.cicipu-text {
-  @apply font-vernacular font-bold;
-}
-
-.national-text {
-  @apply font-serif italic text-purple-800;
-}
-</style>

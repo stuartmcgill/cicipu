@@ -44,4 +44,12 @@
   ul.references li {
       @apply mt-2 ml-8 -indent-8;
   }
+
+  .cicipu-text {
+    @apply font-vernacular font-bold;
+  }
+
+  .national-text {
+    @apply font-serif italic text-purple-800;
+  }
 }
