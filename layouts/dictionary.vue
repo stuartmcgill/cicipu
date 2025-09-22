@@ -25,7 +25,7 @@ const menuLinks = [
 
 <template>
   <div
-    class="mx-auto xl:ml-64 container flex flex-col min-h-screen site-container"
+    class="mx-auto xl:ml-64 container flex flex-col max-w-5xl min-h-screen site-container"
   >
     <NavBar :links="menuLinks" />
     <div class="mb-4 mx-2 sm:mx-4 grow">
