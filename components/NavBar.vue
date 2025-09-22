@@ -1,63 +1,14 @@
 <script setup lang="ts">
-const links = [
-  {
-    label: 'Home',
-    icon: 'i-heroicons-home-solid',
-    to: '/'
-  },
-  {
-    label: 'Listen',
-    icon: 'i-heroicons-play-solid',
-    to: '/listen'
-  },
-  {
-    label: 'Literacy',
-    icon: 'i-heroicons-pencil-solid',
-    to: '/literacy'
-  },
-  {
-    label: 'Dictionary',
-    icon: 'i-heroicons-book-open-solid',
-    to: '/dictionary'
-  },
-  {
-    label: 'Academic',
-    icon: 'i-heroicons-academic-cap-solid',
-    to: '/academic'
-  },
-  {
-    label: 'Photos',
-    icon: 'i-heroicons-photo-solid',
-    to: '/photos'
-  },
-  {
-    label: 'Maps',
-    icon: 'i-heroicons-map-pin',
-    to: '/maps'
-  },
-  {
-    label: 'Links',
-    icon: 'i-heroicons-link',
-    to: '/links'
-  },
-  {
-    label: 'Tools',
-    icon: 'i-heroicons-wrench-solid',
-    to: '/tools'
-  },
-  {
-    label: 'Settings',
-    icon: 'i-heroicons-cog-6-tooth-solid',
-    to: '/settings'
-  }
-]
+import type { HorizontalNavigationLink } from '#ui/types'
+
+const props = defineProps<{ links: HorizontalNavigationLink[] }>()
 
 const menuOpen = ref(false)
 </script>
 
 <template>
   <UHorizontalNavigation
-    :links="links"
+    :links="props.links"
     class="px-4 py-0 border-gray-200 dark:border-gray-700 border-t-0 rounded-t-none hidden md:flex solid-panel"
     :ui="{ inactive: 'text-gray-700 dark:text-gray-200' }"
   />

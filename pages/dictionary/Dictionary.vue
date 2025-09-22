@@ -12,9 +12,9 @@ interface SearchRow {
   national: string
 }
 
-// definePageMeta({
-//   layout: 'dictionary'
-// })
+definePageMeta({
+  layout: 'dictionary'
+})
 
 const appStore = useAppStore()
 //appStore.backgroundImage = 'literacy-chiefs.jpg'
@@ -73,7 +73,7 @@ const rows = computed(() => {
 })
 
 const showLexeme = (row: SearchRow) => {
-  navigateTo(`/dictionary/${row.id}`)
+  navigateTo(`/dictionary/Dictionary/${row.id}`)
 }
 
 //const isOpen = ref(appStore.isDesktop.value)
