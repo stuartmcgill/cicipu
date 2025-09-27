@@ -77,7 +77,7 @@ const rows = computed(() => {
 })
 
 const showLexeme = (row: SearchRow) => {
-  navigateTo(`/dictionary/Dictionary/${row.id}`)
+  navigateTo(`/dictionary/${row.id}`)
 }
 
 //const isOpen = ref(appStore.isDesktop.value)
