@@ -66,8 +66,8 @@ const rows = computed(() => {
       id: result.lexemes.id,
       cicipu: result.lexeme_entries.citationOrtho,
       partOfSpeech: result.lexeme_entries.partOfSpeechId,
-      english: 'dog',
-      national: 'kare'
+      english: result.senses.englishGloss,
+      national: result.senses.nationalGloss
     }
   })
 })
