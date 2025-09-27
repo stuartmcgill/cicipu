@@ -61,15 +61,19 @@ const columns = computed(() => {
 })
 
 const rows = computed(() => {
-  return store.searchResults.map((result) => {
+  const rows = store.searchResults.map((result) => {
     return {
-      id: result.lexemes.id,
-      cicipu: result.lexeme_entries.citationOrtho,
-      partOfSpeech: result.lexeme_entries.partOfSpeechId,
-      english: result.senses.englishGloss,
-      national: result.senses.nationalGloss
+      id: result.lexemeId,
+      cicipu: result.citationOrtho,
+      partOfSpeech: result.partOfSpeech,
+      english: result.englishGloss,
+      national: result.nationalGloss
     }
   })
+
+  console.log(rows)
+
+  return rows
 })
 
 const showLexeme = (row: SearchRow) => {

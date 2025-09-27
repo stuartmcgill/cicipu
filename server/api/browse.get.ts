@@ -3,6 +3,7 @@ import {
   lexemeEntries,
   lexemeEntryTypes,
   lexemes,
+  partsOfSpeech,
   senses
 } from '~/server/db/schema/schema'
 import { and, eq, like } from 'drizzle-orm'
@@ -25,7 +26,13 @@ export default defineEventHandler(async (event) => {
     }
 
     const results = await db
-      .select()
+      .select({
+        lexemeId: lexemes.id,
+        citationOrtho: lexemeEntries.citationOrtho,
+        partOfSpeech: partsOfSpeech.abbreviation,
+        nationalGloss: senses.nationalGloss,
+        englishGloss: senses.englishGloss
+      })
       .from(lexemes)
       .innerJoin(lexemeEntries, eq(lexemes.id, lexemeEntries.lexemeId))
       .innerJoin(
@@ -33,6 +40,10 @@ export default defineEventHandler(async (event) => {
         eq(lexemeEntries.typeId, lexemeEntryTypes.id)
       )
       .leftJoin(senses, eq(lexemeEntries.id, senses.lexemeEntryId))
+      .leftJoin(
+        partsOfSpeech,
+        eq(partsOfSpeech.id, lexemeEntries.partOfSpeechId)
+      )
       .where(
         and(
           eq(lexemeEntries.typeId, LexemeEntryTypeConst.Headword),
@@ -44,6 +55,8 @@ export default defineEventHandler(async (event) => {
         lexemes.lexeme,
         lexemes.homonymNumber
       )
+
+    console.log(results)
 
     return results
   } catch (err) {

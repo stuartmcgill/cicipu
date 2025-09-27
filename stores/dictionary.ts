@@ -1,16 +1,16 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import type {
-  Lexeme,
-  LexemeEntry,
-  LexemeEntryType,
-  Sense
-} from '~/composables/models'
 
 interface SearchResult {
-  lexemes: Lexeme
-  lexeme_entries: LexemeEntry
-  lexeme_entry_types: LexemeEntryType
-  senses: Sense
+  lexemeId: number
+  lexeme: string
+  homonymNumber: number
+  entryId: number
+  citationOrtho: string
+  entryType: string
+  partOfSpeech: string
+  partOfSpeechId: number
+  nationalGloss: string
+  englishGloss: string
 }
 
 export const useDictionaryStore = defineStore('dictionary', {
