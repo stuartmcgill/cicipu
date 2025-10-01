@@ -1,10 +1,12 @@
 import { getDb } from '~/server/db'
 import { inArray, eq } from 'drizzle-orm'
 import {
+  languages,
   lexemes,
   lexemeEntries,
   partsOfSpeech,
   senses,
+  senseExamples,
   senseReferences,
   senseImages,
   images,
@@ -103,14 +105,46 @@ export default defineEventHandler(async (event) => {
       .where(inArray(senseImages.senseId, senseIds))
       .leftJoin(images, eq(senseImages.imageId, images.id))
 
-    // Step 6: Nest data
+    // Step 6: Fetch senseExamples
+    const allExamples = await db
+      .select({
+        id: senseExamples.id,
+        senseReferenceId: senseExamples.senseReferenceId,
+        languageId: senseExamples.languageId,
+        text: senseExamples.text,
+        soundFile: senseExamples.soundFile,
+        soundFileStart: senseExamples.soundFileStart,
+        soundFileEnd: senseExamples.soundFileEnd,
+        languageName: languages.name
+      })
+      .from(senseExamples)
+      .where(
+        inArray(
+          senseExamples.senseReferenceId,
+          allReferences.map((r) => r.id)
+        )
+      )
+      .leftJoin(languages, eq(senseExamples.languageId, languages.id))
+
+    // Step 7: Nest examples under references
+    const referencesById: Record<number, any> = {}
+    for (const ref of allReferences) {
+      referencesById[ref.id] = {
+        ...ref,
+        examples: allExamples.filter((e) => e.senseReferenceId === ref.id)
+      }
+    }
+
+    // Step 8: Nest senses under entries
     const sensesByEntry: Record<number, any[]> = {}
     for (const sense of allSenses) {
       sensesByEntry[sense.lexemeEntryId] =
         sensesByEntry[sense.lexemeEntryId] || []
       sensesByEntry[sense.lexemeEntryId].push({
         ...sense,
-        references: allReferences.filter((r) => r.senseId === sense.id),
+        references: allReferences
+          .filter((r) => r.senseId === sense.id)
+          .map((r) => referencesById[r.id]),
         images: allImages.filter((i) => i.senseId === sense.id)
       })
     }
