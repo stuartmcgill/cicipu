@@ -99,7 +99,9 @@ export default defineEventHandler(async (event) => {
       .select({
         id: senseImages.id,
         senseId: senseImages.senseId,
-        imageId: senseImages.imageId
+        imageId: senseImages.imageId,
+        filename: images.filename,
+        comment: images.comment
       })
       .from(senseImages)
       .where(inArray(senseImages.senseId, senseIds))
