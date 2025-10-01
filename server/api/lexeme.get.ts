@@ -1,9 +1,14 @@
 import { getDb } from '~/server/db'
-import { eq } from 'drizzle-orm'
+import { inArray, eq } from 'drizzle-orm'
 import {
   lexemes,
   lexemeEntries,
-  partsOfSpeech
+  partsOfSpeech,
+  senses,
+  senseReferences,
+  senseImages,
+  images,
+  contributors
 } from '~/server/db/schema/schema'
 
 export default defineEventHandler(async (event) => {
@@ -17,7 +22,7 @@ export default defineEventHandler(async (event) => {
       return { error: 'Missing or invalid "id" parameter' }
     }
 
-    // Fetch lexeme info
+    // Step 1: Fetch lexeme
     const [lexeme] = await db
       .select({
         id: lexemes.id,
@@ -32,7 +37,7 @@ export default defineEventHandler(async (event) => {
       return { error: 'Lexeme not found' }
     }
 
-    // Fetch related lexeme entries with parts of speech
+    // Step 2: Fetch lexeme entries with part of speech
     const entries = await db
       .select({
         id: lexemeEntries.id,
@@ -49,7 +54,71 @@ export default defineEventHandler(async (event) => {
       .where(eq(lexemeEntries.lexemeId, id))
       .orderBy(lexemeEntries.order)
 
-    lexeme.lexemeEntries = entries
+    // Step 3: Fetch senses for these entries
+    const entryIds = entries.map((e) => e.id)
+    const allSenses = await db
+      .select({
+        id: senses.id,
+        lexemeEntryId: senses.lexemeEntryId,
+        order: senses.order,
+        encyclopaedicInfo: senses.encyclopaedicInfo,
+        englishDefinition: senses.englishDefinition,
+        englishGloss: senses.englishGloss,
+        englishReversal: senses.englishReversal,
+        nationalDefinition: senses.nationalDefinition,
+        nationalGloss: senses.nationalGloss,
+        nationalReversal: senses.nationalReversal,
+        scientificName: senses.scientificName,
+        usageComment: senses.usageComment
+      })
+      .from(senses)
+      .where(inArray(senses.lexemeEntryId, entryIds))
+      .orderBy(senses.order)
+
+    // Step 4: Fetch senseReferences
+    const senseIds = allSenses.map((s) => s.id)
+    const allReferences = await db
+      .select({
+        id: senseReferences.id,
+        senseId: senseReferences.senseId,
+        contributorId: senseReferences.contributorId,
+        order: senseReferences.order,
+        englishTranslation: senseReferences.englishTranslation
+      })
+      .from(senseReferences)
+      .where(inArray(senseReferences.senseId, senseIds))
+      .leftJoin(
+        contributors,
+        eq(senseReferences.contributorId, contributors.id)
+      )
+
+    // Step 5: Fetch senseImages
+    const allImages = await db
+      .select({
+        id: senseImages.id,
+        senseId: senseImages.senseId,
+        imageId: senseImages.imageId
+      })
+      .from(senseImages)
+      .where(inArray(senseImages.senseId, senseIds))
+      .leftJoin(images, eq(senseImages.imageId, images.id))
+
+    // Step 6: Nest data
+    const sensesByEntry: Record<number, any[]> = {}
+    for (const sense of allSenses) {
+      sensesByEntry[sense.lexemeEntryId] =
+        sensesByEntry[sense.lexemeEntryId] || []
+      sensesByEntry[sense.lexemeEntryId].push({
+        ...sense,
+        references: allReferences.filter((r) => r.senseId === sense.id),
+        images: allImages.filter((i) => i.senseId === sense.id)
+      })
+    }
+
+    lexeme.lexemeEntries = entries.map((entry) => ({
+      ...entry,
+      senses: sensesByEntry[entry.id] || []
+    }))
 
     return lexeme
   } catch (err) {
