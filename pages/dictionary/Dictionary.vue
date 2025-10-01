@@ -104,6 +104,10 @@ const search = useDebounceFn((term: string) => {
   store.search(searchTerm.value)
 }, 500)
 
+onMounted(() => {
+  store.browse('a')
+})
+
 watch(searchTerm, (val) => search(val))
 //
 // watch(appStore.isDesktop, (isDesktop) => {
@@ -157,8 +161,17 @@ watch(searchTerm, (val) => search(val))
       </div>
     </div>
 
-    <h2 v-if="store.searchTerm">
-      Search results for <span class="font-normal">{{ store.searchTerm }}</span>
+    <h2>
+      <span v-if="store.lastSearch?.type === 'browse'">
+        The letter
+        <span class="font-normal">{{ store.lastSearch.term }}</span>
+      </span>
+      <span v-else>
+        Search results
+        <span v-if="store.lastSearch">
+          for <span class="font-normal">{{ store.lastSearch.term }}</span>
+        </span>
+      </span>
     </h2>
 
     <div v-if="store.pending" class="mt-4">Loading...</div>

@@ -13,16 +13,21 @@ interface SearchResult {
   englishGloss: string
 }
 
+interface LastSearch {
+  type: 'browse' | 'search'
+  term: string
+}
+
 export const useDictionaryStore = defineStore('dictionary', {
   state: () => ({
-    searchTerm: '',
+    lastSearch: null as LastSearch | null,
     searchResults: [] as SearchResult[],
     pending: false,
     error: null as string | null
   }),
   actions: {
     resetSearchResults() {
-      this.searchTerm = ''
+      this.lastSearch = null
       this.searchResults = []
     },
 
@@ -35,7 +40,10 @@ export const useDictionaryStore = defineStore('dictionary', {
           `/api/browse?letter=${encodeURIComponent(letter)}`
         )
         this.searchResults = data as SearchResult[]
-        this.searchTerm = letter
+        this.lastSearch = {
+          type: 'browse',
+          term: letter
+        }
       } catch (err) {
         this.error = (err as Error).message
         this.searchResults = []
@@ -53,7 +61,10 @@ export const useDictionaryStore = defineStore('dictionary', {
           `/api/search?term=${encodeURIComponent(term)}`
         )
         this.searchResults = data as SearchResult[]
-        this.searchTerm = term
+        this.lastSearch = {
+          type: 'search',
+          term: term
+        }
       } catch (err) {
         this.error = (err as Error).message
         this.searchResults = []
