@@ -84,6 +84,7 @@ export default defineEventHandler(async (event) => {
         id: senseReferences.id,
         senseId: senseReferences.senseId,
         contributorId: senseReferences.contributorId,
+        contributorName: contributors.name,
         order: senseReferences.order,
         englishTranslation: senseReferences.englishTranslation
       })
