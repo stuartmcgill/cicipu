@@ -60,6 +60,10 @@ export const useDictionaryStore = defineStore('dictionary', {
       } finally {
         this.pending = false
       }
+    },
+
+    async fetchLexeme(id: number) {
+      return await $fetch(`/api/lexeme?id=${id}`)
     }
   }
 })
