@@ -75,6 +75,10 @@ export const useDictionaryStore = defineStore('dictionary', {
 
     async fetchLexeme(id: number) {
       return await $fetch(`/api/lexeme?id=${id}`)
+    },
+
+    async fetchContributors() {
+      return await $fetch('/api/contributors')
     }
   }
 })

@@ -36,6 +36,11 @@ const menuLinks = [
     to: '/dictionary/HausaTranslations'
   },
   {
+    label: 'Contributors',
+    icon: 'i-heroicons-user-solid',
+    to: '/dictionary/Contributors'
+  },
+  {
     label: 'Cicipu home',
     icon: 'i-heroicons-home-solid',
     to: '/'
