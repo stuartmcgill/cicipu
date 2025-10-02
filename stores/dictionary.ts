@@ -79,6 +79,10 @@ export const useDictionaryStore = defineStore('dictionary', {
 
     async fetchContributors() {
       return await $fetch('/api/contributors')
+    },
+
+    async fetchContributor(id: number) {
+      return await $fetch(`/api/contributor?id=${id}`)
     }
   }
 })

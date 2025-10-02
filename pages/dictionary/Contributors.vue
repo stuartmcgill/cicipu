@@ -25,10 +25,13 @@ const columns = [
 ]
 const rows: Ref<TableRow[]> = ref([])
 
+const selectContributor = (contributor: ContributorRow) => {
+  const router = useRouter()
+  router.push(`/dictionary/Contributors/${contributor.id}`)
+}
+
 onMounted(async () => {
   const contributors = await store.fetchContributors()
-
-  console.log(contributors)
 
   rows.value = contributors.map((contributor) => ({
     id: contributor.id,
@@ -37,11 +40,6 @@ onMounted(async () => {
     languages: contributor.languages.map((language) => language.name).join(', ')
   }))
 })
-
-const selectContributor = (contributor: ContributorRow) => {
-  const router = useRouter()
-  router.push(`/dictionary/Contributors/${contributor.id}`)
-}
 </script>
 
 <template>
