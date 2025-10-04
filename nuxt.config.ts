@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     strict: true
   },
   image: {
-    format: ['webp']
+    format: ['webp'],
+    domains: ['https://stuartmcgill.github.io']
   },
   googleFonts: {
     families: {

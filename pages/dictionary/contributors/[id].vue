@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useAppStore } from '~/stores/app'
 import { useRoute } from '#vue-router'
+import ContributorProperty from '~/components/dictionary/ContributorProperty.vue'
 
 definePageMeta({
   layout: 'dictionary'
@@ -12,159 +13,138 @@ appStore.backgroundImage = ''
 const store = useDictionaryStore()
 const contributor = ref<any>(null)
 
+const languagesSpoken = computed(
+  () => contributor?.value.languages.map((l) => l.name).join(', ') || ''
+)
+
+const yearOfBirth = computed(() => {
+  if (!contributor.value) {
+    return ''
+  }
+
+  return contributor.value.dob
+    ? new Date(contributor.value.dob).getFullYear().toString()
+    : ''
+})
+
 onMounted(async () => {
   const route = useRoute()
   const id = parseInt(route.params.id as string)
+
   contributor.value = await store.fetchContributor(id)
 })
 </script>
 
 <template>
-  <div class="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
-    <!-- Sidebar -->
-    <div class="space-y-6">
-      <!-- Profile card -->
-      <UCard v-if="contributor">
-        <template #header>
-          <div class="flex flex-col items-center text-center">
-            <img
-              v-if="contributor.images?.length"
+  <div class="mx-auto max-w-5xl">
+    <UProgress v-if="!contributor" />
+    <template v-else>
+      <h1>{{ contributor.name }}</h1>
+      <UCard class="mb-6 md:mb-8 lg:mb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <ContributorProperty
+            v-if="contributor.birthplace"
+            label="Birthplace"
+            :text="contributor.birthplace"
+            icon="i-heroicons-map-pin"
+          />
+          <ContributorProperty
+            v-if="contributor.currentResidence"
+            label="Residence"
+            :text="contributor.currentResidence"
+            icon="i-heroicons-home"
+          />
+          <ContributorProperty
+            label="Languages spoken"
+            :text="languagesSpoken"
+            icon="i-heroicons-language"
+          />
+          <ContributorProperty
+            v-if="contributor.occupation"
+            label="Occupation"
+            :text="contributor.occupation"
+            icon="i-mdi-corn"
+          />
+        </div>
+      </UCard>
+
+      <!-- Main content -->
+      <div class="md:col-span-2 space-y-6">
+        <!-- Images -->
+        <template v-if="contributor?.images?.length">
+          <div v-if="contributor.images.length === 1">
+            <NuxtImg
               :src="contributor.images[0].filename"
-              alt="Contributor picture"
-              class="w-32 h-32 rounded-full object-cover"
+              :alt="`Picture of ${contributor.name}`"
+              class="w-full object-cover"
             />
-            <h2 class="mt-3 text-xl font-semibold">{{ contributor.name }}</h2>
             <p
-              v-if="contributor.occupation && contributor.occupation !== 'None'"
-              class="text-gray-500"
+              v-if="contributor.images[0].comment"
+              class="text-sm text-gray-500 mt-2"
             >
-              {{ contributor.occupation }}
+              {{ contributor.images[0].comment }}
             </p>
           </div>
-        </template>
-      </UCard>
-
-      <!-- About me -->
-      <UCard v-if="contributor">
-        <template #header>
-          <h3 class="font-semibold text-lg">About {{ contributor.name }}</h3>
-        </template>
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-map-pin" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Birthplace</span>
-              <p class="text-gray-600">{{ contributor.birthplace }}</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-home" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Residence</span>
-              <p class="text-gray-600">{{ contributor.currentResidence }}</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-language" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Languages spoken</span>
-              <p class="text-gray-600">
-                {{ contributor.languages.map((l) => l.name).join(', ') }}
-              </p>
-            </div>
-          </li>
-        </ul>
-      </UCard>
-    </div>
-
-    <!-- Main content -->
-    <div class="md:col-span-2 space-y-6">
-      <!-- Images -->
-      <UCard v-if="contributor?.images?.length">
-        <template #header>
-          <h3 class="font-semibold text-lg">Images</h3>
-        </template>
-        <div v-if="contributor.images.length === 1">
-          <img
-            :src="contributor.images[0].filename"
-            :alt="`Picture of ${contributor.name}`"
-            class="rounded-lg w-full object-cover"
-          />
-          <p
-            v-if="contributor.images[0].comment"
-            class="text-sm text-gray-500 mt-2"
-          >
-            {{ contributor.images[0].comment }}
-          </p>
-        </div>
-        <div v-else>
-          <UCarousel :items="contributor.images" class="rounded-lg">
-            <template #default="{ item }">
-              <div class="relative">
-                <img
-                  :src="item.filename"
-                  :alt="`Picture of ${contributor.name}`"
-                  class="w-full h-64 object-cover rounded-lg"
-                />
-                <div
-                  v-if="item.comment"
-                  class="absolute bottom-0 w-full bg-black/50 text-white text-sm p-2"
-                >
-                  {{ item.comment }}
+          <div v-else class="flex justify-center">
+            <UCarousel
+              :items="contributor.images"
+              :ui="{ item: 'basis-full' }"
+              class="rounded-lg"
+              arrows
+            >
+              <template #default="{ item }">
+                <div class="flex justify-center items-center relative w-full">
+                  <!-- flex container to center content -->
+                  <NuxtImg
+                    :src="item.filename"
+                    :alt="`Picture of ${contributor.name}`"
+                    class="object-cover max-h-full max-w-full rounded-lg"
+                  />
+                  <div
+                    v-if="item.comment"
+                    class="absolute bottom-0 bg-black/50 text-white text-sm p-2 w-full text-center"
+                  >
+                    {{ item.comment }}
+                  </div>
                 </div>
-              </div>
-            </template>
-          </UCarousel>
-        </div>
-      </UCard>
-
-      <!-- Further details -->
-      <UCard v-if="contributor">
-        <template #header>
-          <h3 class="font-semibold text-lg">Further details</h3>
+              </template>
+            </UCarousel>
+          </div>
         </template>
-        <ul class="text-sm">
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-book-open" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Education</span>
-              <p class="text-gray-600">{{ contributor.levelEducation }}</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-home" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Childhood residence</span>
-              <p class="text-gray-600">{{ contributor.childhoodResidence }}</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-user" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Parental details</span>
-              <p class="text-gray-600">{{ contributor.parentalDetails }}</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-calendar" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Year of birth</span>
-              <p class="text-gray-600">
-                {{
-                  contributor.dob ? new Date(contributor.dob).getFullYear() : ''
-                }}
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2">
-            <UIcon name="i-heroicons-users" class="w-5 h-5 mt-1" />
-            <div>
-              <span class="font-medium">Ethnicity</span>
-              <p class="text-gray-600">{{ contributor.ethnicGroup?.name }}</p>
-            </div>
-          </li>
-        </ul>
-      </UCard>
-    </div>
+
+        <!-- Further details -->
+        <UCard class="mb-6 md:mb-8 lg:mb-12">
+          <template #header>
+            <h3 class="font-semibold text-lg">Further details</h3>
+          </template>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ContributorProperty
+              v-if="contributor.levelEducation"
+              label="Education"
+              :text="contributor.levelEducation"
+              icon="i-heroicons-book-open"
+            />
+            <ContributorProperty
+              v-if="contributor.childhoodResidence"
+              label="Childhood residence"
+              :text="contributor.childhoodResidence"
+              icon="i-heroicons-home"
+            />
+            <ContributorProperty
+              v-if="contributor.parentalDetails"
+              label="Parental details"
+              :text="contributor.parentalDetails"
+              icon="i-heroicons-user"
+            />
+            <ContributorProperty
+              v-if="yearOfBirth"
+              label="Year of birth"
+              :text="yearOfBirth"
+              icon="i-heroicons-calendar"
+            />
+          </div>
+        </UCard>
+      </div>
+    </template>
   </div>
 </template>
