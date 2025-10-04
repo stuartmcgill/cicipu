@@ -69,14 +69,17 @@ onMounted(async () => {
       </UCard>
 
       <!-- Main content -->
-      <div class="md:col-span-2 space-y-6">
+      <div class="space-y-6">
         <!-- Images -->
         <template v-if="contributor?.images?.length">
-          <div v-if="contributor.images.length === 1">
+          <div
+            class="flex justify-center items-center w-full"
+            v-if="contributor.images.length === 1"
+          >
             <NuxtImg
               :src="contributor.images[0].filename"
               :alt="`Picture of ${contributor.name}`"
-              class="w-full object-cover"
+              class="object-cover max-h-full max-w-full rounded-lg"
             />
             <p
               v-if="contributor.images[0].comment"

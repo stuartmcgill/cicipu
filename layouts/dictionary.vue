@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const menuLinks = [
+import { useRoute } from '#app'
+
+const route = useRoute()
+
+const baseMenuItems = [
   {
     label: 'Search/browse',
     icon: 'i-heroicons-magnifying-glass-solid',
@@ -46,6 +50,25 @@ const menuLinks = [
     to: '/'
   }
 ]
+
+const activeSection = computed(() => {
+  if (route.path.startsWith('/dictionary/Contributor')) {
+    return '/dictionary/Contributors'
+  }
+
+  if (/^\/dictionary\/\d+$/.test(route.path)) {
+    return '/dictionary/Dictionary'
+  }
+
+  return route.path
+})
+
+const menuLinks = computed(() =>
+  baseMenuItems.map((link) => ({
+    ...link,
+    active: link.to === activeSection.value
+  }))
+)
 </script>
 
 <template>
