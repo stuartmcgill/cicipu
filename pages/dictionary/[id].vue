@@ -124,9 +124,13 @@ onMounted(async () => {
             <ul v-if="ref.examples.length" class="list-disc list-inside ml-2">
               <li v-for="ex in ref.examples" :key="ex.id">
                 <strong>{{ ex.languageName }}:</strong> {{ ex.text }}
-                <span v-if="ex.soundFile">
-                  🔊 <a :href="ex.soundFile" target="_blank">Play</a>
-                </span>
+                <audio
+                  v-if="ex.soundFile"
+                  :src="AudioUrl + ex.soundFile"
+                  controls
+                >
+                  Your browser does not support the audio element.
+                </audio>
               </li>
             </ul>
           </div>
@@ -139,7 +143,7 @@ onMounted(async () => {
               class="border p-1 rounded w-32 h-32 flex flex-col items-center justify-center"
             >
               <img
-                :src="`/uploads/${img.filename}`"
+                :src="ImagesUrl + img.filename"
                 :alt="img.comment || 'image'"
                 class="max-h-20 object-contain"
               />
