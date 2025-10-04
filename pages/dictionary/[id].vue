@@ -66,7 +66,7 @@ onMounted(async () => {
     </div>
 
     <div v-if="data">
-      <h2 class="text-2xl font-bold">
+      <h2 class="text-2xl font-bold font-vernacular">
         {{ data.lexeme }}
         <span v-if="data.homonymNumber">({{ data.homonymNumber }})</span>
       </h2>
@@ -77,7 +77,7 @@ onMounted(async () => {
         class="border rounded p-4 mt-4 space-y-2"
       >
         <div class="flex justify-between items-center">
-          <h3 class="font-semibold">
+          <h3 class="font-semibold font-vernacular">
             {{ entry.citationOrtho }}
             <small>({{ entry.partOfSpeechAbbr }})</small>
           </h3>
@@ -113,8 +113,8 @@ onMounted(async () => {
             class="border-l-2 border-gray-200 pl-3 mt-1 space-y-1"
           >
             <div>
-              <strong>Reference ({{ ref.order }}):</strong>
-              {{ ref.englishTranslation || '–' }}
+              <strong>Reference ({{ ref.order }}): </strong>
+              <span class="italic">{{ ref.englishTranslation || '–' }}</span>
               <span v-if="ref.contributorName"
                 >by {{ ref.contributorName }}</span
               >
@@ -123,7 +123,11 @@ onMounted(async () => {
             <!-- Examples -->
             <ul v-if="ref.examples.length" class="list-disc list-inside ml-2">
               <li v-for="ex in ref.examples" :key="ex.id">
-                <strong>{{ ex.languageName }}:</strong> {{ ex.text }}
+                <strong>{{ ex.languageName }}: </strong>
+                <span
+                  :class="ex.languageId === 8 ? 'national-text' : 'cicipu-text'"
+                  >{{ ex.text }}</span
+                >
                 <audio
                   v-if="ex.soundFile"
                   :src="AudioUrl + ex.soundFile"
