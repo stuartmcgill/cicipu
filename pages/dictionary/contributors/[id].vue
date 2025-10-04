@@ -71,49 +71,31 @@ onMounted(async () => {
       <!-- Main content -->
       <div class="space-y-6">
         <!-- Images -->
-        <template v-if="contributor?.images?.length">
-          <div
-            class="flex justify-center items-center w-full"
-            v-if="contributor.images.length === 1"
+        <div v-if="contributor?.images?.length" class="flex justify-center">
+          <UCarousel
+            :items="contributor.images"
+            :ui="{ item: 'basis-full' }"
+            class="rounded-lg"
+            :arrows="contributor.images.length > 1"
           >
-            <NuxtImg
-              :src="contributor.images[0].filename"
-              :alt="`Picture of ${contributor.name}`"
-              class="object-cover max-h-full max-w-full rounded-lg"
-            />
-            <p
-              v-if="contributor.images[0].comment"
-              class="text-sm text-gray-500 mt-2"
-            >
-              {{ contributor.images[0].comment }}
-            </p>
-          </div>
-          <div v-else class="flex justify-center">
-            <UCarousel
-              :items="contributor.images"
-              :ui="{ item: 'basis-full' }"
-              class="rounded-lg"
-              arrows
-            >
-              <template #default="{ item }">
-                <div class="flex justify-center items-center relative w-full">
-                  <!-- flex container to center content -->
-                  <NuxtImg
-                    :src="item.filename"
-                    :alt="`Picture of ${contributor.name}`"
-                    class="object-cover max-h-full max-w-full rounded-lg"
-                  />
-                  <div
-                    v-if="item.comment"
-                    class="absolute bottom-0 bg-black/50 text-white text-sm p-2 w-full text-center"
-                  >
-                    {{ item.comment }}
-                  </div>
+            <template #default="{ item }">
+              <div class="flex justify-center items-center relative w-full">
+                <!-- flex container to center content -->
+                <NuxtImg
+                  :src="item.filename"
+                  :alt="`Picture of ${contributor.name}`"
+                  class="object-cover max-h-full max-w-full rounded-lg"
+                />
+                <div
+                  v-if="item.comment"
+                  class="absolute bottom-0 bg-black/50 text-white text-sm p-2 w-full text-center"
+                >
+                  {{ item.comment }}
                 </div>
-              </template>
-            </UCarousel>
-          </div>
-        </template>
+              </div>
+            </template>
+          </UCarousel>
+        </div>
 
         <!-- Further details -->
         <UCard class="mb-6 md:mb-8 lg:mb-12">
