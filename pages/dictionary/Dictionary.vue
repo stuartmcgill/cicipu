@@ -71,8 +71,6 @@ const rows = computed(() => {
     }
   })
 
-  console.log(rows)
-
   return rows
 })
 

@@ -56,8 +56,6 @@ export default defineEventHandler(async (event) => {
         lexemes.homonymNumber
       )
 
-    console.log(results)
-
     return results
   } catch (err) {
     event.node.res.statusCode = 500
