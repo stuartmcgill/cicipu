@@ -144,14 +144,50 @@ appStore.backgroundImage = ''
         <p>
           The lexical database on which the dictionary is based has been built
           up gradually since Stuart McGill’s initial linguistic fieldwork in
-          2006. From 2010-2012 native speaker Markus Yabani was responsible for
-          recording the example sentences together with their Hausa
-          translations. It is his voice that can be heard in the recordings. In
-          2015 a LexiquePro version of this dictionary was put online, and then
-          in 2017 this was replaced by a mobile-friendly version. The
-          photographs included in this dictionary were taken variously by Markus
-          Yabani, Stuart McGill, and Roger Blench.
+          2006. From 2010-2012 native speaker
+          <TextLink to="/dictionary/Contributors/3521">Markus Yabani</TextLink>
+          was responsible for writing and recording the example sentences
+          together with their Hausa translations. It is his voice that can be
+          heard in the recordings. In 2015 a LexiquePro version of this
+          dictionary was put online, and then in 2017 this was replaced by a
+          mobile-friendly version. The photographs included in this dictionary
+          were taken variously by Markus Yabani, Stuart McGill, and Roger
+          Blench.
         </p>
+      </IntroductionSection>
+      <IntroductionSection label="Acknowledgments" icon="i-mdi-hands-pray">
+        <h2>Acknowledgments</h2>
+        <p>
+          Many people have helped make this dictionary possible, especially the
+          Wømø of Karishen, the Sarkinƙasa in Sakaba, the Mai Unguwa of Inguwar
+          Rogo, and
+          <TextLink to="/dictionary/Contributors/3518">Mohammed Mallam</TextLink
+          >. Other important contributors have been
+          <TextLink to="/dictionary/Contributors/3519">Mohammed Musa</TextLink>,
+          <TextLink to="/dictionary/Contributors/3514">Musa Mai Unguwa</TextLink
+          >,
+          <TextLink to="/dictionary/Contributors/3492"
+            >Ibrahim Mai Unguwa</TextLink
+          >, Ayuba Sani, Ishiaku Ibrahim,
+          <TextLink to="/dictionary/Contributors/3453">Amos Bako</TextLink>,
+          Israel and Omonor Wade, David Heath, and David Crozier.
+          <span class="vern-detail">Tugweede ggẽi!</span>
+        </p>
+        <p>
+          I am especially grateful to the
+          <TextLink
+            :external="true"
+            to="http://www.rogerblench.info/KWEF/KWEF/KWEFOP.htm"
+            >Kay Williamson Educational Foundation</TextLink
+          >
+          for a grant towards the production of this dictionary, and especially
+          to
+          <TextLink :external="true" to="http://rogerblench.info/"
+            >Roger Blench</TextLink
+          >
+          for his encouragement throughout the project.
+        </p>
+        <div class="mb-4 md:mb-6 lg:mn-12 italic">Stuart McGill, 2017</div>
       </IntroductionSection>
       <IntroductionSection label="References" icon="i-mdi-format-list-bulleted">
         <h2>References</h2>
@@ -179,33 +215,6 @@ appStore.backgroundImage = ''
             >The Hausa language: an encyclopedic reference grammar</span
           >. New Haven: Yale University Press.
         </p>
-      </IntroductionSection>
-      <IntroductionSection label="Acknowledgments" icon="i-mdi-hands-pray">
-        <h2>Acknowledgments</h2>
-        <p>
-          Many people have helped make this dictionary possible, especially the
-          Wømø of Karishen, the Sarkinƙasa in Sakaba, the Mai Unguwa of Inguwar
-          Rogo, and Mohammed Mallam. Other important contributors have been
-          Mohammed Musa, Musa Mai Unguwa, Ibrahim Mai Unguwa, Ayuba Sani,
-          Ishiaku Ibrahim, Amos Bako, Israel and Omonor Wade, David Heath, and
-          David Crozier.
-          <span class="vern-detail">Tugweede ggẽi!</span>
-        </p>
-        <p>
-          I am especially grateful to the
-          <TextLink
-            :external="true"
-            to="http://www.rogerblench.info/KWEF/KWEF/KWEFOP.htm"
-            >Kay Williamson Educational Foundation</TextLink
-          >
-          for a grant towards the production of this dictionary, and especially
-          to
-          <TextLink :external="true" to="http://rogerblench.info/"
-            >Roger Blench</TextLink
-          >
-          for his encouragement throughout the project.
-        </p>
-        <div class="mb-4 md:mb-6 lg:mn-12 italic">Stuart McGill, 2017</div>
       </IntroductionSection>
     </div>
   </div>
