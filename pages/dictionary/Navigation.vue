@@ -13,35 +13,43 @@ appStore.backgroundImage = ''
   <div class="mx-auto max-w-2xl text-lg">
     <h1>Navigating the dictionary</h1>
     <p>
-      There are two main ways to navigate the dictionary, as well as two minor
-      ones. Firstly, the
-      <TextLink to="./Dictionary">Browse</TextLink> sidebar allows the user to
-      browse alphabetically by clicking on one of the letters in the Cicipu
-      alphabet. This displays a list of all the words beginning with that
-      letter. Due to the noun class system the initial letters of words are not
-      evenly distributed; for example almost a third of the words in the
-      dictionary begin with <span class="cicipu-text">k</span>.
+      There are two main ways to navigate the
+      <TextLink to="./Dictionary">dictionary</TextLink>, as well as two minor
+      ones.
     </p>
+    <h2>Browsing by letter</h2>
     <p>
-      Secondly, the sidebar also contains a search box. This can be used to
-      search in any of the three languages. All search hits are displayed in a
-      single list (for example searching for 'mar' would return
+      Firstly, the Browse sidebar allows the user to browse alphabetically by
+      clicking on one of the letters in the Cicipu alphabet. This displays a
+      list of all the words beginning with that letter. Due to the noun class
+      system the initial letters of words are not evenly distributed; for
+      example almost a third of the words in the dictionary begin with
+      <span class="cicipu-text">k</span>.
+    </p>
+    <h2>Searching</h2>
+    <p>
+      Secondly, the search box can be used to search in any of the three
+      languages. All search hits are displayed in a single list (for example
+      searching for 'mar' would return
       <span class="cicipu-text">maringi</span>
       'claperless bell', Hausa
       <span class="national-text">maraba</span> 'welcome', and English 'marsh'.
     </p>
+    <h2>Next and Previous</h2>
     <p>
-      As an additional feature, each entry also contains 'previous' and 'next'
+      As an additional feature, each entry also contains 'next' and 'previous'
       buttons which allow the user to move from word-to-word. For technical
       reasons it has been easier to order this list alphabetically by lexical
       root rather than word (this is not considered a serious flaw since anyone
       seeking a list ordered by word can simply use the alphabetic links on the
       sidebar).
     </p>
+    <h2>Random word</h2>
     <p>
       Finally, the home page contains a randomly-chosen 'sample word' with a
       link to the full lexical entry.
     </p>
+    <h2>Tips on finding words</h2>
     <p>
       Throughout the dictionary text in Cicipu appears in bold (e.g.
       <span class="cicipu-text">cinda</span>), English in plain font (e.g.
@@ -60,9 +68,9 @@ appStore.backgroundImage = ''
     <p>
       When trying to look up a word in Cicipu, bear in mind that some words
       begin with long consonants (e.g.
-      <span class="cicipu-text">zzá</span>'person' appears after
-      <span class="cicipu-text">zũwã</span>'roast') and that others contain long
-      vowels (e.g.
+      <span class="cicipu-text">zzá</span> 'person' appears after
+      <span class="cicipu-text">zũwã</span> 'roast') and that others contain
+      long vowels (e.g.
       <span class="cicipu-text">kàdáaná</span>
       'large brown hawk' appears before
       <span class="cicipu-text">kàdámá</span> 'word'). Words that begin with a

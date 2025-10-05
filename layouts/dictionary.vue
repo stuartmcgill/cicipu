@@ -30,16 +30,6 @@ const baseMenuItems = [
     to: '/dictionary/Orthography'
   },
   {
-    label: 'Audio',
-    icon: 'i-heroicons-speaker-wave-solid',
-    to: '/dictionary/AudioFiles'
-  },
-  {
-    label: 'Translation',
-    icon: 'i-heroicons-language-solid',
-    to: '/dictionary/HausaTranslations'
-  },
-  {
     label: 'Contributors',
     icon: 'i-heroicons-user-solid',
     to: '/dictionary/Contributors'

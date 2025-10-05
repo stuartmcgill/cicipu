@@ -15,11 +15,11 @@ appStore.backgroundImage = ''
 
 <template>
   <div class="mx-auto max-w-2xl text-lg">
-    <h1>Introduction to Cicipu</h1>
+    <h1>Introduction to the dictionary</h1>
     <div class="flex flex-col gap-4">
       <IntroductionSection
         :start-open="true"
-        label="Introduction"
+        label="Overview"
         icon="i-heroicons-information-circle-solid"
       >
         <p>
@@ -130,6 +130,91 @@ appStore.backgroundImage = ''
           mobile-friendly version. The photographs included in this dictionary
           were taken variously by Markus Yabani, Stuart McGill, and Roger
           Blench.
+        </p>
+      </IntroductionSection>
+      <IntroductionSection
+        label="Hausa translations"
+        icon="i-heroicons-language-solid"
+      >
+        <p>
+          An attempt has been made to translate every word and every example
+          sentence into Hausa as well as English. This is problematic due to the
+          lack of a written standard for the particular dialect of Hausa spoken
+          by the Acipu. This variety is a form of the 'Western Hausa' dialect
+          centred on Sokoto (Newman 2000:1). It is also my impression – based on
+          comparing Yabani's Hausa translations with the dialectal forms given
+          in Bargery (1934) – that in terms of vocabulary there is (or at least
+          has been) strong influence from Katsina too.
+        </p>
+        <p>
+          But the Hausa spoken by the Cicipu diverges in other ways too, and
+          no-one who has spent all their life in Cicipuland would be able to
+          pass themselves off as a native Hausa speaker – an obvious example is
+          that almost all nouns are assigned to the masculine gender, the
+          exceptions being when the referent is actually female. There are also
+          phonologial differences such as the use of epenthetic vowels (e.g.
+          <span class="national-text">fuska</span>
+          'face' is pronounced [<span class="phonetic">húsᵊkà</span>
+          ]) and the simplification of phonemes: the Hausa ejectives
+          <span class="national-text">ts</span>
+          [<span class="phonetic">sʼ</span>] and
+          <span class="national-text">ƙ</span>
+          are pronounced [<span class="phonetic">s</span>] or [<span
+            class="phonetic"
+            >tʃ</span
+          >] and [<span class="phonetic">k</span>] respectively. Hausa
+          <span class="national-text">sh</span>
+          [<span class="phonetic">tʃ</span>] is also often pronounced [<span
+            class="phonetic"
+            >s</span
+          >]. Cicipu vowel harmony also has a significant effect on the way
+          native speakers pronounce Hausa (e.g. [<span class="phonetic"
+            >ɡúːnáː</span
+          >] for
+          <span class="national-text">gona</span>
+          'farm').
+        </p>
+        <p>
+          When revising Yabani's initial Hausa transcriptions we have tended to
+          retain grammatical differences, but abstract away from phonological
+          differences in an effort to make the identification of the Hausa words
+          easier. Bargery (1934) has been followed for Sokoto Hausa spelling.
+          Yabani's original unedited transcriptions are available from the
+          <TextLink
+            to="https://www.elararchive.org/uncategorized/SO_0898469b-5c6f-4f35-a3b8-ec825211154c/"
+            :external="true"
+            >ELAR Cicipu deposit</TextLink
+          >.
+        </p>
+        <p>
+          Although officially part of the Hausa orthography, in practice the
+          hooked letters <span class="national-text">ɓ</span>,
+          <span class="national-text">ɗ</span>, and
+          <span class="national-text">ƙ</span>
+          are often written as <span class="national-text">b</span>,
+          <span class="national-text">d</span>, and
+          <span class="national-text">k</span> respectively. In this dictionary
+          we follow the standard Hausa orthography.
+        </p>
+      </IntroductionSection>
+      <IntroductionSection
+        label="Audio recordings"
+        icon="i-heroicons-speaker-wave-solid"
+      >
+        <p>
+          The audio recordings in this dictionary were recorded by Markus
+          Yabani. Some of these sound files cover two examples, in which case
+          you may have to wait a few seconds to get to the start of the example
+          you want to hear. It should be possible even for beginners to identify
+          the relevant portion.
+        </p>
+        <p>
+          The sound quality of the audio recordings varies. Our original
+          intention was to use them purely as an aid to transcription but we
+          decided that they were too valuable a resource not to publish along
+          with the dictionary. In particular native speakers may find them
+          useful for checking their understanding of the accompanying written
+          Cicipu.
         </p>
       </IntroductionSection>
       <IntroductionSection label="Acknowledgments" icon="i-mdi-hands-pray">
