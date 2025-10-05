@@ -121,9 +121,15 @@ onMounted(async () => {
                     >
                       Your browser does not support the audio element.
                     </audio>
-                    <div>
-                      {{ example.languageName }}
-                    </div>
+                    <UTooltip :text="example.languageName">
+                      <UButton
+                        icon="i-heroicons-language-solid"
+                        size="xs"
+                        color="gray"
+                        square
+                        variant="soft"
+                      />
+                    </UTooltip>
                   </div>
                 </div>
               </div>
