@@ -3,6 +3,7 @@ import { useAppStore } from '~/stores/app'
 import DialectTable from '~/components/dictionary/DialectTable.vue'
 import LanguageAreaMap from '~/components/dictionary/LanguageAreaMap.vue'
 import DialectMap from '~/components/dictionary/DialectMap.vue'
+import IntroductionSection from '~/components/dictionary/IntroductionSection.vue'
 
 definePageMeta({
   layout: 'dictionary'
@@ -15,14 +16,13 @@ appStore.backgroundImage = ''
 <template>
   <div class="mx-auto max-w-2xl text-lg">
     <h1>Introduction</h1>
-    <UAccordion
-      :default-open="true"
-      :items="[
-        { label: 'Introduction', icon: 'i-heroicons-information-circle-solid' }
-      ]"
-    >
-      <template #item="{ item }">
-        <span>
+    <div class="flex flex-col gap-4">
+      <IntroductionSection
+        :start-open="true"
+        label="Introduction"
+        icon="i-heroicons-information-circle-solid"
+      >
+        <p>
           This trilingual dictionary is the first of any kind for the Cicipu
           language. It is intended for people who want to learn to read, write,
           or speak the Cicipu language and who already read English or Hausa.
@@ -37,7 +37,7 @@ appStore.backgroundImage = ''
             >PDF format</TextLink
           >, providing basic sociolinguistic, phonological and grammatical
           information. For further information see McGill (2009).
-        </span>
+        </p>
         <UAlert
           icon="i-heroicons-chat-bubble-left"
           variant="outline"
@@ -68,12 +68,8 @@ appStore.backgroundImage = ''
           description="The c in Cicipu is pronounced like ch in 'church'"
           :ui="{ title: 'font-vernacular' }"
         />
-      </template>
-    </UAccordion>
-    <UAccordion
-      :items="[{ label: 'Maps and dialects', icon: 'i-heroicons-map' }]"
-    >
-      <template #item="{ item }">
+      </IntroductionSection>
+      <IntroductionSection label="Maps and dialects" icon="i-heroicons-map">
         <p>
           Cicipu is spoken in northwest Nigeria, with the main language area
           straddling the boundary between Kebbi and Niger States (<TextLink
@@ -95,17 +91,11 @@ appStore.backgroundImage = ''
         </p>
         <DialectTable id="table-1" class="mt-8" />
         <DialectMap id="figure-2" class="mt-8" />
-      </template>
-    </UAccordion>
-    <UAccordion
-      :items="[
-        {
-          label: 'Language endangerment',
-          icon: 'i-heroicons-exclamation-triangle'
-        }
-      ]"
-    >
-      <template #item="{ item }">
+      </IntroductionSection>
+      <IntroductionSection
+        label="Language endangerment"
+        icon="i-heroicons-exclamation-triangle"
+      >
         <p>
           Unless otherwise stated the words and examples in this dictionary are
           from Tirisino, the most prestigious and probably most robust dialect
@@ -130,17 +120,11 @@ appStore.backgroundImage = ''
           no systematic research has been attempted on any dialect other than
           Tirisino.
         </p>
-      </template>
-    </UAccordion>
-    <UAccordion
-      :items="[
-        {
-          label: 'Language documentation',
-          icon: 'i-heroicons-document'
-        }
-      ]"
-    >
-      <template #item="{ item }">
+      </IntroductionSection>
+      <IntroductionSection
+        label="Language documentation"
+        icon="i-heroicons-document"
+      >
         <p>
           This dictionary is part of a broader effort to document the Cicipu
           language which began in 2006, funded mainly by the
@@ -168,53 +152,35 @@ appStore.backgroundImage = ''
           photographs included in this dictionary were taken variously by Markus
           Yabani, Stuart McGill, and Roger Blench.
         </p>
-      </template>
-    </UAccordion>
-    <UAccordion
-      :items="[
-        {
-          label: 'References',
-          icon: 'i-mdi-format-list-bulleted'
-        }
-      ]"
-    >
-      <template #item="{ item }">
+      </IntroductionSection>
+      <IntroductionSection label="References" icon="i-mdi-format-list-bulleted">
         <h2>References</h2>
         <p>
           Bargery, George P. 1934.
-          <I>
+          <span class="italic">
             <TextLink :external="true" to="http://maguzawa.dyndns.ws/"
               >A Hausa-English dictionary and English-Hausa vocabulary</TextLink
-            > </I
+            > </span
           >. London: Oxford University Press.
         </p>
         <p>
           McGill, Stuart. 2009.
-          <I>
+          <span class="italic">
             <TextLink
               :external="true"
               to="http://cicipu.org/papers/gender_and_person_agreement_in_cicipu_discourse.pdf"
               >Gender and person agreement in Cicipu discourse</TextLink
-            >
-          </I>
-          . PhD thesis, School of Oriental and African Studies.
+            > </span
+          >. PhD thesis, School of Oriental and African Studies.
         </p>
         <p>
           Newman, Paul. 2000.
-          <I> The Hausa language: an encyclopedic reference grammar </I>. New
-          Haven: Yale University Press.
+          <span class="italic"
+            >The Hausa language: an encyclopedic reference grammar</span
+          >. New Haven: Yale University Press.
         </p>
-      </template>
-    </UAccordion>
-    <UAccordion
-      :items="[
-        {
-          label: 'Acknowledgments',
-          icon: 'i-mdi-hands-pray'
-        }
-      ]"
-    >
-      <template #item="{ item }">
+      </IntroductionSection>
+      <IntroductionSection label="Acknowledgments" icon="i-mdi-hands-pray">
         <h2>Acknowledgments</h2>
         <p>
           Many people have helped make this dictionary possible, especially the
@@ -240,7 +206,7 @@ appStore.backgroundImage = ''
           for his encouragement throughout the project.
         </p>
         <div class="mb-4 md:mb-6 lg:mn-12 italic">Stuart McGill, 2017</div>
-      </template>
-    </UAccordion>
+      </IntroductionSection>
+    </div>
   </div>
 </template>
