@@ -66,7 +66,7 @@ onMounted(async () => {
     </div>
 
     <div v-if="data">
-      <h2 class="text-2xl font-bold font-vernacular">
+      <h2 class="font-vernacular">
         {{ data.lexeme }}
         <span v-if="data.homonymNumber">({{ data.homonymNumber }})</span>
       </h2>

@@ -38,13 +38,25 @@ appStore.backgroundImage = ''
           >, providing basic sociolinguistic, phonological and grammatical
           information. For further information see McGill (2009).
         </p>
-        <UAlert
-          icon="i-heroicons-chat-bubble-left"
-          variant="outline"
-          title="tʃìtʃípù"
-          description="The c in Cicipu is pronounced like ch in 'church'"
-          :ui="{ title: 'font-vernacular' }"
-        />
+        <div class="flex flex-col gap-4">
+          <UAlert
+            icon="i-heroicons-chat-bubble-left"
+            variant="outline"
+            title="tʃìtʃípù"
+            description="The c in Cicipu is pronounced like ch in 'church'"
+            :ui="{ title: 'font-vernacular' }"
+          />
+          <UAlert icon="i-mdi-file-pdf-box" variant="outline">
+            <template #description
+              >The full dictionary is also available in
+              <TextLink
+                to="https://app.box.com/s/t6puwd3ff4d6c3cjmteguc2hwutm69gz"
+                external
+                >PDF format</TextLink
+              >.</template
+            >
+          </UAlert>
+        </div>
       </IntroductionSection>
       <IntroductionSection label="Maps and dialects" icon="i-heroicons-map">
         <p>
