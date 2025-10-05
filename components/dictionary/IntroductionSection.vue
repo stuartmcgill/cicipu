@@ -23,7 +23,10 @@ const props = withDefaults(
       item: {
         base: 'px-4'
       },
-      default: { variant: 'solid', class: 'rounded-b-none' }
+      default: {
+        variant: 'outline',
+        class: 'rounded-b-none text-xl text-primary-700'
+      }
     }"
   >
     <template #item="{ item }">
