@@ -5,7 +5,7 @@ const route = useRoute()
 
 const baseMenuItems = [
   {
-    label: 'Search',
+    label: 'Dictionary',
     icon: 'i-heroicons-magnifying-glass-solid',
     to: '/dictionary/Dictionary'
   },

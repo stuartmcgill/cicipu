@@ -14,7 +14,7 @@ appStore.backgroundImage = ''
 
 <template>
   <div class="mx-auto max-w-2xl text-lg">
-    <h1>Cicipu dictionary</h1>
+    <h1>Introduction</h1>
     <div class="italic">Stuart McGill, 2017</div>
     <p>
       This trilingual dictionary is the first of any kind for the Cicipu

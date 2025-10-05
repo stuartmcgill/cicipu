@@ -14,7 +14,7 @@ appStore.backgroundImage = ''
 
 <template>
   <div class="mx-auto max-w-2xl text-lg">
-    <h1>Writing system and grammar</h1>
+    <h1>Writing system</h1>
 
     <div>
       <h2 class="panel-title">Consonants and vowels</h2>

@@ -11,7 +11,7 @@ appStore.backgroundImage = ''
 
 <template>
   <div class="mx-auto max-w-2xl text-lg">
-    <h1>Dictionary navigation</h1>
+    <h1>Navigating the dictionary</h1>
     <p>
       There are two main ways to navigate the dictionary, as well as two minor
       ones. Firstly, the
