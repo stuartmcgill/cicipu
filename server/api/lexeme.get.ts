@@ -46,6 +46,7 @@ export default defineEventHandler(async (event) => {
         citationOrtho: lexemeEntries.citationOrtho,
         order: lexemeEntries.order,
         partOfSpeechId: lexemeEntries.partOfSpeechId,
+        lexemeTypeId: lexemeEntries.typeId,
         partOfSpeechAbbr: partsOfSpeech.abbreviation
       })
       .from(lexemeEntries)
