@@ -41,7 +41,7 @@ const columns = [{ key: 'part', label: 'Part of Speech' }]
 
 <template>
   <div class="flex flex-col">
-    <h1>Parts of Speech</h1>
+    <h2>Parts of Speech</h2>
     <div>
       The following table lists the parts of speech used in the dictionary:
     </div>

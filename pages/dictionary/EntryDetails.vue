@@ -33,6 +33,7 @@ appStore.backgroundImage = ''
     <PartsOfSpeechTable />
     <AffixTable />
 
+    <h2>Entry structure</h2>
     <p>
       If the word has multiple senses of meaning then these are indicated with
       numbers i.e. 1. wait, 2. look after, and so on; if there is only one sense

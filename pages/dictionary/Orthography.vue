@@ -189,15 +189,21 @@ appStore.backgroundImage = ''
       </p>
     </div>
 
-    <div class="box-footer">
-      More information on the Cicipu writing system is available
-      <TextLink to="/Orthography">here</TextLink>. For more information on
-      Cicipu phonology see chapter 3 in
-      <TextLink
-        external
-        to="https://app.box.com/s/t4q302sv8g75zhoua930o55wua4a4t7e"
-        >Gender and person agreement in Cicipu discourse</TextLink
-      >.
-    </div>
+    <UAlert
+      icon="i-heroicons-information-circle-solid"
+      variant="outline"
+      :ui="{ title: 'font-vernacular' }"
+    >
+      <template #description>
+        More information on the Cicipu writing system is available
+        <TextLink to="/Orthography">here</TextLink>. For more information on
+        Cicipu phonology see chapter 3 in
+        <TextLink
+          external
+          to="https://app.box.com/s/t4q302sv8g75zhoua930o55wua4a4t7e"
+          >Gender and person agreement in Cicipu discourse</TextLink
+        >.
+      </template>
+    </UAlert>
   </div>
 </template>

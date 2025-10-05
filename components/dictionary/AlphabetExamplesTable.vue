@@ -320,7 +320,7 @@ const columns: TableColumn[] = [
   { key: 'letter', label: 'Letter' },
   { key: 'ipa', label: 'IPA' },
   { key: 'pronunciation', label: 'Pronunciation' },
-  { key: 'example', label: 'Cicipu example', rowClass: 'font-vernacular' },
+  { key: 'example', label: 'Example', rowClass: 'font-vernacular' },
   { key: 'hausa', label: 'Hausa', rowClass: 'national-text' },
   { key: 'english', label: 'English' }
 ]

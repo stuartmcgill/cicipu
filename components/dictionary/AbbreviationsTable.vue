@@ -16,7 +16,7 @@ const rows: Ref<TableRow[]> = computed(() => [
 
 <template>
   <div class="flex flex-col">
-    <h1>Abbreviations</h1>
+    <h2>Abbreviations</h2>
     <div>
       In addition to the parts of speech listed above, the following
       abbreviations are used in the dictionary:

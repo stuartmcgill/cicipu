@@ -22,7 +22,7 @@ const columns = [{ key: 'affix', label: 'Affix' }]
 
 <template>
   <div class="flex flex-col">
-    <h1>Affixes</h1>
+    <h2>Affixes</h2>
     <div>The following table lists the affixes used in the dictionary:</div>
     <UTable :rows="rows" :columns="columns" />
   </div>
