@@ -172,20 +172,29 @@ onMounted(async () => {
             </div>
 
             <!-- Images -->
-            <div v-if="sense.images.length" class="flex flex-wrap gap-2 mt-2">
-              <div
-                v-for="img in sense.images"
-                :key="img.id"
-                class="border p-1 rounded w-32 h-32 flex flex-col items-center justify-center"
-              >
-                <img
-                  :src="ImagesUrl + img.filename"
-                  :alt="img.comment || 'image'"
-                  class="max-h-20 object-contain"
-                />
-                <span class="text-xs text-center mt-1">{{ img.comment }}</span>
-              </div>
-            </div>
+            <UCarousel
+              v-if="sense.images.length"
+              class="mt-4 w-full max-w-lg mx-auto"
+              :items="sense.images"
+              :loop="true"
+              :autoplay="true"
+              :autoplay-interval="4000"
+              :arrows="sense.images.length > 1"
+              :pagination="true"
+            >
+              <template #default="{ item }">
+                <div class="flex flex-col items-center justify-center p-2">
+                  <img
+                    :src="ImagesUrl + item.filename"
+                    :alt="item.comment || 'image'"
+                    class="max-h-64 object-contain rounded shadow"
+                  />
+                  <span class="text-sm text-center mt-2 text-gray-600">
+                    {{ item.comment }}
+                  </span>
+                </div>
+              </template>
+            </UCarousel>
           </div>
         </div>
       </div>
