@@ -3,6 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useDictionaryStore } from '~/stores/dictionary'
 import PrevNextButtons from '~/components/dictionary/PrevNextButtons.vue'
+import { formatEmbeddedStyles } from '~/composables/formatEmbeddedStyles'
 
 definePageMeta({
   layout: 'dictionary'
@@ -56,9 +57,9 @@ onMounted(async () => {
           <div
             v-for="sense in entry.senses"
             :key="sense.id"
-            class="border border-primary-500 rounded p-4 mt-4 space-y-2"
+            class="mt-4 p-4 flex flex-col gap-2 border border-primary-500 rounded"
           >
-            <div>{{ sense.englishDefinition }}</div>
+            <span v-html="formatEmbeddedStyles(sense.englishDefinition)" />
             <div v-if="sense.nationalDefinition">
               <span class="national-text">{{
                 sense.nationalDefinition || '–'
@@ -79,13 +80,13 @@ onMounted(async () => {
                     class="flex flex-col gap-2"
                   >
                     <span
+                      v-html="formatEmbeddedStyles(example.text)"
                       :class="
                         example.languageId === 8
                           ? 'national-text'
                           : 'cicipu-text'
                       "
-                      >{{ example.text }}</span
-                    >
+                    />
                     <div class="flex items-center gap-4">
                       <audio
                         v-if="example.soundFile"
@@ -106,9 +107,10 @@ onMounted(async () => {
                   </div>
                 </div>
                 <div class="mt-2 flex items-center gap-2">
-                  <span class="italic">{{
-                    ref.englishTranslation || '–'
-                  }}</span>
+                  <span
+                    class="italic"
+                    v-html="formatEmbeddedStyles(ref.englishTranslation || '–')"
+                  ></span>
                   <TextLink
                     v-if="ref.contributorName"
                     :to="`/dictionary/Contributors/${ref.contributorId}`"
@@ -120,7 +122,7 @@ onMounted(async () => {
             </div>
 
             <!--          Additional info-->
-            <div class="flex flex-col gap-2">
+            <div class="mt-4 flex flex-col gap-2">
               <UTooltip
                 v-if="sense.encyclopaedicInfo"
                 text="Encyclopaedic information"
@@ -128,7 +130,10 @@ onMounted(async () => {
               >
                 <div class="flex items-center gap-2 text-sm">
                   <UIcon name="i-heroicons-globe-alt" class="w-5 h-5" />
-                  <span class="italic">{{ sense.encyclopaedicInfo }}</span>
+                  <span
+                    v-html="formatEmbeddedStyles(sense.encyclopaedicInfo) + '.'"
+                    class="italic"
+                  />
                 </div>
               </UTooltip>
               <UTooltip
@@ -148,7 +153,10 @@ onMounted(async () => {
               >
                 <div class="flex items-center gap-2 text-sm">
                   <UIcon name="i-mdi-forum" class="w-5 h-5" />
-                  <span class="italic">{{ sense.usageComment }}</span>
+                  <span
+                    v-html="formatEmbeddedStyles(sense.usageComment) + '.'"
+                    class="italic"
+                  />
                 </div>
               </UTooltip>
             </div>
@@ -185,7 +193,3 @@ onMounted(async () => {
     <div v-else class="text-center text-gray-500">Loading lexeme...</div>
   </div>
 </template>
-
-<style scoped>
-/* optional styling */
-</style>
