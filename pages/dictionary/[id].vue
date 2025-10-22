@@ -48,9 +48,17 @@ onMounted(async () => {
 
       <div class="flex flex-col gap-12">
         <div v-for="entry in data.lexemeEntries" :key="entry.id">
-          <div class="flex items-center gap-2">
-            <span class="text-xl cicipu-text">{{ entry.citationOrtho }}</span>
-            <span class="mt-1">({{ entry.partOfSpeechAbbr }}.)</span>
+          <div class="flex items-center">
+            <span class="-mt-1 text-xl cicipu-text">{{
+              entry.citationOrtho
+            }}</span>
+            <span class="ml-2">({{ entry.partOfSpeechAbbr }}.)</span>
+            <div v-if="entry.loanwordComment">
+              <span
+                class="ml-8 italic"
+                v-html="'from ' + formatEmbeddedStyles(entry.loanwordComment)"
+              />
+            </div>
           </div>
 
           <!-- Senses -->
