@@ -83,6 +83,10 @@ export const useDictionaryStore = defineStore('dictionary', {
 
     async fetchContributor(id: number) {
       return await $fetch(`/api/contributor?id=${id}`)
+    },
+
+    validateLexemeId(id: number) {
+      return id >= 21602 && id <= 24084
     }
   }
 })

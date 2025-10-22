@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useDictionaryStore } from '~/stores/dictionary'
-import abbreviations from '~/composables/abbreviations'
+import PrevNextButtons from '~/components/dictionary/PrevNextButtons.vue'
 
 definePageMeta({
   layout: 'dictionary'
@@ -10,30 +10,9 @@ definePageMeta({
 
 const store = useDictionaryStore()
 const route = useRoute()
-const router = useRouter()
 
 const lexemeId = ref<number | null>(null)
 const data = ref<any>(null)
-
-const validateLexemeId = (id: number) => id >= 21602 && id <= 24084
-
-const isNextValid = computed(
-  () => lexemeId.value !== null && validateLexemeId(lexemeId.value + 1)
-)
-const isPrevValid = computed(
-  () => lexemeId.value !== null && validateLexemeId(lexemeId.value - 1)
-)
-
-const moveNext = () => {
-  if (isNextValid.value && lexemeId.value !== null) {
-    router.push(`/dictionary/${lexemeId.value + 1}`)
-  }
-}
-const movePrev = () => {
-  if (isPrevValid.value && lexemeId.value !== null) {
-    router.push(`/dictionary/${lexemeId.value - 1}`)
-  }
-}
 
 const headword = computed(() => {
   return (
@@ -45,7 +24,7 @@ const headword = computed(() => {
 
 onMounted(async () => {
   const id = parseInt(route.params.id as string)
-  if (!validateLexemeId(id)) return
+  if (!store.validateLexemeId(id)) return
 
   lexemeId.value = id
   data.value = await store.fetchLexeme(lexemeId.value)
@@ -57,27 +36,9 @@ onMounted(async () => {
 
 <template>
   <div class="p-4 space-y-4">
-    <!-- Navigation -->
-    <div class="flex gap-4 justify-center">
-      <UButton
-        icon="i-heroicons-arrow-left"
-        color="primary"
-        label="Prev"
-        :trailing="false"
-        :disabled="!isPrevValid"
-        @click="movePrev"
-      />
-      <UButton
-        icon="i-heroicons-arrow-right"
-        color="primary"
-        label="Next"
-        :trailing="true"
-        :disabled="!isNextValid"
-        @click="moveNext"
-      />
-    </div>
-
     <div v-if="data">
+      <PrevNextButtons :lexeme-id="lexemeId!" />
+
       <!--      Headword-->
       <h2 class="flex justify-center font-vernacular">
         {{ headword.citationOrtho }}
@@ -219,8 +180,8 @@ onMounted(async () => {
           </div>
         </div>
       </div>
+      <PrevNextButtons :lexeme-id="lexemeId!" class="mt-6 md:mt-8 lg:mt-12" />
     </div>
-
     <div v-else class="text-center text-gray-500">Loading lexeme...</div>
   </div>
 </template>
