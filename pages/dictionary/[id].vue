@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useDictionaryStore } from '~/stores/dictionary'
+import abbreviations from '~/composables/abbreviations'
 
 definePageMeta({
   layout: 'dictionary'
@@ -159,16 +160,36 @@ onMounted(async () => {
 
             <!--          Additional info-->
             <div class="flex flex-col gap-2">
-              <div v-if="sense.encyclopaedicInfo">
-                <strong>Encyclopaedic information: </strong>
-                {{ sense.encyclopaedicInfo }}
-              </div>
-              <div v-if="sense.scientificName">
-                <strong>Scientific name: </strong> {{ sense.scientificName }}
-              </div>
-              <div v-if="sense.usageComment">
-                <strong>Usage: </strong> {{ sense.usageComment }}
-              </div>
+              <UTooltip
+                v-if="sense.encyclopaedicInfo"
+                text="Encyclopaedic information"
+                class="self-start"
+              >
+                <div class="flex items-center gap-2 text-sm">
+                  <UIcon name="i-heroicons-globe-alt" class="w-5 h-5" />
+                  <span class="italic">{{ sense.encyclopaedicInfo }}</span>
+                </div>
+              </UTooltip>
+              <UTooltip
+                v-if="sense.scientificName"
+                text="Scientific name"
+                class="self-start"
+              >
+                <div class="flex items-center gap-2 text-sm">
+                  <UIcon name="i-mdi-flower" class="w-5 h-5" />
+                  <span class="italic">{{ sense.scientificName }}</span>
+                </div>
+              </UTooltip>
+              <UTooltip
+                v-if="sense.usageComment"
+                text="Usage"
+                class="self-start"
+              >
+                <div class="flex items-center gap-2 text-sm">
+                  <UIcon name="i-mdi-forum" class="w-5 h-5" />
+                  <span class="italic">{{ sense.usageComment }}</span>
+                </div>
+              </UTooltip>
             </div>
 
             <!-- Images -->
