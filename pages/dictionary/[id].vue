@@ -48,17 +48,32 @@ onMounted(async () => {
 
       <div class="flex flex-col gap-12">
         <div v-for="entry in data.lexemeEntries" :key="entry.id">
-          <div class="flex items-center">
+          <div class="flex items-center gap-2">
             <span class="-mt-1 text-xl cicipu-text">{{
               entry.citationOrtho
             }}</span>
-            <span class="ml-2">({{ entry.partOfSpeechAbbr }}.)</span>
-            <div v-if="entry.loanwordComment">
-              <span
-                class="ml-8 italic"
-                v-html="'from ' + formatEmbeddedStyles(entry.loanwordComment)"
-              />
+            <span>({{ entry.partOfSpeechAbbr }}.)</span>
+          </div>
+
+          <div class="ml-6 mt-2 flex flex-col gap-2">
+            <div v-if="entry.phonetic" class="flex items-center gap-2">
+              <UTooltip text="Pronunciation" class="self-start">
+                <span class="font-vernacular">[{{ entry.phonetic }}]</span>
+              </UTooltip>
             </div>
+            <UTooltip
+              text="Loanword"
+              v-if="entry.loanwordComment"
+              class="self-start"
+            >
+              <div class="flex items-center gap-2">
+                <span
+                  class="italic"
+                  v-html="'from ' + formatEmbeddedStyles(entry.loanwordComment)"
+                />
+                <UIcon name="i-heroicons-arrows-right-left" class="w-5 h-5" />
+              </div>
+            </UTooltip>
           </div>
 
           <!-- Senses -->

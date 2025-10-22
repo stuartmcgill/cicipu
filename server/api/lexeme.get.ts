@@ -48,6 +48,7 @@ export default defineEventHandler(async (event) => {
         partOfSpeechId: lexemeEntries.partOfSpeechId,
         lexemeTypeId: lexemeEntries.typeId,
         loanwordComment: lexemeEntries.loanwordComment,
+        phonetic: lexemeEntries.phonetic,
         partOfSpeechAbbr: partsOfSpeech.abbreviation
       })
       .from(lexemeEntries)
