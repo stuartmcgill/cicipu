@@ -58,42 +58,77 @@ onMounted(async () => {
           <div class="ml-6 mt-2 flex flex-col gap-2">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div class="flex flex-col gap-2">
-                <div v-if="entry.phonetic" class="flex items-center gap-2">
-                  <UTooltip text="Pronunciation" class="self-start">
+                <UTooltip
+                  text="Pronunciation"
+                  v-if="entry.phonetic"
+                  class="self-start"
+                >
+                  <div class="flex items-center gap-2">
+                    <UIcon name="i-mdi-chat-outline" class="w-5 h-5" />
                     <span class="font-vernacular">[{{ entry.phonetic }}]</span>
-                  </UTooltip>
-                </div>
+                  </div>
+                </UTooltip>
                 <UTooltip
                   text="Loanword"
                   v-if="entry.loanwordComment"
                   class="self-start"
                 >
                   <div class="flex items-center gap-2">
-                    <span
-                      class="italic"
-                      v-html="
-                        'from ' + formatEmbeddedStyles(entry.loanwordComment)
-                      "
-                    />
                     <UIcon
                       name="i-heroicons-arrows-right-left"
                       class="w-5 h-5"
                     />
+                    <span
+                      class="text-sm"
+                      v-html="
+                        'from ' + formatEmbeddedStyles(entry.loanwordComment)
+                      "
+                    />
+                  </div>
+                </UTooltip>
+                <UTooltip
+                  text="Literally"
+                  v-if="entry.literally"
+                  class="self-start"
+                >
+                  <div class="flex items-center gap-2">
+                    <UIcon name="i-mdi-approximately-equal" class="w-5 h-5" />
+                    <div>
+                      lit.
+                      <span class="italic">{{ entry.literally }}</span>
+                    </div>
                   </div>
                 </UTooltip>
               </div>
               <div class="flex flex-col gap-2">
-                <div v-if="entry.singularForm" class="text-sm">
-                  Singular:
-                  <span class="font-vernacular">{{ entry.singularForm }}</span>
-                </div>
-                <div v-if="entry.pluralForm" class="text-sm">
-                  Plural:
-                  <span class="font-vernacular">{{ entry.pluralForm }}</span>
-                </div>
+                <UTooltip
+                  text="Singular"
+                  v-if="entry.singularForm"
+                  class="self-start"
+                >
+                  <div class="flex items-center gap-2">
+                    <UIcon name="i-mdi-account-minus-outline" class="w-5 h-5" />
+                    <span class="font-vernacular">{{
+                      entry.singularForm
+                    }}</span>
+                  </div>
+                </UTooltip>
+                <UTooltip
+                  text="Plural"
+                  v-if="entry.pluralForm"
+                  class="self-start"
+                >
+                  <div class="flex items-center gap-2">
+                    <UIcon
+                      name="i-mdi-account-multiple-plus-outline"
+                      class="w-5 h-5"
+                    />
+                    <span class="font-vernacular">{{ entry.pluralForm }}</span>
+                  </div>
+                </UTooltip>
                 <div v-if="entry.gender" class="flex items-center gap-2">
-                  <span class="text-sm">Noun class {{ entry.gender }}</span>
                   <UIcon name="i-heroicons-book-open" class="w-5 h-5" />
+                  <span class="text-sm">Noun class {{ entry.gender }}</span>
                 </div>
               </div>
             </div>

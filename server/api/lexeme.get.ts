@@ -52,6 +52,7 @@ export default defineEventHandler(async (event) => {
         gender: lexemeEntries.gender,
         singularForm: lexemeEntries.singularForm,
         pluralForm: lexemeEntries.pluralForm,
+        literally: lexemeEntries.literally,
         partOfSpeechAbbr: partsOfSpeech.abbreviation
       })
       .from(lexemeEntries)
