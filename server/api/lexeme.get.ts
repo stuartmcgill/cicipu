@@ -53,7 +53,9 @@ export default defineEventHandler(async (event) => {
         singularForm: lexemeEntries.singularForm,
         pluralForm: lexemeEntries.pluralForm,
         literally: lexemeEntries.literally,
-        partOfSpeechAbbr: partsOfSpeech.abbreviation
+        verbalComment: lexemeEntries.verbalComment,
+        partOfSpeechAbbr: partsOfSpeech.abbreviation,
+        partOfSpeechName: partsOfSpeech.name
       })
       .from(lexemeEntries)
       .leftJoin(

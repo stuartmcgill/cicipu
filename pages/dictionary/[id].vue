@@ -52,7 +52,9 @@ onMounted(async () => {
             <span class="-mt-1 text-xl cicipu-text">{{
               entry.citationOrtho
             }}</span>
-            <span>({{ entry.partOfSpeechAbbr }}.)</span>
+            <UTooltip :text="entry.partOfSpeechName" class="self-start">
+              <span>({{ entry.partOfSpeechAbbr }}.)</span>
+            </UTooltip>
           </div>
 
           <div class="ml-6 mt-2 flex flex-col gap-2">
