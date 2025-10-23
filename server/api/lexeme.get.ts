@@ -49,6 +49,9 @@ export default defineEventHandler(async (event) => {
         lexemeTypeId: lexemeEntries.typeId,
         loanwordComment: lexemeEntries.loanwordComment,
         phonetic: lexemeEntries.phonetic,
+        gender: lexemeEntries.gender,
+        singularForm: lexemeEntries.singularForm,
+        pluralForm: lexemeEntries.pluralForm,
         partOfSpeechAbbr: partsOfSpeech.abbreviation
       })
       .from(lexemeEntries)

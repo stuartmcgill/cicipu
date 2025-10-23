@@ -56,24 +56,47 @@ onMounted(async () => {
           </div>
 
           <div class="ml-6 mt-2 flex flex-col gap-2">
-            <div v-if="entry.phonetic" class="flex items-center gap-2">
-              <UTooltip text="Pronunciation" class="self-start">
-                <span class="font-vernacular">[{{ entry.phonetic }}]</span>
-              </UTooltip>
-            </div>
-            <UTooltip
-              text="Loanword"
-              v-if="entry.loanwordComment"
-              class="self-start"
-            >
-              <div class="flex items-center gap-2">
-                <span
-                  class="italic"
-                  v-html="'from ' + formatEmbeddedStyles(entry.loanwordComment)"
-                />
-                <UIcon name="i-heroicons-arrows-right-left" class="w-5 h-5" />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <div class="flex flex-col gap-2">
+                <div v-if="entry.phonetic" class="flex items-center gap-2">
+                  <UTooltip text="Pronunciation" class="self-start">
+                    <span class="font-vernacular">[{{ entry.phonetic }}]</span>
+                  </UTooltip>
+                </div>
+                <UTooltip
+                  text="Loanword"
+                  v-if="entry.loanwordComment"
+                  class="self-start"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="italic"
+                      v-html="
+                        'from ' + formatEmbeddedStyles(entry.loanwordComment)
+                      "
+                    />
+                    <UIcon
+                      name="i-heroicons-arrows-right-left"
+                      class="w-5 h-5"
+                    />
+                  </div>
+                </UTooltip>
               </div>
-            </UTooltip>
+              <div class="flex flex-col gap-2">
+                <div v-if="entry.singularForm" class="text-sm">
+                  Singular:
+                  <span class="font-vernacular">{{ entry.singularForm }}</span>
+                </div>
+                <div v-if="entry.pluralForm" class="text-sm">
+                  Plural:
+                  <span class="font-vernacular">{{ entry.pluralForm }}</span>
+                </div>
+                <div v-if="entry.gender" class="flex items-center gap-2">
+                  <span class="text-sm">Noun class {{ entry.gender }}</span>
+                  <UIcon name="i-heroicons-book-open" class="w-5 h-5" />
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Senses -->
