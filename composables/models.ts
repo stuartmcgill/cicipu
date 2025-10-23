@@ -5,7 +5,8 @@ import {
   lexemeEntryTypes,
   lexemes,
   partsOfSpeech,
-  senses
+  senses,
+  senseXReferences
 } from '~/server/db/schema/schema'
 
 export type Lexeme = InferSelectModel<typeof lexemes>
@@ -14,3 +15,4 @@ export type LexemeEntryType = InferSelectModel<typeof lexemeEntryTypes>
 export type PartOfSpeech = InferSelectModel<typeof partsOfSpeech>
 export type Sense = InferSelectModel<typeof senses>
 export type Language = InferSelectModel<typeof languages>
+export type SenseXReferences = InferSelectModel<typeof senseXReferences>

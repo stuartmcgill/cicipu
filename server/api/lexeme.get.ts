@@ -8,6 +8,7 @@ import {
   senses,
   senseExamples,
   senseReferences,
+  senseXReferences,
   senseImages,
   images,
   contributors
@@ -117,7 +118,31 @@ export default defineEventHandler(async (event) => {
       .where(inArray(senseImages.senseId, senseIds))
       .leftJoin(images, eq(senseImages.imageId, images.id))
 
-    // Step 6: Fetch senseExamples
+    // Step 6: Fetch sense cross-references (sense_x_references)
+    const allXRefs = await db
+      .select({
+        id: senseXReferences.id,
+        senseId: senseXReferences.senseId,
+        order: senseXReferences.order,
+        targetEntryId: senseXReferences.xreferenceId,
+        targetLexemeId: lexemeEntries.lexemeId,
+        targetCitation: lexemeEntries.citationOrtho,
+        targetPartOfSpeech: partsOfSpeech.abbreviation
+      })
+      .from(senseXReferences)
+      .leftJoin(
+        lexemeEntries,
+        eq(senseXReferences.xreferenceId, lexemeEntries.id)
+      )
+      .leftJoin(
+        partsOfSpeech,
+        eq(lexemeEntries.partOfSpeechId, partsOfSpeech.id)
+      )
+      .leftJoin(senses, eq(senseXReferences.senseId, senses.id))
+      .where(inArray(senseXReferences.senseId, senseIds))
+      .orderBy(senseXReferences.order)
+
+    // Step 7: Fetch senseExamples
     const allExamples = await db
       .select({
         id: senseExamples.id,
@@ -138,7 +163,7 @@ export default defineEventHandler(async (event) => {
       )
       .leftJoin(languages, eq(senseExamples.languageId, languages.id))
 
-    // Step 7: Nest examples under references
+    // Step 8: Nest examples under references
     const referencesById: Record<number, any> = {}
     for (const ref of allReferences) {
       referencesById[ref.id] = {
@@ -147,7 +172,7 @@ export default defineEventHandler(async (event) => {
       }
     }
 
-    // Step 8: Nest senses under entries
+    // Step 9: Nest senses under entries
     const sensesByEntry: Record<number, any[]> = {}
     for (const sense of allSenses) {
       sensesByEntry[sense.lexemeEntryId] =
@@ -157,7 +182,8 @@ export default defineEventHandler(async (event) => {
         references: allReferences
           .filter((r) => r.senseId === sense.id)
           .map((r) => referencesById[r.id]),
-        images: allImages.filter((i) => i.senseId === sense.id)
+        images: allImages.filter((i) => i.senseId === sense.id),
+        xReferences: allXRefs.filter((x) => x.senseId === sense.id)
       })
     }
 

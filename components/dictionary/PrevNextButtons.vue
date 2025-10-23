@@ -32,7 +32,7 @@ const movePrev = () => {
     <UButton
       icon="i-heroicons-arrow-left"
       color="primary"
-      label="Prev"
+      label="Previous word"
       :trailing="false"
       :disabled="!isPrevValid"
       @click="movePrev"
@@ -40,7 +40,7 @@ const movePrev = () => {
     <UButton
       icon="i-heroicons-arrow-right"
       color="primary"
-      label="Next"
+      label="Next word"
       :trailing="true"
       :disabled="!isNextValid"
       @click="moveNext"

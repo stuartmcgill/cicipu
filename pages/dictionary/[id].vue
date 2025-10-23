@@ -29,9 +29,6 @@ onMounted(async () => {
 
   lexemeId.value = id
   data.value = await store.fetchLexeme(lexemeId.value)
-
-  console.log(data.value)
-  console.log(headword.value)
 })
 </script>
 
@@ -275,6 +272,25 @@ onMounted(async () => {
                 </div>
               </template>
             </UCarousel>
+
+            <div
+              v-if="sense.xReferences?.length > 0"
+              class="mt-4 flex flex-col gap-2"
+            >
+              <NuxtLink
+                v-for="xref in sense.xReferences"
+                :key="xref.id"
+                :to="'./' + xref.targetLexemeId"
+              >
+                <UAlert
+                  icon="i-heroicons-arrow-right"
+                  variant="outline"
+                  :description="xref.targetCitation"
+                  :ui="{
+                    description: 'font-vernacular'
+                  }"
+              /></NuxtLink>
+            </div>
           </div>
         </div>
       </div>
