@@ -14,8 +14,7 @@ appStore.backgroundImage = ''
     <h1>Navigating the dictionary</h1>
     <p>
       There are two main ways to navigate the
-      <TextLink to="./Dictionary">dictionary</TextLink>, as well as two minor
-      ones.
+      <TextLink to="./">dictionary</TextLink>, as well as two minor ones.
     </p>
     <h2>Browsing by letter</h2>
     <p>

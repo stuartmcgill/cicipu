@@ -7,7 +7,7 @@ const baseMenuItems = [
   {
     label: 'Dictionary',
     icon: 'i-heroicons-magnifying-glass-solid',
-    to: '/dictionary/Dictionary'
+    to: '/dictionary'
   },
   {
     label: 'Introduction',
@@ -47,7 +47,7 @@ const activeSection = computed(() => {
   }
 
   if (/^\/dictionary\/\d+$/.test(route.path)) {
-    return '/dictionary/Dictionary'
+    return '/dictionary'
   }
 
   return route.path

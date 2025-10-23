@@ -1,5 +1,6 @@
 import { type InferSelectModel } from 'drizzle-orm'
 import {
+  languages,
   lexemeEntries,
   lexemeEntryTypes,
   lexemes,
@@ -12,3 +13,4 @@ export type LexemeEntry = InferSelectModel<typeof lexemeEntries>
 export type LexemeEntryType = InferSelectModel<typeof lexemeEntryTypes>
 export type PartOfSpeech = InferSelectModel<typeof partsOfSpeech>
 export type Sense = InferSelectModel<typeof senses>
+export type Language = InferSelectModel<typeof languages>

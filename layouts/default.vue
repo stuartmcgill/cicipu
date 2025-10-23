@@ -31,7 +31,7 @@ const menuLinks = [
   {
     label: 'Dictionary',
     icon: 'i-heroicons-book-open-solid',
-    to: '/dictionary/Dictionary'
+    to: '/dictionary'
   },
   {
     label: 'Academic',

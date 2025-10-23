@@ -23,14 +23,15 @@ appStore.backgroundImage = ''
         icon="i-heroicons-information-circle-solid"
       >
         <p>
-          This trilingual dictionary is the first of any kind for the Cicipu
-          language. It is intended for people who want to learn to read, write,
-          or speak the Cicipu language and who already read English or Hausa.
-          These might be native speakers of Cicipu, or others who are learning
-          it as a second language. A second reason for producing the dictionary
-          is to ensure that future generations of Acipu have a written record of
-          their language. Finally, we hope the dictionary will also be of some
-          interest to linguists, and so a fuller introduction is available in
+          This trilingual <TextLink to="./">dictionary</TextLink> is the first
+          of any kind for the Cicipu language. It is intended for people who
+          want to learn to read, write, or speak the Cicipu language and who
+          already read English or Hausa. These might be native speakers of
+          Cicipu, or others who are learning it as a second language. A second
+          reason for producing the dictionary is to ensure that future
+          generations of Acipu have a written record of their language. Finally,
+          we hope the dictionary will also be of some interest to linguists, and
+          so a fuller introduction is available in
           <TextLink
             :external="true"
             to="https://app.box.com/s/6dym0ewo1inff9twrqr89if7bwudy9pb"
