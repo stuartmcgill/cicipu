@@ -132,6 +132,13 @@ onMounted(async () => {
                   <UIcon name="i-heroicons-book-open" class="w-5 h-5" />
                   <span class="text-sm">Noun class {{ entry.gender }}</span>
                 </div>
+                <div v-if="entry.verbalComment" class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-book-open" class="w-5 h-5" />
+                  <div
+                    class="text-sm"
+                    v-html="formatEmbeddedStyles(entry.verbalComment)"
+                  />
+                </div>
               </div>
             </div>
           </div>
