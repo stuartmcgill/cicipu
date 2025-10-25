@@ -124,7 +124,11 @@ watch(searchTerm, (val) => search(val))
     <div class="flex items-center gap-2">
       <div class="flex flex-col md:flex-row gap-2">
         <div class="flex gap-2">
-          <UButton label="Browse" @click="isOpen = true" />
+          <UButton
+            label="Browse"
+            @click="isOpen = true"
+            icon="i-heroicons-arrow-left-end-on-rectangle"
+          />
           <UInput
             ref="searchTermRef"
             v-model="searchTerm"
