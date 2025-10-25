@@ -274,12 +274,12 @@ appStore.backgroundImage = ''
             > </span
           >. London: Oxford University Press.
         </p>
-        <p>
+        <p id="mcgill-2009">
           McGill, Stuart. 2009.
           <span class="italic">
             <TextLink
               :external="true"
-              to="http://cicipu.org/papers/gender_and_person_agreement_in_cicipu_discourse.pdf"
+              to="https://app.box.com/s/t4q302sv8g75zhoua930o55wua4a4t7e"
               >Gender and person agreement in Cicipu discourse</TextLink
             > </span
           >. PhD thesis, School of Oriental and African Studies.
