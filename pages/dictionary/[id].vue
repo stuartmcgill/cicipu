@@ -297,12 +297,12 @@ onMounted(async () => {
           </div>
 
           <!--          Link to the main entry (if there is one)-->
-          <div v-if="entry.MainEntryId" class="mt-4 w-full">
-            <NuxtLink :to="'./' + entry.MainEntryId">
+          <div v-if="entry.mainEntryId" class="mt-4 w-full">
+            <NuxtLink :to="'./' + entry.mainEntryId">
               <UAlert
                 icon="i-heroicons-arrow-right"
                 variant="outline"
-                :description="entry.MainEntryLexeme"
+                :description="entry.mainEntryLexeme"
                 title="See main entry"
                 :ui="{
                   title: 'italic',

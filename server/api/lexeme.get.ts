@@ -55,7 +55,7 @@ export default defineEventHandler(async (event) => {
         pluralForm: le.pluralForm,
         literally: le.literally,
         verbalComment: le.verbalComment,
-        MainEntryId: le.mainEntryId,
+        mainEntryId: le.mainEntryId,
         partOfSpeechAbbr: partsOfSpeech.abbreviation,
         partOfSpeechName: partsOfSpeech.name
       })
@@ -66,7 +66,7 @@ export default defineEventHandler(async (event) => {
 
     // Step 3: Fetch linked main-entry lexemes (corrected)
     const mainLexemeIds = entries
-      .map((e) => e.MainEntryId)
+      .map((e) => e.mainEntryId)
       .filter((v): v is number => !!v)
 
     let mainLexemeLookup: Record<number, string> = {}
@@ -202,10 +202,9 @@ export default defineEventHandler(async (event) => {
     // Step 11: Combine everything
     lexeme.lexemeEntries = entries.map((entry) => ({
       ...entry,
-      MainEntryLexemeId: entry.MainEntryId || null,
-      MainEntryLexeme:
-        entry.MainEntryId && mainLexemeLookup[entry.MainEntryId]
-          ? mainLexemeLookup[entry.MainEntryId]
+      mainEntryLexeme:
+        entry.mainEntryId && mainLexemeLookup[entry.mainEntryId]
+          ? mainLexemeLookup[entry.mainEntryId]
           : null,
       senses: sensesByEntry[entry.id] || []
     }))
