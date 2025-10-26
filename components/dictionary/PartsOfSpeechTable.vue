@@ -1,0 +1,47 @@
+<script setup lang="ts">
+import type { TableRow } from '#ui/types'
+
+const rows: Ref<TableRow[]> = computed(() => [
+  { part: 'adjective' },
+  { part: 'adverb' },
+  { part: 'article' },
+  { part: 'associative plural' },
+  { part: 'auxiliary verb' },
+  { part: 'counterfactual' },
+  { part: 'conjunction' },
+  { part: 'copula' },
+  { part: 'demonstrative' },
+  { part: 'exclamation' },
+  { part: 'existential predicate' },
+  { part: 'greeting' },
+  { part: 'honorific' },
+  { part: 'ideophone' },
+  { part: 'interjection' },
+  { part: 'locative' },
+  { part: 'noun' },
+  { part: 'negator' },
+  { part: 'numeral' },
+  { part: 'numerical adjective' },
+  { part: 'object clitic' },
+  { part: 'particle (discourse)' },
+  { part: 'possessive pronoun' },
+  { part: 'preposition' },
+  { part: 'presentative' },
+  { part: 'pronoun' },
+  { part: 'prohibitive' },
+  { part: 'quantifier' },
+  { part: 'question word' },
+  { part: 'relativiser' },
+  { part: 'reportative evidential' },
+  { part: 'verb' }
+])
+
+const columns = [{ key: 'part', label: '' }]
+</script>
+
+<template>
+  <div class="flex flex-col">
+    <h2>Parts of Speech</h2>
+    <UTable :rows="rows" :columns="columns" />
+  </div>
+</template>

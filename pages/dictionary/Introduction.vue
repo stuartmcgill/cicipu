@@ -1,0 +1,296 @@
+<script setup lang="ts">
+import { useAppStore } from '~/stores/app'
+import DialectTable from '~/components/dictionary/DialectTable.vue'
+import LanguageAreaMap from '~/components/dictionary/LanguageAreaMap.vue'
+import DialectMap from '~/components/dictionary/DialectMap.vue'
+import IntroductionSection from '~/components/dictionary/IntroductionSection.vue'
+
+definePageMeta({
+  layout: 'dictionary'
+})
+
+const appStore = useAppStore()
+appStore.backgroundImage = ''
+</script>
+
+<template>
+  <div class="mx-auto max-w-2xl text-lg">
+    <h1>Introduction to the dictionary</h1>
+    <div class="flex flex-col gap-4">
+      <IntroductionSection
+        :start-open="true"
+        label="Overview"
+        icon="i-heroicons-information-circle-solid"
+      >
+        <p>
+          This trilingual <TextLink to="./">dictionary</TextLink> is the first
+          of any kind for the Cicipu language. It is intended for people who
+          want to learn to read, write, or speak the Cicipu language and who
+          already read English or Hausa. These might be native speakers of
+          Cicipu, or others who are learning it as a second language. A second
+          reason for producing the dictionary is to ensure that future
+          generations of Acipu have a written record of their language. Finally,
+          we hope the dictionary will also be of some interest to linguists, and
+          so a fuller introduction is available in
+          <TextLink
+            :external="true"
+            to="https://app.box.com/s/6dym0ewo1inff9twrqr89if7bwudy9pb"
+            >PDF format</TextLink
+          >, providing basic sociolinguistic, phonological and grammatical
+          information. For further information see McGill (2009).
+        </p>
+        <div class="flex flex-col gap-4">
+          <UAlert
+            icon="i-heroicons-chat-bubble-left"
+            variant="outline"
+            title="tʃìtʃípù"
+            description="The c in Cicipu is pronounced like ch in 'church'"
+            :ui="{ title: 'font-vernacular' }"
+          />
+          <UAlert icon="i-mdi-file-pdf-box" variant="outline">
+            <template #description
+              >The full dictionary is also available in
+              <TextLink
+                to="https://app.box.com/s/t6puwd3ff4d6c3cjmteguc2hwutm69gz"
+                external
+                >PDF format</TextLink
+              >.</template
+            >
+          </UAlert>
+        </div>
+      </IntroductionSection>
+      <IntroductionSection label="Maps and dialects" icon="i-heroicons-map">
+        <p>
+          Cicipu is spoken in northwest Nigeria, with the main language area
+          straddling the boundary between Kebbi and Niger States (<TextLink
+            to="#figure-1"
+            >Figure 1</TextLink
+          >).
+        </p>
+        <LanguageAreaMap id="figure-1" />
+        <p>
+          The language is a member of the
+          <TextLink
+            to="http://www.rogerblench.info/Language/Niger-Congo/BC/Kainji/KOP.htm"
+            >Kainji</TextLink
+          >
+          subgroup of Benue-Congo. Native speakers identify seven dialects
+          (<TextLink to="#table-1">Table 1</TextLink>), the approximate
+          locations of which can be seen in
+          <TextLink to="#figure-2">Figure 2</TextLink>.
+        </p>
+        <DialectTable id="table-1" class="mt-8" />
+        <DialectMap id="figure-2" class="mt-8" />
+      </IntroductionSection>
+      <IntroductionSection
+        label="Language endangerment"
+        icon="i-heroicons-exclamation-triangle"
+      >
+        <p>
+          Unless otherwise stated the words and examples in this dictionary are
+          from Tirisino, the most prestigious and probably most robust dialect
+          of Cicipu. The Orisino have maintained their language, and children in
+          every village I visited spoke Cicipu as their mother tongue.
+          Nevertheless younger speakers are heavily influenced by Hausa, which
+          has spread into sociolinguistic domains such as casual conversation
+          which were previously the preserve of the vernacular. The speech of
+          young men and children (particularly boys) is markedly different to
+          that of old men, with a higher incidence of Hausa loanwords and
+          calqued constructions. The number system is a linguistic subdomain
+          which, although very simple, is falling out of use: some young Orisino
+          struggle to count past 5. Similarly many of the words in this
+          dictionary will be unknown to the younger generation.
+        </p>
+        <p>
+          In contrast, Tikula is possibly the most endangered of the dialects,
+          with only a small number of children learning Cicipu. The Tikumbasi
+          dialect may be similarly endangered, and others likely fall between
+          these two extremes. A few words from other dialects (especially
+          Tikula) are included in the dictionary and clearly marked as such, but
+          no systematic research has been attempted on any dialect other than
+          Tirisino.
+        </p>
+      </IntroductionSection>
+      <IntroductionSection
+        label="Language documentation"
+        icon="i-heroicons-document"
+      >
+        <p>
+          This dictionary is part of a broader effort to document the Cicipu
+          language which began in 2006, funded mainly by the
+          <TextLink
+            to="https://peterkaustin.com/projects/hrelp/"
+            :external="true"
+            >Hans Rausing Endangered Language Project</TextLink
+          >. The focus was on spoken language, resulting in a substantial corpus
+          of texts from various genres (available from the
+          <TextLink
+            to="https://www.elararchive.org/uncategorized/SO_0898469b-5c6f-4f35-a3b8-ec825211154c/"
+            :external="true"
+            >Endangered Languages Archive</TextLink
+          >) but little in the way of lexical documentation. This dictionary
+          serves to improve the balance.
+        </p>
+        <p>
+          The lexical database on which the dictionary is based has been built
+          up gradually since Stuart McGill’s initial linguistic fieldwork in
+          2006. From 2010-2012 native speaker
+          <TextLink to="/dictionary/Contributors/3521">Markus Yabani</TextLink>
+          was responsible for writing and recording the example sentences
+          together with their Hausa translations. It is his voice that can be
+          heard in the recordings. In 2015 a LexiquePro version of this
+          dictionary was put online, and then in 2017 this was replaced by a
+          mobile-friendly version. The photographs included in this dictionary
+          were taken variously by Markus Yabani, Stuart McGill, and Roger
+          Blench.
+        </p>
+      </IntroductionSection>
+      <IntroductionSection
+        label="Hausa translations"
+        icon="i-heroicons-language-solid"
+      >
+        <p>
+          An attempt has been made to translate every word and every example
+          sentence into Hausa as well as English. This is problematic due to the
+          lack of a written standard for the particular dialect of Hausa spoken
+          by the Acipu. This variety is a form of the 'Western Hausa' dialect
+          centred on Sokoto (Newman 2000:1). It is also my impression – based on
+          comparing Yabani's Hausa translations with the dialectal forms given
+          in Bargery (1934) – that in terms of vocabulary there is (or at least
+          has been) strong influence from Katsina too.
+        </p>
+        <p>
+          But the Hausa spoken by the Cicipu diverges in other ways too, and
+          no-one who has spent all their life in Cicipuland would be able to
+          pass themselves off as a native Hausa speaker – an obvious example is
+          that almost all nouns are assigned to the masculine gender, the
+          exceptions being when the referent is actually female. There are also
+          phonologial differences such as the use of epenthetic vowels (e.g.
+          <span class="national-text">fuska</span>
+          'face' is pronounced [<span class="phonetic">húsᵊkà</span>
+          ]) and the simplification of phonemes: the Hausa ejectives
+          <span class="national-text">ts</span>
+          [<span class="phonetic">sʼ</span>] and
+          <span class="national-text">ƙ</span>
+          are pronounced [<span class="phonetic">s</span>] or [<span
+            class="phonetic"
+            >tʃ</span
+          >] and [<span class="phonetic">k</span>] respectively. Hausa
+          <span class="national-text">sh</span>
+          [<span class="phonetic">tʃ</span>] is also often pronounced [<span
+            class="phonetic"
+            >s</span
+          >]. Cicipu vowel harmony also has a significant effect on the way
+          native speakers pronounce Hausa (e.g. [<span class="phonetic"
+            >ɡúːnáː</span
+          >] for
+          <span class="national-text">gona</span>
+          'farm').
+        </p>
+        <p>
+          When revising Yabani's initial Hausa transcriptions we have tended to
+          retain grammatical differences, but abstract away from phonological
+          differences in an effort to make the identification of the Hausa words
+          easier. Bargery (1934) has been followed for Sokoto Hausa spelling.
+          Yabani's original unedited transcriptions are available from the
+          <TextLink
+            to="https://www.elararchive.org/uncategorized/SO_0898469b-5c6f-4f35-a3b8-ec825211154c/"
+            :external="true"
+            >ELAR Cicipu deposit</TextLink
+          >.
+        </p>
+        <p>
+          Although officially part of the Hausa orthography, in practice the
+          hooked letters <span class="national-text">ɓ</span>,
+          <span class="national-text">ɗ</span>, and
+          <span class="national-text">ƙ</span>
+          are often written as <span class="national-text">b</span>,
+          <span class="national-text">d</span>, and
+          <span class="national-text">k</span> respectively. In this dictionary
+          we follow the standard Hausa orthography.
+        </p>
+      </IntroductionSection>
+      <IntroductionSection
+        label="Audio recordings"
+        icon="i-heroicons-speaker-wave-solid"
+      >
+        <p>
+          The audio recordings in this dictionary were recorded by Markus
+          Yabani. Some of these sound files cover two examples, in which case
+          you may have to wait a few seconds to get to the start of the example
+          you want to hear. It should be possible even for beginners to identify
+          the relevant portion.
+        </p>
+        <p>
+          The sound quality of the audio recordings varies. Our original
+          intention was to use them purely as an aid to transcription but we
+          decided that they were too valuable a resource not to publish along
+          with the dictionary. In particular native speakers may find them
+          useful for checking their understanding of the accompanying written
+          Cicipu.
+        </p>
+      </IntroductionSection>
+      <IntroductionSection label="Acknowledgments" icon="i-mdi-hands-pray">
+        <h2>Acknowledgments</h2>
+        <p>
+          Many people have helped make this dictionary possible, especially the
+          Wømø of Karishen, the Sarkinƙasa in Sakaba, the Mai Unguwa of Inguwar
+          Rogo, and
+          <TextLink to="/dictionary/Contributors/3518">Mohammed Mallam</TextLink
+          >. Other important contributors have been
+          <TextLink to="/dictionary/Contributors/3519">Mohammed Musa</TextLink>,
+          <TextLink to="/dictionary/Contributors/3514">Musa Mai Unguwa</TextLink
+          >,
+          <TextLink to="/dictionary/Contributors/3492"
+            >Ibrahim Mai Unguwa</TextLink
+          >, Ayuba Sani, Ishiaku Ibrahim,
+          <TextLink to="/dictionary/Contributors/3453">Amos Bako</TextLink>,
+          Israel and Omonor Wade, David Heath, and David Crozier.
+          <span class="vern-detail">Tugweede ggẽi!</span>
+        </p>
+        <p>
+          I am especially grateful to the
+          <TextLink
+            :external="true"
+            to="http://www.rogerblench.info/KWEF/KWEF/KWEFOP.htm"
+            >Kay Williamson Educational Foundation</TextLink
+          >
+          for a grant towards the production of this dictionary, and especially
+          to
+          <TextLink :external="true" to="http://rogerblench.info/"
+            >Roger Blench</TextLink
+          >
+          for his encouragement throughout the project.
+        </p>
+        <div class="mb-4 md:mb-6 lg:mn-12 italic">Stuart McGill, 2017</div>
+      </IntroductionSection>
+      <IntroductionSection label="References" icon="i-mdi-format-list-bulleted">
+        <h2>References</h2>
+        <p>
+          Bargery, George P. 1934.
+          <span class="italic">
+            <TextLink :external="true" to="http://maguzawa.dyndns.ws/"
+              >A Hausa-English dictionary and English-Hausa vocabulary</TextLink
+            > </span
+          >. London: Oxford University Press.
+        </p>
+        <p id="mcgill-2009">
+          McGill, Stuart. 2009.
+          <span class="italic">
+            <TextLink
+              :external="true"
+              to="https://app.box.com/s/t4q302sv8g75zhoua930o55wua4a4t7e"
+              >Gender and person agreement in Cicipu discourse</TextLink
+            > </span
+          >. PhD thesis, School of Oriental and African Studies.
+        </p>
+        <p>
+          Newman, Paul. 2000.
+          <span class="italic"
+            >The Hausa language: an encyclopedic reference grammar</span
+          >. New Haven: Yale University Press.
+        </p>
+      </IntroductionSection>
+    </div>
+  </div>
+</template>

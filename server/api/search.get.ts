@@ -1,0 +1,69 @@
+import { getDb } from '~/server/db'
+import { and, eq, like, or } from 'drizzle-orm'
+import {
+  lexemeEntries,
+  lexemeEntryTypes,
+  lexemes,
+  partsOfSpeech,
+  senses
+} from '~/server/db/schema/schema'
+import { LexemeEntryTypeConst } from '~/composables/constants'
+
+export default defineEventHandler(async (event) => {
+  try {
+    const db = await getDb()
+    if (!db) {
+      throw new Error('Database connection failed')
+    }
+
+    const query = getQuery(event)
+    const term = query.term as string | undefined
+
+    if (!term) {
+      event.node.res.statusCode = 400
+
+      return { error: 'Missing or invalid "term" parameter' }
+    }
+
+    const results = await db
+      .select({
+        lexemeId: lexemes.id,
+        citationOrtho: lexemeEntries.citationOrtho,
+        partOfSpeech: partsOfSpeech.abbreviation,
+        nationalGloss: senses.nationalGloss,
+        englishGloss: senses.englishGloss
+      })
+      .from(lexemes)
+      .innerJoin(lexemeEntries, eq(lexemes.id, lexemeEntries.lexemeId))
+      .innerJoin(
+        lexemeEntryTypes,
+        eq(lexemeEntries.typeId, lexemeEntryTypes.id)
+      )
+      .leftJoin(senses, eq(lexemeEntries.id, senses.lexemeEntryId))
+      .leftJoin(
+        partsOfSpeech,
+        eq(partsOfSpeech.id, lexemeEntries.partOfSpeechId)
+      )
+      .where(
+        and(
+          eq(lexemeEntries.typeId, LexemeEntryTypeConst.Headword),
+          or(
+            like(lexemeEntries.citationOrtho, `%${term}%`),
+            like(senses.nationalGloss, `%${term}%`),
+            like(senses.englishGloss, `%${term}%`)
+          )
+        )
+      )
+      .orderBy(
+        lexemeEntries.citationOrtho,
+        lexemes.lexeme,
+        lexemes.homonymNumber
+      )
+
+    return results
+  } catch (err) {
+    event.node.res.statusCode = 500
+
+    return { error: (err as Error).message || 'Internal server error' }
+  }
+})

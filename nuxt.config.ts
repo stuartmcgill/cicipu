@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-09-27',
   modules: ['@nuxt/ui', '@nuxt/image', '@pinia/nuxt', '@nuxtjs/google-fonts'],
   devtools: { enabled: true },
   css: ['~/assets/fonts/CharisSIL-webfont.css'],
@@ -7,7 +8,8 @@ export default defineNuxtConfig({
     strict: true
   },
   image: {
-    format: ['webp']
+    format: ['webp'],
+    domains: ['https://stuartmcgill.github.io']
   },
   googleFonts: {
     families: {
