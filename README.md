@@ -48,7 +48,7 @@ To deploy a release to production, do the following on a development machine:
 
 ```bash
 # Build
-npm ci && run build
+npm ci && npm run build
 
 # Copy the files to the server
 rsync -avz --delete -e "ssh -p <PORT>" .output/ <USERNAME>@stuartmcgill.org:~/domains/cicipu.stuartmcgill.org/cicipu-main/.output
