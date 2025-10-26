@@ -3,7 +3,7 @@ import { inArray, eq } from 'drizzle-orm'
 import {
   languages,
   lexemes,
-  lexemeEntries,
+  lexemeEntries as le,
   partsOfSpeech,
   senses,
   senseExamples,
@@ -43,30 +43,49 @@ export default defineEventHandler(async (event) => {
     // Step 2: Fetch lexeme entries with part of speech
     const entries = await db
       .select({
-        id: lexemeEntries.id,
-        citationOrtho: lexemeEntries.citationOrtho,
-        order: lexemeEntries.order,
-        partOfSpeechId: lexemeEntries.partOfSpeechId,
-        lexemeTypeId: lexemeEntries.typeId,
-        loanwordComment: lexemeEntries.loanwordComment,
-        phonetic: lexemeEntries.phonetic,
-        gender: lexemeEntries.gender,
-        singularForm: lexemeEntries.singularForm,
-        pluralForm: lexemeEntries.pluralForm,
-        literally: lexemeEntries.literally,
-        verbalComment: lexemeEntries.verbalComment,
+        id: le.id,
+        citationOrtho: le.citationOrtho,
+        order: le.order,
+        partOfSpeechId: le.partOfSpeechId,
+        lexemeTypeId: le.typeId,
+        loanwordComment: le.loanwordComment,
+        phonetic: le.phonetic,
+        gender: le.gender,
+        singularForm: le.singularForm,
+        pluralForm: le.pluralForm,
+        literally: le.literally,
+        verbalComment: le.verbalComment,
+        MainEntryId: le.mainEntryId,
         partOfSpeechAbbr: partsOfSpeech.abbreviation,
         partOfSpeechName: partsOfSpeech.name
       })
-      .from(lexemeEntries)
-      .leftJoin(
-        partsOfSpeech,
-        eq(lexemeEntries.partOfSpeechId, partsOfSpeech.id)
-      )
-      .where(eq(lexemeEntries.lexemeId, id))
-      .orderBy(lexemeEntries.order)
+      .from(le)
+      .leftJoin(partsOfSpeech, eq(le.partOfSpeechId, partsOfSpeech.id))
+      .where(eq(le.lexemeId, id))
+      .orderBy(le.order)
 
-    // Step 3: Fetch senses for these entries
+    // Step 3: Fetch linked main-entry lexemes (corrected)
+    const mainLexemeIds = entries
+      .map((e) => e.MainEntryId)
+      .filter((v): v is number => !!v)
+
+    let mainLexemeLookup: Record<number, string> = {}
+
+    if (mainLexemeIds.length > 0) {
+      const mainLexemes = await db
+        .select({
+          id: lexemes.id,
+          lexeme: lexemes.lexeme
+        })
+        .from(lexemes)
+        .where(inArray(lexemes.id, mainLexemeIds))
+
+      mainLexemeLookup = Object.fromEntries(
+        mainLexemes.map((m) => [m.id, m.lexeme])
+      )
+    }
+
+    // Step 4: Fetch senses for these entries
     const entryIds = entries.map((e) => e.id)
     const allSenses = await db
       .select({
@@ -87,7 +106,7 @@ export default defineEventHandler(async (event) => {
       .where(inArray(senses.lexemeEntryId, entryIds))
       .orderBy(senses.order)
 
-    // Step 4: Fetch senseReferences
+    // Step 5: Fetch senseReferences
     const senseIds = allSenses.map((s) => s.id)
     const allReferences = await db
       .select({
@@ -105,7 +124,7 @@ export default defineEventHandler(async (event) => {
         eq(senseReferences.contributorId, contributors.id)
       )
 
-    // Step 5: Fetch senseImages
+    // Step 6: Fetch senseImages
     const allImages = await db
       .select({
         id: senseImages.id,
@@ -118,31 +137,24 @@ export default defineEventHandler(async (event) => {
       .where(inArray(senseImages.senseId, senseIds))
       .leftJoin(images, eq(senseImages.imageId, images.id))
 
-    // Step 6: Fetch sense cross-references (sense_x_references)
+    // Step 7: Fetch sense cross-references
     const allXRefs = await db
       .select({
         id: senseXReferences.id,
         senseId: senseXReferences.senseId,
         order: senseXReferences.order,
         targetEntryId: senseXReferences.xreferenceId,
-        targetLexemeId: lexemeEntries.lexemeId,
-        targetCitation: lexemeEntries.citationOrtho,
+        targetLexemeId: le.lexemeId,
+        targetCitation: le.citationOrtho,
         targetPartOfSpeech: partsOfSpeech.abbreviation
       })
       .from(senseXReferences)
-      .leftJoin(
-        lexemeEntries,
-        eq(senseXReferences.xreferenceId, lexemeEntries.id)
-      )
-      .leftJoin(
-        partsOfSpeech,
-        eq(lexemeEntries.partOfSpeechId, partsOfSpeech.id)
-      )
-      .leftJoin(senses, eq(senseXReferences.senseId, senses.id))
+      .leftJoin(le, eq(senseXReferences.xreferenceId, le.id))
+      .leftJoin(partsOfSpeech, eq(le.partOfSpeechId, partsOfSpeech.id))
       .where(inArray(senseXReferences.senseId, senseIds))
       .orderBy(senseXReferences.order)
 
-    // Step 7: Fetch senseExamples
+    // Step 8: Fetch senseExamples
     const allExamples = await db
       .select({
         id: senseExamples.id,
@@ -163,7 +175,7 @@ export default defineEventHandler(async (event) => {
       )
       .leftJoin(languages, eq(senseExamples.languageId, languages.id))
 
-    // Step 8: Nest examples under references
+    // Step 9: Nest examples under references
     const referencesById: Record<number, any> = {}
     for (const ref of allReferences) {
       referencesById[ref.id] = {
@@ -172,7 +184,7 @@ export default defineEventHandler(async (event) => {
       }
     }
 
-    // Step 9: Nest senses under entries
+    // Step 10: Nest senses under entries
     const sensesByEntry: Record<number, any[]> = {}
     for (const sense of allSenses) {
       sensesByEntry[sense.lexemeEntryId] =
@@ -187,8 +199,14 @@ export default defineEventHandler(async (event) => {
       })
     }
 
+    // Step 11: Combine everything
     lexeme.lexemeEntries = entries.map((entry) => ({
       ...entry,
+      MainEntryLexemeId: entry.MainEntryId || null,
+      MainEntryLexeme:
+        entry.MainEntryId && mainLexemeLookup[entry.MainEntryId]
+          ? mainLexemeLookup[entry.MainEntryId]
+          : null,
       senses: sensesByEntry[entry.id] || []
     }))
 

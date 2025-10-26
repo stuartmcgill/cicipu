@@ -29,6 +29,8 @@ onMounted(async () => {
 
   lexemeId.value = id
   data.value = await store.fetchLexeme(lexemeId.value)
+
+  console.log(data.value)
 })
 </script>
 
@@ -273,6 +275,7 @@ onMounted(async () => {
               </template>
             </UCarousel>
 
+            <!--            Cross-references-->
             <div
               v-if="sense.xReferences?.length > 0"
               class="mt-4 flex flex-col gap-2"
@@ -291,6 +294,22 @@ onMounted(async () => {
                   }"
               /></NuxtLink>
             </div>
+          </div>
+
+          <!--          Link to the main entry (if there is one)-->
+          <div v-if="entry.MainEntryId" class="mt-4 w-full">
+            <NuxtLink :to="'./' + entry.MainEntryId">
+              <UAlert
+                icon="i-heroicons-arrow-right"
+                variant="outline"
+                :description="entry.MainEntryLexeme"
+                title="See main entry"
+                :ui="{
+                  title: 'italic',
+                  description: 'font-vernacular'
+                }"
+              />
+            </NuxtLink>
           </div>
         </div>
       </div>
