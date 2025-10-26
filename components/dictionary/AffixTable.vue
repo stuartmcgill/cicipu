@@ -17,13 +17,12 @@ const rows: Ref<TableRow[]> = computed(() => [
   { affix: 'ventive' }
 ])
 
-const columns = [{ key: 'affix', label: 'Affix' }]
+const columns = [{ key: 'affix', label: '' }]
 </script>
 
 <template>
   <div class="flex flex-col">
     <h2>Affixes</h2>
-    <div>The following table lists the affixes used in the dictionary:</div>
     <UTable :rows="rows" :columns="columns" />
   </div>
 </template>

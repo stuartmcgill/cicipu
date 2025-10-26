@@ -34,19 +34,14 @@ appStore.backgroundImage = ''
       'claperless bell', Hausa
       <span class="national-text">maraba</span> 'welcome', and English 'marsh'.
     </p>
-    <h2>Next and Previous</h2>
+    <h2>Next and Previous words</h2>
     <p>
-      As an additional feature, each entry also contains 'next' and 'previous'
-      buttons which allow the user to move from word-to-word. For technical
-      reasons it has been easier to order this list alphabetically by lexical
-      root rather than word (this is not considered a serious flaw since anyone
-      seeking a list ordered by word can simply use the alphabetic links on the
-      sidebar).
-    </p>
-    <h2>Random word</h2>
-    <p>
-      Finally, the home page contains a randomly-chosen 'sample word' with a
-      link to the full lexical entry.
+      As an additional feature, each entry also contains 'Next word' and
+      'Previous word' buttons which allow the user to move from word-to-word.
+      For technical reasons it has been easier to order this list alphabetically
+      by lexical root rather than word (this is not considered a serious flaw
+      since anyone seeking a list ordered by word can simply use the alphabetic
+      links on the sidebar).
     </p>
     <h2>Tips on finding words</h2>
     <p>

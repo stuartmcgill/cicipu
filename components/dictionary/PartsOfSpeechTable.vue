@@ -36,15 +36,12 @@ const rows: Ref<TableRow[]> = computed(() => [
   { part: 'verb' }
 ])
 
-const columns = [{ key: 'part', label: 'Part of Speech' }]
+const columns = [{ key: 'part', label: '' }]
 </script>
 
 <template>
   <div class="flex flex-col">
     <h2>Parts of Speech</h2>
-    <div>
-      The following table lists the parts of speech used in the dictionary:
-    </div>
     <UTable :rows="rows" :columns="columns" />
   </div>
 </template>

@@ -18,16 +18,18 @@ appStore.backgroundImage = ''
     <p>
       The format of the dictionary entries is best described through a series of
       examples. Consider the following entry for the verb
-      <span class="cicipu-text">cinda</span> 'give' (Figure 3).
+      <span class="cicipu-text">cinda</span> 'give':
     </p>
-    <!--    @TODO add a screenshot (Fig 3 here-->
+    <img
+      src="/img/dictionary/intro/cinda.png"
+      alt="Keyword screenshot"
+      class="max-w-80 entry-screenshot"
+    />
     <p>
       The headword <span class="cicipu-text">cinda</span> is written
-      orthographically and is followed by a phonetic representation (<span
-        class="phonetic"
-        >[tʃĩnda]</span
-      >) and then the part of speech. A full list of Cicipu parts of speech and
-      affixes are given in Tables 2 and 3 below.
+      orthographically and is followed by the part of speech (v.) and then a
+      phonetic representation (<span class="phonetic">[tʃĩnda]</span>). A full
+      list of Cicipu parts of speech and affixes are given below.
     </p>
 
     <PartsOfSpeechTable />
@@ -35,60 +37,72 @@ appStore.backgroundImage = ''
 
     <h2>Entry structure</h2>
     <p>
-      If the word has multiple senses of meaning then these are indicated with
-      numbers i.e. 1. wait, 2. look after, and so on; if there is only one sense
-      then the number is omitted. For each sense glosses are given in English
-      (wait) and Hausa (<span class="national-text">jira</span>).
+      Multiple senses of meaning are indicated in boxes with a
+      <span class="text-primary-500">coloured border</span> e.g. 'wait', 'look
+      after'. For each sense glosses are given in English (wait) and Hausa
+      (<span class="national-text">jira</span>).
     </p>
+    <img
+      src="/img/dictionary/intro/multiple-senses.png"
+      alt="Multiple senses screenshot"
+      class="entry-screenshot"
+    />
     <p>
       One or more example sentences may appear after the glosses, together with
       encyclopaedic information and notes on usage if relevant. If the examples
       have audio then a playbar will be displayed below the relevant example.
       Most examples have audio for the Hausa translation as well as the Cicipu.
       A link to the contributor of the example (in this case Markus Yabani)
-      appears underneath the example.
+      appears at the bottom of the example.
     </p>
+    <img
+      src="/img/dictionary/intro/example.png"
+      alt="Example sentence screenshot"
+      class="entry-screenshot"
+    />
     <p>
       The following screenshot shows a noun
-      <span class="cicipu-text">ddø̂ø</span> 'horse' (Figure 4). Each noun entry
-      includes both a gender/noun class pairing (8/3) and, where appropriate,
-      the plural form (<span class="cicipu-text">ìdø̂ø</span>).
+      <span class="cicipu-text">ddø̂ø</span> 'horse'. Each noun entry includes
+      both a gender/noun class pairing (8/3) and, where appropriate, the plural
+      form (<span class="cicipu-text">ìdø̂ø</span>).
     </p>
 
-    <!--      @TODO add horse screenshot-->
-    <div>Figure 4: Entry for <span class="cicipu-text">ddøø</span> 'horse'</div>
-
-    <!--      @TODO add neck bone screenshot-->
-    <div>
-      Figure 5: Entry for <span class="cicipu-text">ddøø ccillu</span> 'bone at
-      the back of the neck'
-    </div>
+    <img
+      src="/img/dictionary/intro/horse.png"
+      alt="Horse screenshot"
+      class="max-w-80 entry-screenshot"
+    />
 
     <p>
-      Figure 5 shows a subentry of the headword
+      The next screenshot shows a subentry of the headword
       <span class="cicipu-text">ddøø ccillu</span> as well as a cross-reference
-      to another headword (see also
-      <span class="cicipu-text">cillu</span> 'neck').
+      to another headword (<span class="cicipu-text">cillu</span> 'neck').
     </p>
+    <img
+      src="/img/dictionary/intro/horse-bone.png"
+      alt="Bone at the back of the neck screenshot"
+      class="max-w-80 entry-screenshot"
+    />
     <p>
       For identifiable loan words such as
-      <span class="cicipu-text">kaduniya</span> 'world' (Figure 6) the source of
-      the loan is given at the end of the entry (e.g. Borrowed from Arabic
+      <span class="cicipu-text">kaduniya</span> 'world' the source of the loan
+      is given near the start of the entry (e.g. borrowed from Arabic
       <span class="italic">duniya</span> via Hausa).
     </p>
 
-    <!--      @TODO add 'world' screenshot-->
-    <div>
-      Figure 5: Entry for <span class="cicipu-text">kaduniya</span> 'world'
-    </div>
+    <img
+      src="/img/dictionary/intro/world.png"
+      alt="World screenshot"
+      class="max-w-80 entry-screenshot"
+    />
 
     <p>
       Idiolectal or dialectal variants (e.g.
-      <span class="cicipu-text">hyáɓá</span> 'teardrop', Figure 7) have concise
-      entries, but with a link to the main entry. A similar approach is taken
-      for verbal nouns (e.g. <span class="cicipu-text">cìdópì</span> 'sewing'
-      appears in the dictionary as a minor entry cross-referenced to the main
-      entry <span class="cicipu-text">dopo</span> 'sew').
+      <span class="cicipu-text">hyáɓá</span> 'teardrop') have concise entries,
+      but with a link to the main entry. A similar approach is taken for verbal
+      nouns (e.g. <span class="cicipu-text">cìdópì</span> 'sewing' appears in
+      the dictionary as a minor entry cross-referenced to the main entry
+      <span class="cicipu-text">dopo</span> 'sew').
     </p>
 
     <!--      @TODO add 'tear' screenshot-->
@@ -98,3 +112,8 @@ appStore.backgroundImage = ''
     <AbbreviationsTable />
   </div>
 </template>
+<style scoped>
+.entry-screenshot {
+  @apply p-2 rounded shadow-xl;
+}
+</style>
