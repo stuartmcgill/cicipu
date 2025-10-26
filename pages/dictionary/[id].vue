@@ -29,8 +29,6 @@ onMounted(async () => {
 
   lexemeId.value = id
   data.value = await store.fetchLexeme(lexemeId.value)
-
-  console.log(data.value)
 })
 </script>
 
