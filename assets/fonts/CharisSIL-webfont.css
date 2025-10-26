@@ -29,9 +29,3 @@ Open Font License, Version 1.1 (http://scripts.sil.org/OFL).
 	font-style: italic;
 	src: url(CharisSIL-BoldItalic.woff2);
 }
-
-/* @TODO SJM delete?*/
-.cicipu-text {
-  font-family: CharisSILW, sans-serif;
-    /* fall back to sans serif so that it's really obvious if the fonts don't load */
-}
