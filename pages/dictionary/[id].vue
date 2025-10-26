@@ -80,7 +80,9 @@ onMounted(async () => {
                     <span
                       class="text-sm"
                       v-html="
-                        'from ' + formatEmbeddedStyles(entry.loanwordComment)
+                        String(
+                          'from ' + formatEmbeddedStyles(entry.loanwordComment)
+                        )
                       "
                     />
                   </div>
@@ -218,7 +220,11 @@ onMounted(async () => {
                 <div class="flex items-center gap-2 text-sm">
                   <UIcon name="i-heroicons-globe-alt" class="w-5 h-5" />
                   <span
-                    v-html="formatEmbeddedStyles(sense.encyclopaedicInfo) + '.'"
+                    v-html="
+                      String(
+                        formatEmbeddedStyles(sense.encyclopaedicInfo) + '.'
+                      )
+                    "
                     class="italic"
                   />
                 </div>
@@ -241,7 +247,9 @@ onMounted(async () => {
                 <div class="flex items-center gap-2 text-sm">
                   <UIcon name="i-mdi-forum" class="w-5 h-5" />
                   <span
-                    v-html="formatEmbeddedStyles(sense.usageComment) + '.'"
+                    v-html="
+                      String(formatEmbeddedStyles(sense.usageComment) + '.')
+                    "
                     class="italic"
                   />
                 </div>
