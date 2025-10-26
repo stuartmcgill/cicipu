@@ -14,8 +14,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       'DM+Sans': true,
-      'Space+Grotesk': true,
-      'Charis+SIL': true
+      'Space+Grotesk': true
     }
   },
   ui: {
