@@ -9,7 +9,7 @@ module.exports = {
         sans: ['DM Sans', 'sans-serif'],
         heading: ['Space Grotesk', 'serif', ...defaultTheme.fontFamily.sans],
         serif: ['serif'],
-        vernacular: ['Charis SIL', 'serif']
+        vernacular: ['CharisSILW', 'serif']
       }
     }
   }
