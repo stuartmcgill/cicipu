@@ -105,10 +105,11 @@ appStore.backgroundImage = ''
       <span class="cicipu-text">dopo</span> 'sew').
     </p>
 
-    <!--      @TODO add 'tear' screenshot-->
-    <div>
-      Figure 5: Entry for <span class="cicipu-text">hyaɓa</span> 'teardrop'
-    </div>
+    <img
+      src="/img/dictionary/intro/tear.png"
+      alt="Teardrop screenshot"
+      class="max-w-80 entry-screenshot"
+    />
     <AbbreviationsTable />
   </div>
 </template>
