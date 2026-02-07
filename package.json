@@ -14,7 +14,7 @@
     "@iconify-json/twemoji": "^1.1.15",
     "@nuxt/image": "^1.4.0",
     "@nuxt/ui": "^2.15.0",
-    "@pinia/nuxt": "^0.5.1",
+    "@pinia/nuxt": "^0.11.0",
     "drizzle-kit": "^0.31.4",
     "drizzle-orm": "^0.44.5",
     "mysql2": "^3.14.5",
