@@ -15,13 +15,41 @@ Installation using [pm2](https://pm2.keymetrics.io/):
 ```bash
 # Install pm2 globally
 npm install pm2 -g
+```
 
-# Install and build website
-npm install
+### Option 1 - build on the server
+
+This could run out of memory though.
+
+```bash
+# Install and build website in-situ
+npm ci
+npm run build
+npm install --omit=dev
+```
+
+### Option 2 - build locally (preferred)
+
+```bash
+# Install and build website locally
+npm ci
 npm run build
 
+# Copy the files to the server
+rsync -avz --delete -e "ssh -p <PORT>" .output/ <USERNAME>@stuartmcgill.org:~/domains/cicipu.stuartmcgill.org/cicipu-main/.output
+```
+
+Then on the server:
+
+```bash
+npm install --omit=dev
+```
+
+### Restart the app
+
+```bash
 # This should start the app and also handle restarts
-pm2 start
+pm2 reload cicipu-main
 ```
 
 See also https://nuxt.com/docs/getting-started/deployment#pm2.
@@ -48,29 +76,7 @@ Start the development server on `http://localhost:3000`:
 npm run dev
 ```
 
-## Production
-
-To deploy a release to production, do the following on a development machine:
-
-```bash
-# Build
-npm ci && npm run build
-
-# Copy the files to the server
-rsync -avz --delete -e "ssh -p <PORT>" .output/ <USERNAME>@stuartmcgill.org:~/domains/cicipu.stuartmcgill.org/cicipu-main/.output
-```
-
-Now on the production server:
-
-```bash
-# NPM build
-npm ci
-
-# Reload the app
-pm2 reload cicipu-main
-````
-
-Locally preview production build:
+## Locally preview production build:
 
 ```bash
 # npm
