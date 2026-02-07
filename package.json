@@ -30,6 +30,6 @@
     "@fortawesome/free-solid-svg-icons": "^7",
     "@nuxtjs/google-fonts": "^3.2.0",
     "baseline-browser-mapping": "^2.9.19",
-    "prettier": "3.2.5"
+    "prettier": "^3.2.5"
   }
 }
