@@ -28,6 +28,12 @@ See also https://nuxt.com/docs/getting-started/deployment#pm2.
 
 ## Development
 
+Start the database:
+
+```shell
+docker-compose up -d
+```
+
 Install the dependencies:
 
 ```bash
