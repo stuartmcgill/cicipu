@@ -25,10 +25,11 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-regular-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^7",
+    "@fortawesome/free-regular-svg-icons": "^7",
+    "@fortawesome/free-solid-svg-icons": "^7",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "baseline-browser-mapping": "^2.9.19",
     "prettier": "3.2.5"
   }
 }
